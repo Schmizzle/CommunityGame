@@ -6,8 +6,8 @@ class_name Player
 var InputDirection: Vector2 = Vector2.ZERO
 var Direction: Vector3 = Vector3.ZERO
 var TargetVelocity: Vector3 = Vector3.ZERO
-var Gravity: int = 100
-var JumpForce: int = 20
+var Gravity: int = 20
+var JumpForce: int = 7
 
 # Mouse look variables
 var MouseVelocity: Vector2 = Vector2.ZERO
