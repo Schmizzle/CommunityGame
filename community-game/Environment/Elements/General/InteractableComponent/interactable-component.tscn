@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3cuj7rpu1fl6"]
+
+[ext_resource type="Script" uid="uid://g4ni8nhuydxj" path="res://Environment/Elements/General/InteractableComponent/interactable_component.gd" id="1_p0go8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c4c5c"]
+
+[node name="InteractableComponent" type="StaticBody3D" unique_id=1550476877]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_p0go8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=364242616]
+shape = SubResource("BoxShape3D_c4c5c")
+debug_color = Color(0, 0.6509804, 0.11372549, 1)

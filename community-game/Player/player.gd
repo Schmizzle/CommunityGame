@@ -15,6 +15,10 @@ var Sensitivity: float = 0.3
 var LookRotation: Vector2 = Vector2.ZERO
 @export var CameraPivot: Node3D
 
+# Interacting variables
+@export var InteractCast: RayCast3D
+@export var InteractUI: Label
+
 
 func _ready() -> void:
 	# Captures the player mouse, making it hidden and centered in the window
@@ -55,6 +59,17 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 #endregion
+	
+#region Interacting
+	var DetectingInteractable: bool = InteractCast.get_collider() != null
+	InteractUI.visible = DetectingInteractable
+	var DetectedInteractable = InteractCast.get_collider()
+	
+	if Input.is_action_just_pressed("interact") and DetectingInteractable:
+		InteractCast.get_collider().call("on_interacted")
+#endregion
+	
+	
 
 
 func _input(event):
