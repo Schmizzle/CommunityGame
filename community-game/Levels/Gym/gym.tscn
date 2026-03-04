@@ -39,7 +39,10 @@ transform = Transform3D(0.90073615, 0.368416, -0.2300957, 0, 0.52972704, 0.84816
 environment = SubResource("Environment_4jjoa")
 
 [node name="Node3D" parent="." unique_id=239868963 instance=ExtResource("1_kit3i")]
-transform = Transform3D(14.22342, 0, 0, 0, 1, 0, 0, 0, 14.22342, 0, -0.50626767, 0)
+transform = Transform3D(11.732837, 0, 0, 0, 1, 0, 0, 0, 11.732837, 0, -0.50626767, 0)
+
+[node name="Node3D2" parent="." unique_id=983906796 instance=ExtResource("1_kit3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.2789426, 5.955337, 1.7551073, 0)
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("2_5qgok")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0223587, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8487244, 0)
