@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dxrnv4l03xrmv"]
+
+[ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/Gym/basic-block.tscn" id="1_kit3i"]
+[ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
+
+[sub_resource type="Gradient" id="Gradient_sa4en"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kit3i"]
+frequency = 0.0015
+fractal_type = 2
+fractal_octaves = 4
+fractal_lacunarity = 2.39
+fractal_gain = 0.355
+fractal_weighted_strength = 0.65
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5qgok"]
+width = 2560
+height = 2560
+noise = SubResource("FastNoiseLite_kit3i")
+color_ramp = SubResource("Gradient_sa4en")
+seamless = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
+panorama = SubResource("NoiseTexture2D_5qgok")
+
+[sub_resource type="Sky" id="Sky_kcxp8"]
+sky_material = SubResource("PanoramaSkyMaterial_0l8pt")
+
+[sub_resource type="Environment" id="Environment_4jjoa"]
+background_mode = 2
+sky = SubResource("Sky_kcxp8")
+
+[node name="Gym" type="Node3D" unique_id=952443488]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1375572134]
+transform = Transform3D(0.90073615, 0.368416, -0.2300957, 0, 0.52972704, 0.8481684, 0.43436673, -0.76397604, 0.47714433, 0, 6.843994, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1608423285]
+environment = SubResource("Environment_4jjoa")
+
+[node name="Node3D" parent="." unique_id=239868963 instance=ExtResource("1_kit3i")]
+transform = Transform3D(14.22342, 0, 0, 0, 1, 0, 0, 0, 14.22342, 0, -0.50626767, 0)
+
+[node name="Player" parent="." unique_id=1432177263 instance=ExtResource("2_5qgok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0223587, 0)
