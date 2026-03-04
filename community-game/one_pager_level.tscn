@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://8lr11g85dwxn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_243hp"]
+
+[sub_resource type="Gradient" id="Gradient_jxd5m"]
+colors = PackedColorArray(0, 0, 0, 1, 0.4696207, 0.40893257, 0.29441306, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sqjnu"]
+noise_type = 0
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_oandy"]
+noise = SubResource("FastNoiseLite_sqjnu")
+color_ramp = SubResource("Gradient_jxd5m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltly4"]
+albedo_color = Color(0.89517313, 0.90205526, 0.8007364, 1)
+albedo_texture = SubResource("NoiseTexture2D_oandy")
+
+[sub_resource type="BoxMesh" id="BoxMesh_7fhiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmqxy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_sebj7"]
+material = SubResource("StandardMaterial3D_dmqxy")
+text = "Hello Hi this is 
+When you make it"
+
+[node name="OnePagerLevel" type="Node3D" unique_id=1994563043]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=636693326]
+transform = Transform3D(12.346334, 0, 0, 0, 0.23299575, 0, 0, 0, 8.013165, 0, 0, 0)
+mesh = SubResource("BoxMesh_243hp")
+surface_material_override/0 = SubResource("StandardMaterial3D_ltly4")
+
+[node name="Wall" type="MeshInstance3D" parent="." unique_id=969859999]
+transform = Transform3D(-4.371139e-08, 0, -0.2929011, 0, 1, 0, 1, 0, -1.2803113e-08, 0, 0.5894357, 0)
+mesh = SubResource("BoxMesh_7fhiu")
+
+[node name="Text" type="MeshInstance3D" parent="." unique_id=487344708]
+transform = Transform3D(-4.3711392e-08, 0, -0.0068843416, 0, 1, 0, -1.0000001, 0, 3.0092412e-10, 0.2318505, 0.80850106, -0.08101638)
+mesh = SubResource("TextMesh_sebj7")
