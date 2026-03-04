@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://dir4y2agytnmg"]
 
+[ext_resource type="Script" uid="uid://drtf21ydaxqqm" path="res://Player/player.gd" id="1_l8h54"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b4nnr"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1432177263]
-collision_layer = 5
+[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot")]
+collision_layer = 2
+collision_mask = 5
 input_ray_pickable = false
+script = ExtResource("1_l8h54")
+CameraPivot = NodePath("Pivot")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1736355451]
 shape = SubResource("CapsuleShape3D_b4nnr")
+debug_color = Color(0.8182316, 0.0018720936, 0.97130984, 0.41960785)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=503390998]
+[node name="Pivot" type="Node3D" parent="." unique_id=501292623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Camera" type="Camera3D" parent="Pivot" unique_id=503390998]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
