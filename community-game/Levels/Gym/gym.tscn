@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
 [ext_resource type="PackedScene" uid="uid://b0qjgpg6v2fw5" path="res://Environment/TestingStuff/VendingMachine/vending_machine.tscn" id="4_kcxp8"]
-[ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="5_4jjoa"]
-[ext_resource type="Material" uid="uid://dcnvxh5ulctr" path="res://Environment/TestingStuff/InitTester/test_mat2.tres" id="6_s6hch"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -63,7 +61,3 @@ Message = "This object always tells the truth"
 
 [node name="VendingMachine" parent="." unique_id=306594449 instance=ExtResource("4_kcxp8")]
 transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.15642905, 0.754381, 4.14131)
-
-[node name="InitTester" parent="." unique_id=1480506836 instance=ExtResource("5_4jjoa")]
-transform = Transform3D(0.9999995, -0.0004973493, -0.0008560598, 0.0004988435, 0.99999833, 0.0017657826, 0.0008551899, -0.001766204, 0.9999981, -3.5727139, 1.4473047, -2.8106651)
-Mat = ExtResource("6_s6hch")
