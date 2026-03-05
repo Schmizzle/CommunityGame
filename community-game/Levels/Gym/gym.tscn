@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/test-interactable.tscn" id="3_0l8pt"]
 [ext_resource type="ArrayMesh" uid="uid://bjwq10belkgu2" path="res://Environment/Assets/VoxelSodaMachine.obj" id="4_4jjoa"]
+[ext_resource type="Script" uid="uid://bpu4acc1nbkhm" path="res://Environment/SodaCan/soda_can_rigid.gd" id="4_ol1f0"]
 [ext_resource type="Script" uid="uid://b0xa842vnlk4w" path="res://Environment/Assets/vending_interactable.gd" id="4_s6hch"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="5_s6hch"]
 
@@ -33,6 +34,14 @@ sky_material = SubResource("PanoramaSkyMaterial_0l8pt")
 [sub_resource type="Environment" id="Environment_4jjoa"]
 background_mode = 2
 sky = SubResource("Sky_kcxp8")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_s6hch"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ol1f0"]
+albedo_color = Color(0.972549, 0.011764706, 0.39215687, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s6hch"]
+radius = 0.5683594
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ol1f0"]
 size = Vector3(3.425293, 6.5004883, 3.7404785)
@@ -64,17 +73,43 @@ Message = "This object always lies"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.567909, 2.1201885, -1.5182796)
 Message = "This object always tells the truth"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1583636826]
+[node name="SodaCan" type="RigidBody3D" parent="." unique_id=1181012039]
+transform = Transform3D(-0.2730717, 0, -0.043880787, -0.026497332, 0.22045769, 0.16489385, 0.034977347, 0.16700925, -0.21766528, 2.2234375, 2.3473668, -0.08704758)
+mass = 18.037
+linear_velocity = Vector3(0, 0.805, 0)
+linear_damp = 1.14
+script = ExtResource("4_ol1f0")
+
+[node name="SodaCan" type="MeshInstance3D" parent="SodaCan" unique_id=141920758]
+mesh = SubResource("CylinderMesh_s6hch")
+surface_material_override/0 = SubResource("StandardMaterial3D_ol1f0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SodaCan" unique_id=106804480]
+shape = SubResource("CylinderShape3D_s6hch")
+
+[node name="InteractableComponent" parent="SodaCan" unique_id=1550476877 instance=ExtResource("5_s6hch")]
+transform = Transform3D(3.615657, 0, 0, 0, 3.6156573, 0, 0, 0, 3.6156576, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="SodaCan/InteractableComponent" index="0" unique_id=364242616]
+transform = Transform3D(0.9999962, 2.6077032e-07, 0, -4.4703484e-08, 1, 0, -5.5134296e-07, -2.9802322e-08, 1, -0.04785323, -0.015381098, 0.010497689)
+
+[node name="VendingMachine" type="StaticBody3D" parent="." unique_id=1583636826]
 transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.20932311, 0.81133395, 3.2487242)
 script = ExtResource("4_s6hch")
 
-[node name="Mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=1486481130]
+[node name="Mesh" type="MeshInstance3D" parent="VendingMachine" unique_id=1486481130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018311262, -2.7502441, 0.030885696)
 mesh = ExtResource("4_4jjoa")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=206652755]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VendingMachine" unique_id=206652755]
 shape = SubResource("BoxShape3D_ol1f0")
 
-[node name="InteractableComponent" parent="StaticBody3D" unique_id=1550476877 instance=ExtResource("5_s6hch")]
+[node name="InteractableComponent" parent="VendingMachine" unique_id=611252436 instance=ExtResource("5_s6hch")]
 
-[connection signal="_interaction_signal" from="StaticBody3D/InteractableComponent" to="StaticBody3D" method="_on_interactable_component__interaction_signal"]
+[node name="SpawnLoc" type="Node3D" parent="VendingMachine" unique_id=740550600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10489416, -2.377841, 2.18326)
+
+[connection signal="_interaction_signal" from="SodaCan/InteractableComponent" to="SodaCan" method="_on_interactable_component__interaction_signal"]
+[connection signal="_interaction_signal" from="VendingMachine/InteractableComponent" to="VendingMachine" method="_on_interactable_component__interaction_signal"]
+
+[editable path="SodaCan/InteractableComponent"]
