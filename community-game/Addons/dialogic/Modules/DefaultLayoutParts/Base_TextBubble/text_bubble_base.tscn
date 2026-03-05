@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://syki6k0e6aac"]
+[gd_scene format=3 uid="uid://syki6k0e6aac"]
 
 [ext_resource type="Script" uid="uid://v8guu7n6gv8a" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.gd" id="1_urqwc"]
 

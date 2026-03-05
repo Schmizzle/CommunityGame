@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dotvrsumm5y5c"]
+[gd_scene format=3 uid="uid://dotvrsumm5y5c"]
 
 [ext_resource type="Script" uid="uid://lnr24bngydn2" path="res://addons/dialogic/Editor/Events/Fields/field_audio_preview.gd" id="1_7wm54"]
 

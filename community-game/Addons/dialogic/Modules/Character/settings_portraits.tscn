@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cp463rpri5j8a"]
+[gd_scene format=3 uid="uid://cp463rpri5j8a"]
 
 [ext_resource type="Script" uid="uid://c3hdycwp0hrdm" path="res://addons/dialogic/Modules/Character/settings_portraits.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_dce78"]

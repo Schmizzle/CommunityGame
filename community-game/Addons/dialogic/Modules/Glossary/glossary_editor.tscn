@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://due48ce7jiudt"]
+[gd_scene format=3 uid="uid://due48ce7jiudt"]
 
 [ext_resource type="Script" uid="uid://bqu863yjcjc8y" path="res://addons/dialogic/Modules/Glossary/glossary_editor.gd" id="1_tf3p1"]
 

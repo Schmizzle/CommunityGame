@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpwhshre1n4t6"]
+[gd_scene format=3 uid="uid://dpwhshre1n4t6"]
 
 [ext_resource type="Script" uid="uid://cowk63wwk126v" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.gd" id="1_b07gq"]
 

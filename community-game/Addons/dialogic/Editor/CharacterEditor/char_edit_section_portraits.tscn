@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmrgbo8qi145o"]
+[gd_scene format=3 uid="uid://cmrgbo8qi145o"]
 
 [ext_resource type="Script" uid="uid://yulfiomudcob" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_section_portraits.gd" id="1_6sxsl"]
 [ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="2_birla"]

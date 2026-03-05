@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm5hxmhyyxgq"]
+[gd_scene format=3 uid="uid://dm5hxmhyyxgq"]
 
 [ext_resource type="Script" uid="uid://ddxcyihcistll" path="res://addons/dialogic/Editor/Events/Fields/field_bool_check.gd" id="1_ckmtx"]
 

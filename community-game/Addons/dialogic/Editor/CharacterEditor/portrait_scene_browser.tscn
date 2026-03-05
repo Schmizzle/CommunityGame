@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1wn8r84uh11b"]
+[gd_scene format=3 uid="uid://b1wn8r84uh11b"]
 
 [ext_resource type="Script" uid="uid://iwv7qff6g0f0" path="res://addons/dialogic/Editor/CharacterEditor/portrait_scene_browser.gd" id="1_an6nc"]
 

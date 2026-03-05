@@ -1,4 +1,4 @@
-[gd_resource type="RichTextEffect" script_class="DialogicRichTextTransitionEffect" load_steps=6 format=3 uid="uid://c8b884puc720d"]
+[gd_resource type="RichTextEffect" script_class="DialogicRichTextTransitionEffect" format=3 uid="uid://c8b884puc720d"]
 
 [ext_resource type="Script" uid="uid://wf7hpguw17ex" path="res://addons/dialogic/Example Assets/bbcode_transitions/bbcode_transition_effect.gd" id="1_n3lqs"]
 

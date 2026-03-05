@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddlxjde1cx035"]
+[gd_scene format=3 uid="uid://ddlxjde1cx035"]
 
 [ext_resource type="Script" uid="uid://ckthmmkodqqwt" path="res://addons/dialogic/Editor/Common/BrowserItem.gd" id="1_s3kf0"]
 

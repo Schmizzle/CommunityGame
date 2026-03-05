@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7lmt5cp7bxcm"]
+[gd_scene format=3 uid="uid://c7lmt5cp7bxcm"]
 
 [ext_resource type="Script" uid="uid://dugy11ebty3yq" path="res://addons/dialogic/Editor/Common/reference_manager.gd" id="1_3t531"]
 [ext_resource type="Script" uid="uid://nrhtjk2rgmgk" path="res://addons/dialogic/Editor/Common/broken_reference_manager.gd" id="1_agmg4"]

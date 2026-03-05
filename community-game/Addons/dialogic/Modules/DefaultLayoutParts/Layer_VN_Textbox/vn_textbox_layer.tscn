@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bquja8jyk8kbr"]
+[gd_scene format=3 uid="uid://bquja8jyk8kbr"]
 
 [ext_resource type="Script" uid="uid://bl43m5qw8pso3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd" id="1_bpydr"]
 [ext_resource type="Script" uid="uid://bfc03rn8slceu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/animations.gd" id="2_xy7a2"]

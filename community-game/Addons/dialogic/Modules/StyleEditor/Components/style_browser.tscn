@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cs381i3h7sveq"]
+[gd_scene format=3 uid="uid://cs381i3h7sveq"]
 
 [ext_resource type="Script" uid="uid://dpuqnw4cshljm" path="res://addons/dialogic/Modules/StyleEditor/Components/style_browser.gd" id="1_3sdb0"]
 

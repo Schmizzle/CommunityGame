@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhk6j6eb6e3q"]
+[gd_scene format=3 uid="uid://dhk6j6eb6e3q"]
 
 [ext_resource type="Script" uid="uid://ij0qm2ew6plv" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd" id="1_kurgw"]
 [ext_resource type="Script" uid="uid://bldt7xlfum7ov" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]

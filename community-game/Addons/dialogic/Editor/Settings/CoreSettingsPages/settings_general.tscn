@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b873ho41sklv8"]
+[gd_scene format=3 uid="uid://b873ho41sklv8"]
 
 [ext_resource type="Script" uid="uid://chb81lvjh47jr" path="res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_general.gd" id="2"]
 [ext_resource type="Script" uid="uid://bo0dfmsyky1mm" path="res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_tools.gd" id="2_3xeuv"]
