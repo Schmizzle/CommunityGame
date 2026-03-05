@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0xa842vnlk4w" path="res://Environment/TestingStuff/VendingMachine/vending_interactable.gd" id="1_06qvb"]
 [ext_resource type="ArrayMesh" uid="uid://bjwq10belkgu2" path="res://Environment/TestingStuff/VendingMachine/VoxelSodaMachine.obj" id="2_iuqra"]
+[ext_resource type="PackedScene" uid="uid://egpaculqw1o8" path="res://Environment/SodaCan/soda_can.tscn" id="2_rkuta"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="3_rkuta"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ol1f0"]
@@ -13,6 +14,7 @@ size = Vector3(3.3886719, 6.576172, 3.765625)
 [node name="VendingMachine" type="StaticBody3D" unique_id=306594449]
 transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, 0, 0, 0)
 script = ExtResource("1_06qvb")
+sodaCan = ExtResource("2_rkuta")
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=829942862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018311262, -2.7502441, 0.030885696)
@@ -25,6 +27,9 @@ shape = SubResource("BoxShape3D_ol1f0")
 
 [node name="CollisionShape3D" parent="InteractableComponent" index="0" unique_id=364242616]
 shape = SubResource("BoxShape3D_06qvb")
+
+[node name="SpawnLoc" type="Node3D" parent="." unique_id=1281804253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26332998, -2.2430775, 1.6387119)
 
 [connection signal="_interaction_signal" from="InteractableComponent" to="." method="_on_interactable_component__interaction_signal"]
 

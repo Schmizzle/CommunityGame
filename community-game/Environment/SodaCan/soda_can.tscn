@@ -13,9 +13,10 @@ radius = 0.5683594
 
 [node name="SodaCan" type="RigidBody3D" unique_id=1261307789]
 transform = Transform3D(-0.2730717, 0, -0.043880787, -0.026497332, 0.22045769, 0.16489385, 0.034977347, 0.16700925, -0.21766528, 0, 0, 0)
-mass = 18.037
-linear_velocity = Vector3(0, 0.805, 0)
+mass = 3.357
+linear_velocity = Vector3(0, 10, -10)
 linear_damp = 1.14
+angular_velocity = Vector3(0.17453292, 1.7453293, 0)
 script = ExtResource("1_23iha")
 
 [node name="SodaCan" type="MeshInstance3D" parent="." unique_id=365984404]
