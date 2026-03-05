@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
-[ext_resource type="ArrayMesh" uid="uid://bjwq10belkgu2" path="res://Environment/Assets/VoxelSodaMachine.obj" id="4_4jjoa"]
-[ext_resource type="Script" uid="uid://b0xa842vnlk4w" path="res://Environment/Assets/vending_interactable.gd" id="4_s6hch"]
+[ext_resource type="ArrayMesh" uid="uid://bjwq10belkgu2" path="res://Environment/TestingStuff/VendingMachine/VoxelSodaMachine.obj" id="4_4jjoa"]
+[ext_resource type="Script" uid="uid://b0xa842vnlk4w" path="res://Environment/TestingStuff/VendingMachine/vending_interactable.gd" id="4_s6hch"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="5_s6hch"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
