@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://g4ni8nhuydxj" path="res://Environment/Elements/General/InteractableComponent/interactable_component.gd" id="1_p0go8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c4c5c"]
+size = Vector3(1.8125, 1.8369141, 2.2060547)
 
 [node name="InteractableComponent" type="StaticBody3D" unique_id=1550476877]
 collision_layer = 8

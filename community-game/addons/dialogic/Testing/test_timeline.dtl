@@ -1,0 +1,18 @@
+join test_character right
+test_character: Isn't this crazy
+You're like talking to me and everything
+label The choice
+test_character: What do you think about our conversation
+- Thank you real person
+	jump Bad choice
+- So you're not like a figment of my imagination?
+	jump Bad choice
+- You're not real!
+	jump Good choice
+label Bad choice
+test_character: But I'm not real, silly!
+test_character: Try again!
+jump The choice
+label Good choice
+test_character: Well done for recognizing that!
+test_character: Now hurry along

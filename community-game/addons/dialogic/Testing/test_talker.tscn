@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://gfqc05knf2c5"]
+
+[ext_resource type="Texture2D" uid="uid://bo1cogvetaidl" path="res://icon.svg" id="1_0oa2m"]
+[ext_resource type="Script" uid="uid://c015ta2vsikvd" path="res://addons/dialogic/Testing/test_talker.gd" id="2_sdih7"]
+[ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="2_ww5gp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sdih7"]
+radius = 0.9242487
+
+[node name="TestTalker" type="Sprite3D" unique_id=31493115]
+billboard = 1
+texture = ExtResource("1_0oa2m")
+script = ExtResource("2_sdih7")
+
+[node name="InteractableComponent" parent="." unique_id=1550476877 instance=ExtResource("2_ww5gp")]
+
+[node name="CollisionShape3D" parent="InteractableComponent" index="0" unique_id=364242616]
+shape = SubResource("SphereShape3D_sdih7")
+
+[connection signal="_interaction_signal" from="InteractableComponent" to="." method="_on_interactable_component__interaction_signal"]
+
+[editable path="InteractableComponent"]

@@ -21,8 +21,12 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"test_character": "res://addons/dialogic/Testing/test_character.dch"
+}
+directories/dtl_directory={
+"test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl"
+}
 layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

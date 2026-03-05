@@ -2,6 +2,7 @@ extends CharacterBody3D
 class_name Player
 
 # Movement variables
+var CanMove: bool = true
 @export var Speed: int = 700
 var InputDirection: Vector2 = Vector2.ZERO
 var Direction: Vector3 = Vector3.ZERO
@@ -10,6 +11,7 @@ var Gravity: int = 20
 var JumpForce: int = 7
 
 # Mouse look variables
+var CanLook: bool = true
 var MouseVelocity: Vector2 = Vector2.ZERO
 var Sensitivity: float = 0.3
 var LookRotation: Vector2 = Vector2.ZERO
@@ -32,8 +34,9 @@ func _process(delta: float) -> void:
 	Direction = (transform.basis * Vector3(InputDirection.x, 0, InputDirection.y)).normalized()
 	
 	# Sets the horizontal components of target velocity
-	TargetVelocity.x = Direction.x * Speed * delta
-	TargetVelocity.z = Direction.z * Speed * delta
+	if CanMove:
+		TargetVelocity.x = Direction.x * Speed * delta
+		TargetVelocity.z = Direction.z * Speed * delta
 	
 	# Makes the player fall if they're not on the floor
 	if not is_on_floor():
@@ -51,8 +54,9 @@ func _process(delta: float) -> void:
 #endregion
 	
 #region Looking
-	rotation_degrees.y = LookRotation.x
-	CameraPivot.rotation_degrees.z = LookRotation.y
+	if CanLook:
+		rotation_degrees.y = LookRotation.x
+		CameraPivot.rotation_degrees.z = LookRotation.y
 #endregion
 	
 #region Quitting
@@ -71,7 +75,6 @@ func _process(delta: float) -> void:
 	
 	
 
-
 func _input(event):
 #region Getting mouse look data
 	if event is InputEventMouseMotion:
@@ -81,3 +84,8 @@ func _input(event):
 #endregion
 	
 	
+
+
+func _change_input_enabled(move: bool, look: bool) -> void:
+	CanMove = move
+	CanLook = look
