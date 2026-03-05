@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dith8khycdp61"]
 
-[ext_resource type="Script" uid="uid://djcvud4kn80nf" path="res://Environment/TestingStuff/test_interactable.gd" id="1_uxded"]
+[ext_resource type="Script" uid="uid://djcvud4kn80nf" path="res://Environment/TestingStuff/TestInteractable/test_interactable.gd" id="1_uxded"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="2_snfgv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m2o6v"]
