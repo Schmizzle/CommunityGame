@@ -1,6 +1,6 @@
 join test_character right
 test_character: Isn't this crazy
-You're like talking to me and everything
+test_character: You're like talking to me and everything
 label The choice
 test_character: What do you think about our conversation
 - Thank you real person
