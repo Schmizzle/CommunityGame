@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
+[ext_resource type="PackedScene" uid="uid://b0qjgpg6v2fw5" path="res://Environment/TestingStuff/VendingMachine/vending_machine.tscn" id="4_kcxp8"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -57,3 +58,6 @@ Message = "This object always lies"
 [node name="TestInteractable2" parent="." unique_id=1737886960 instance=ExtResource("3_0l8pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.567909, 2.1201885, -1.5182796)
 Message = "This object always tells the truth"
+
+[node name="VendingMachine" parent="." unique_id=306594449 instance=ExtResource("4_kcxp8")]
+transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.15642905, 0.754381, 4.14131)
