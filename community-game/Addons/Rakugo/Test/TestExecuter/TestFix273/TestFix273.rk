@@ -1,5 +1,0 @@
-test_var = 0
-jump test if test_var == 0
-
-test:
-	"273 fixed"

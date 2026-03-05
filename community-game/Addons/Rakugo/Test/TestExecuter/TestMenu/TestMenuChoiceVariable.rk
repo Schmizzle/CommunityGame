@@ -1,3 +1,0 @@
-test_var = "a"
-menu:
-	"test var in menu choice: <test_var>"
