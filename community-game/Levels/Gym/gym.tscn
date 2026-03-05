@@ -3,9 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
-[ext_resource type="ArrayMesh" uid="uid://bjwq10belkgu2" path="res://Environment/TestingStuff/VendingMachine/VoxelSodaMachine.obj" id="4_4jjoa"]
-[ext_resource type="Script" uid="uid://b0xa842vnlk4w" path="res://Environment/TestingStuff/VendingMachine/vending_interactable.gd" id="4_s6hch"]
-[ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="5_s6hch"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -34,9 +31,6 @@ sky_material = SubResource("PanoramaSkyMaterial_0l8pt")
 background_mode = 2
 sky = SubResource("Sky_kcxp8")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ol1f0"]
-size = Vector3(3.425293, 6.5004883, 3.7404785)
-
 [node name="Gym" type="Node3D" unique_id=952443488]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1375572134]
@@ -46,7 +40,7 @@ transform = Transform3D(0.90073615, 0.368416, -0.2300957, 0, 0.52972704, 0.84816
 environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("2_5qgok")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8487244, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5017912, 0)
 
 [node name="Blocks" type="Node3D" parent="." unique_id=862098181]
 
@@ -63,18 +57,3 @@ Message = "This object always lies"
 [node name="TestInteractable2" parent="." unique_id=1737886960 instance=ExtResource("3_0l8pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.567909, 2.1201885, -1.5182796)
 Message = "This object always tells the truth"
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1583636826]
-transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.20932311, 0.81133395, 3.2487242)
-script = ExtResource("4_s6hch")
-
-[node name="Mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=1486481130]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018311262, -2.7502441, 0.030885696)
-mesh = ExtResource("4_4jjoa")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=206652755]
-shape = SubResource("BoxShape3D_ol1f0")
-
-[node name="InteractableComponent" parent="StaticBody3D" unique_id=1550476877 instance=ExtResource("5_s6hch")]
-
-[connection signal="_interaction_signal" from="StaticBody3D/InteractableComponent" to="StaticBody3D" method="_on_interactable_component__interaction_signal"]
