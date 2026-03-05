@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://cseqjecln4kp1"]
 
 [ext_resource type="Script" uid="uid://b6bvqg02a3b2y" path="res://Environment/TestingStuff/InitTester/init_tester.gd" id="1_knrqq"]
-[ext_resource type="Material" uid="uid://cufdjn16qx2nr" path="res://Environment/TestingStuff/InitTester/test_mat1.tres" id="2_xqk2l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xqk2l"]
 
-[node name="InitTester" type="Node3D" unique_id=1480506836 node_paths=PackedStringArray("TheMesh")]
+[node name="InitTester" type="Node3D" unique_id=1480506836]
 script = ExtResource("1_knrqq")
-Mat = ExtResource("2_xqk2l")
-TheMesh = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=410737039]
 mesh = SubResource("BoxMesh_xqk2l")
