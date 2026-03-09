@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+QuestManager="*uid://408n8rhcs20k"
+Globals="*uid://u0roaemhptg6"
 
 [dialogic]
 
