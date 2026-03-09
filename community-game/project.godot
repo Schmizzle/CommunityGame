@@ -74,7 +74,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/blender_godot_pipeline/plugin.cfg", "res://addons/datatable_godot/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/blender_godot_pipeline/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [input]
 
