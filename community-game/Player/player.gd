@@ -17,14 +17,20 @@ var Sensitivity: float = 0.3
 var LookRotation: Vector2 = Vector2.ZERO
 @export var CameraPivot: Node3D
 
-# Interacting variables
-@export var InteractCast: RayCast3D
+@export_group("UI References")
+@export var UIReference: Control
 @export var InteractUI: Label
+@export var QuestContainer: VBoxContainer
+
+@export_group("")
+@export var InteractCast: RayCast3D
 
 
 func _ready() -> void:
 	# Captures the player mouse, making it hidden and centered in the window
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	create_quest_ui()
 
 
 func _process(delta: float) -> void:
@@ -86,6 +92,21 @@ func _input(event):
 	
 
 
-func _change_input_enabled(move: bool, look: bool) -> void:
+func change_input_enabled(move: bool, look: bool) -> void:
 	CanMove = move
 	CanLook = look
+
+
+func create_quest_ui():
+	
+	for x in get_tree().get_nodes_in_group("QuestNodes"):
+		if x is Quest:
+			var QuestBoxScene: PackedScene = load("res://quests/UI/quest_box.tscn")
+			var NewBox: QuestBox = QuestBoxScene.instantiate()
+			print("added new questbox")
+			NewBox.RelatedQuest = x
+			x.RelatedUI = NewBox
+			
+			NewBox.update_display()
+			
+			QuestContainer.add_child(NewBox)

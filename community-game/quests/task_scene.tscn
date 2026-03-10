@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b41uvbfv3u7b3"]
+
+[ext_resource type="Script" uid="uid://cq41qfkaqlh5a" path="res://quests/task_scene.gd" id="1_v851p"]
+
+[node name="TaskScene" type="Node" unique_id=1788071432]
+script = ExtResource("1_v851p")

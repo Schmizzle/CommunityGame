@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cr060crbwehvk"]
+
+[ext_resource type="Script" uid="uid://coielhamy1a56" path="res://quests/UI/quest_box.gd" id="1_8jljk"]
+
+[node name="QuestBox" type="VBoxContainer" unique_id=697611150 node_paths=PackedStringArray("QName", "QDescription", "CName")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jljk")
+QName = NodePath("QuestName")
+QDescription = NodePath("HBoxContainer/QuestDescription")
+CName = NodePath("StageName")
+
+[node name="QuestName" type="Label" parent="." unique_id=865925236]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=761493347]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=628773864]
+custom_minimum_size = Vector2(41.565, 0)
+layout_mode = 2
+
+[node name="QuestDescription" type="Label" parent="HBoxContainer" unique_id=1378078756]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="StageName" type="Label" parent="." unique_id=48384621]
+layout_mode = 2

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Checklist" format=3 uid="uid://cu2hpkaq8uka1"]
+
+[ext_resource type="Script" uid="uid://cq41qfkaqlh5a" path="res://quests/task_scene.gd" id="1_o3reb"]
+[ext_resource type="Script" uid="uid://bxr2a1q6ojrbe" path="res://quests/checklist_scene.gd" id="2_uk6g4"]
+
+[resource]
+script = ExtResource("2_uk6g4")

@@ -9,14 +9,16 @@ font_size = 53
 outline_size = 28
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot", "InteractCast", "InteractUI")]
+[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot", "UIReference", "InteractUI", "QuestContainer", "InteractCast")]
 collision_layer = 2
 collision_mask = 5
 input_ray_pickable = false
 script = ExtResource("1_l8h54")
 CameraPivot = NodePath("Pivot")
-InteractCast = NodePath("Pivot/InteractCast")
+UIReference = NodePath("PlayerUI")
 InteractUI = NodePath("PlayerUI/InteractText")
+QuestContainer = NodePath("PlayerUI/QuestContainer")
+InteractCast = NodePath("Pivot/InteractCast")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1736355451]
 shape = SubResource("CapsuleShape3D_b4nnr")
@@ -35,9 +37,12 @@ collision_mask = 8
 
 [node name="PlayerUI" type="Control" parent="." unique_id=2144263866]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="InteractText" type="Label" parent="PlayerUI" unique_id=587150643]
 layout_mode = 1
@@ -46,11 +51,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 541.0
-offset_top = 342.5
-offset_right = 571.0
-offset_bottom = 415.5
+offset_left = -13.0
+offset_top = 54.5
+offset_right = 17.0
+offset_bottom = 127.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "E"
 label_settings = SubResource("LabelSettings_l8h54")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestContainer" type="VBoxContainer" parent="PlayerUI" unique_id=1152965132]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = -270.0
+offset_right = 520.0
+offset_bottom = 283.0
+grow_vertical = 2
