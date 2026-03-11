@@ -1,13 +1,24 @@
 [gd_scene format=3 uid="uid://b8qdhe0dbj7ly"]
 
-[node name="TaskBox" type="HBoxContainer" unique_id=1695828218]
+[ext_resource type="Script" uid="uid://s2x42yumrb0b" path="res://quests/UI/task_box.gd" id="1_11l8t"]
+
+[node name="TaskBox" type="HBoxContainer" unique_id=1695828218 node_paths=PackedStringArray("TName", "CountingLabel")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_11l8t")
+TName = NodePath("TextHolder/TaskName")
+CountingLabel = NodePath("DoneDisplays/Count")
 
-[node name="CheckBox" type="Sprite2D" parent="." unique_id=757494859]
+[node name="DoneDisplays" type="CenterContainer" parent="." unique_id=1748262674]
+layout_mode = 2
+
+[node name="CheckBox" type="Sprite2D" parent="DoneDisplays" unique_id=757494859]
+
+[node name="Count" type="Label" parent="DoneDisplays" unique_id=1538051256]
+layout_mode = 2
 
 [node name="TextHolder" type="VBoxContainer" parent="." unique_id=2047257043]
 layout_mode = 2
@@ -16,4 +27,5 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Control" type="Control" parent="." unique_id=1030489891]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2

@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cxe1ph3ahpbln"]
-
-[ext_resource type="Script" uid="uid://bxr2a1q6ojrbe" path="res://quests/checklist_scene.gd" id="1_sf1uu"]
-
-[node name="ChecklistScene" type="Node" unique_id=1649445508]
-script = ExtResource("1_sf1uu")

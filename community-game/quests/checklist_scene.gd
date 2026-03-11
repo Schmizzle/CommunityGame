@@ -1,9 +1,9 @@
-extends Node
+extends Resource
 class_name Checklist
 
 @export var Name: String
 
-@export var Checks: Dictionary[Task, bool]
+@export var Tasks: Dictionary[Task, bool]
 var NumToComplete: int
 
 # Values to be loaded
@@ -15,19 +15,16 @@ var OwningQuest: Quest
 var IsActive: bool
 
 func _init() -> void:
-	# Says how many checks need to be completed
-	NumToComplete = Checks.size() - 1
-	OwningQuest = owner
+	# Says how many Tasks need to be completed
+	NumToComplete = Tasks.size() - 1
 
 func _ready() -> void:
 	"# Adds requirements to dictionary
 	for x in get_children():
-		Checks.get_or_add(x, false)"
+		Tasks.get_or_add(x, false)"
 
 # When requirement completed
 func increment_completed():
-	OwningQuest = owner
-	
 	# Simple increment checking if everything's done
 	if IsActive:
 		if Completed < NumToComplete:

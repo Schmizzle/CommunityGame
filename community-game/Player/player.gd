@@ -98,7 +98,6 @@ func change_input_enabled(move: bool, look: bool) -> void:
 
 
 func create_quest_ui():
-	
 	for x in get_tree().get_nodes_in_group("QuestNodes"):
 		if x is Quest:
 			var QuestBoxScene: PackedScene = load("res://quests/UI/quest_box.tscn")

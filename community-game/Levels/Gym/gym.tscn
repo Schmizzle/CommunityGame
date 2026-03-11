@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="6_s6hch"]
 [ext_resource type="ArrayMesh" uid="uid://c8unmikkqq3vm" path="res://Environment/Elements/Rooms/room5.obj" id="7_ol1f0"]
 [ext_resource type="PackedScene" uid="uid://ct2memot8iaw4" path="res://quests/quest_scene.tscn" id="8_uakrt"]
-[ext_resource type="PackedScene" uid="uid://cxe1ph3ahpbln" path="res://quests/checklist_scene.tscn" id="9_sh7xe"]
-[ext_resource type="PackedScene" uid="uid://b41uvbfv3u7b3" path="res://quests/task_scene.tscn" id="10_i7i0x"]
+[ext_resource type="Script" uid="uid://bxr2a1q6ojrbe" path="res://quests/checklist_scene.gd" id="9_l8u6m"]
+[ext_resource type="Script" uid="uid://cq41qfkaqlh5a" path="res://quests/task_scene.gd" id="10_sh7xe"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -57,6 +57,16 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l8u6m"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Resource" id="Resource_i7i0x"]
+script = ExtResource("9_l8u6m")
+Name = "Click the two orbs!"
+metadata/_custom_type_script = "uid://bxr2a1q6ojrbe"
+
+[sub_resource type="Resource" id="Resource_w3mwu"]
+script = ExtResource("9_l8u6m")
+Name = "Drink the soda!"
+metadata/_custom_type_script = "uid://bxr2a1q6ojrbe"
 
 [node name="Gym" type="Node3D" unique_id=952443488]
 
@@ -154,32 +164,8 @@ mesh = SubResource("BoxMesh_uakrt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2/StaticBody3D" unique_id=1533072516]
 shape = SubResource("ConvexPolygonShape3D_l8u6m")
 
-[node name="TestQuest1" parent="." unique_id=2089789354 node_paths=PackedStringArray("Stages") instance=ExtResource("8_uakrt")]
+[node name="TestQuest1" parent="." unique_id=2089789354 instance=ExtResource("8_uakrt")]
 Name = "Testing... is this thing on?"
 Description = "This is a quest to see if my shit works at ALL, first time testing it within code tee hee oopsies"
-Stages = [NodePath("OrbChecklist"), NodePath("SodaCanChecklist")]
+Stages = Array[ExtResource("9_l8u6m")]([SubResource("Resource_i7i0x"), SubResource("Resource_w3mwu")])
 State = 1
-
-[node name="OrbChecklist" parent="TestQuest1" unique_id=1649445508 node_paths=PackedStringArray("Checks") instance=ExtResource("9_sh7xe")]
-Name = "Click on the two orbs"
-Checks = {
-NodePath("ReqOrb1"): false,
-NodePath("ReqOrb2"): false
-}
-
-[node name="ReqOrb1" parent="TestQuest1/OrbChecklist" unique_id=1788071432 instance=ExtResource("10_i7i0x")]
-Name = "The truth!"
-Description = "Click the object that always tells the truth"
-Tag = "Orb1"
-
-[node name="ReqOrb2" parent="TestQuest1/OrbChecklist" unique_id=2113732778 instance=ExtResource("10_i7i0x")]
-Name = "Lies!"
-Description = "Click the orb that always tells lies"
-Tag = "Orb2"
-
-[node name="SodaCanChecklist" parent="TestQuest1" unique_id=1492481980 instance=ExtResource("9_sh7xe")]
-
-[node name="SodaRequirement" parent="TestQuest1/SodaCanChecklist" unique_id=1953871144 instance=ExtResource("10_i7i0x")]
-Name = "Drink 3 Soda cans"
-Description = "slurp em up, boy, for the sweet sweet refreshment"
-Tag = "3Sodas"
