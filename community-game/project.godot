@@ -75,6 +75,10 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/blender_godot_pipeline/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+Player="This is the group the player is in"
+
 [input]
 
 move-forward={

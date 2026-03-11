@@ -22,6 +22,9 @@ var LookRotation: Vector2 = Vector2.ZERO
 @export var InteractUI: Label
 @export var QuestContainer: VBoxContainer
 
+@export_group("Quest stuff")
+@export var QuestManage: QuestManager
+
 @export_group("")
 @export var InteractCast: RayCast3D
 
@@ -29,6 +32,8 @@ var LookRotation: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	# Captures the player mouse, making it hidden and centered in the window
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	Globals.PlayerReference = self
 
 
 func _process(delta: float) -> void:

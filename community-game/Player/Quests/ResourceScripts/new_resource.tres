@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://b25ik70cr6y4e"]
+
+[ext_resource type="Script" uid="uid://d23h7xp3s8yao" path="res://Player/Quests/ResourceScripts/tasklist_resource.gd" id="1_wry27"]
+
+[resource]
+script = ExtResource("1_wry27")
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"

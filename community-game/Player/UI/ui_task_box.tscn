@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://nofc4vb6hicf"]
+
+[ext_resource type="Script" uid="uid://cwtxgryytubup" path="res://Player/UI/ui_task_box.gd" id="1_sxxh0"]
+
+[node name="UiTaskBox" type="HBoxContainer" unique_id=1333406088]
+script = ExtResource("1_sxxh0")
