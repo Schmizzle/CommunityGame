@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://gfqc05knf2c5" path="res://addons/dialogic/Testing/test_talker.tscn" id="5_4jjoa"]
 [ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="6_s6hch"]
 [ext_resource type="ArrayMesh" uid="uid://c8unmikkqq3vm" path="res://Environment/Elements/Rooms/room5.obj" id="7_ol1f0"]
-[ext_resource type="PackedScene" uid="uid://ct2memot8iaw4" path="res://quests/quest_scene.tscn" id="8_uakrt"]
-[ext_resource type="Script" uid="uid://bxr2a1q6ojrbe" path="res://quests/checklist_scene.gd" id="9_l8u6m"]
-[ext_resource type="Script" uid="uid://cq41qfkaqlh5a" path="res://quests/task_scene.gd" id="10_sh7xe"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -57,16 +54,6 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l8u6m"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="Resource" id="Resource_i7i0x"]
-script = ExtResource("9_l8u6m")
-Name = "Click the two orbs!"
-metadata/_custom_type_script = "uid://bxr2a1q6ojrbe"
-
-[sub_resource type="Resource" id="Resource_w3mwu"]
-script = ExtResource("9_l8u6m")
-Name = "Drink the soda!"
-metadata/_custom_type_script = "uid://bxr2a1q6ojrbe"
 
 [node name="Gym" type="Node3D" unique_id=952443488]
 
@@ -163,9 +150,3 @@ mesh = SubResource("BoxMesh_uakrt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2/StaticBody3D" unique_id=1533072516]
 shape = SubResource("ConvexPolygonShape3D_l8u6m")
-
-[node name="TestQuest1" parent="." unique_id=2089789354 instance=ExtResource("8_uakrt")]
-Name = "Testing... is this thing on?"
-Description = "This is a quest to see if my shit works at ALL, first time testing it within code tee hee oopsies"
-Stages = Array[ExtResource("9_l8u6m")]([SubResource("Resource_i7i0x"), SubResource("Resource_w3mwu")])
-State = 1
