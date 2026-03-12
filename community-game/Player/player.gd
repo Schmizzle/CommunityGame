@@ -23,7 +23,7 @@ var LookRotation: Vector2 = Vector2.ZERO
 @export var QuestContainer: VBoxContainer
 
 @export_group("Quest stuff")
-@export var QuestManage: QuestManager
+@export var QuestManagerNode: QuestManager
 
 @export_group("")
 @export var InteractCast: RayCast3D
