@@ -23,9 +23,11 @@ Globals="*uid://u0roaemhptg6"
 [dialogic]
 
 directories/dch_directory={
+"Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
 "test_character": "res://addons/dialogic/Testing/test_character.dch"
 }
 directories/dtl_directory={
+"FirstObstacle": "res://Player/Quests/LeakQuest/FirstObstacle.dtl",
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl"
 }
 layout/style_directory={}

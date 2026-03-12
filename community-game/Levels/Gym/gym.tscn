@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://gfqc05knf2c5" path="res://addons/dialogic/Testing/test_talker.tscn" id="5_4jjoa"]
 [ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="6_s6hch"]
 [ext_resource type="ArrayMesh" uid="uid://c8unmikkqq3vm" path="res://Environment/Elements/Rooms/room5.obj" id="7_ol1f0"]
+[ext_resource type="Script" uid="uid://xxtcpiic3op2" path="res://Levels/Gym/key_interactable.gd" id="8_l8u6m"]
+[ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="9_l8u6m"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -54,6 +56,10 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l8u6m"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l8u6m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sh7xe"]
 
 [node name="Gym" type="Node3D" unique_id=952443488]
 
@@ -152,3 +158,30 @@ mesh = SubResource("BoxMesh_uakrt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2/StaticBody3D" unique_id=1533072516]
 shape = SubResource("ConvexPolygonShape3D_l8u6m")
+
+[node name="BedRoomKey" type="StaticBody3D" parent="." unique_id=476777265]
+transform = Transform3D(0.7285974, 0, 0, 0, 0.11305903, 0, 0, 0, 0.14935867, 2.5192316, 0.7098447, 0.932549)
+script = ExtResource("8_l8u6m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BedRoomKey" unique_id=1640529531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6944618, 0)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BedRoomKey/MeshInstance3D" unique_id=1122208222]
+transform = Transform3D(-4.371139e-08, 0, -0.14356881, 0, 1, 0, 1, 0, -6.275592e-09, 0.41351348, 0.021274328, -0.9428608)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BedRoomKey/MeshInstance3D" unique_id=688618888]
+transform = Transform3D(-4.371139e-08, 0, -0.14356881, 0, 1, 0, 1, 0, -6.275592e-09, 0.13090628, 0.021274328, -0.9428608)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BedRoomKey/MeshInstance3D" unique_id=985637180]
+transform = Transform3D(-1.0070061e-07, 0, -0.47535896, 0, 1, 0, 2.3037615, 0, -2.07786e-08, -0.5999986, 0.021274328, 0.032788455)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BedRoomKey" unique_id=1529523286]
+shape = SubResource("BoxShape3D_sh7xe")
+
+[node name="InteractableComponent" parent="BedRoomKey" unique_id=1550476877 instance=ExtResource("9_l8u6m")]
+
+[connection signal="_interaction_signal" from="BedRoomKey/InteractableComponent" to="BedRoomKey" method="_on_interactable_component__interaction_signal"]

@@ -48,7 +48,6 @@ metadata/_custom_type_script = "uid://d23h7xp3s8yao"
 script = ExtResource("3_k53q1")
 Name = "Testing!"
 Description = "Testing if my shii work"
-State = 2
 TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1"), SubResource("Resource_x3vf3")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
