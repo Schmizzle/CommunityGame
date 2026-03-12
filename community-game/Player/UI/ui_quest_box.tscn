@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bs6323ryyxho0" path="res://Player/UI/ui_quest_box.gd" id="1_ystvm"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ystvm"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Gradient" id="Gradient_ystvm"]
 offsets = PackedFloat32Array(0, 0.9975)
 colors = PackedColorArray(0, 0.18167168, 0.0004963724, 1, 0.044160068, 0.3169374, 0, 1)
@@ -13,30 +20,42 @@ noise = SubResource("FastNoiseLite_gjptt")
 color_ramp = SubResource("Gradient_ystvm")
 seamless = true
 
-[node name="UiQuestBox" type="CenterContainer" unique_id=2110154397 node_paths=PackedStringArray("NameLabel", "DescriptionLabel", "TaskListLabel")]
-offset_right = 512.0
-offset_bottom = 512.0
+[sub_resource type="LabelSettings" id="LabelSettings_gjptt"]
+font_size = 24
+
+[node name="UiQuestBox" type="PanelContainer" unique_id=2076595825 node_paths=PackedStringArray("NameLabel", "DescriptionLabel", "TaskListLabel", "TaskContainer")]
+offset_right = 436.0
+offset_bottom = 191.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ystvm")
 script = ExtResource("1_ystvm")
-NameLabel = NodePath("VBoxContainer/NameLabel")
-DescriptionLabel = NodePath("VBoxContainer/DescriptionLabel")
-TaskListLabel = NodePath("VBoxContainer/TaskListLabel")
+NameLabel = NodePath("DataContainer/NameLabel")
+DescriptionLabel = NodePath("DataContainer/DescriptionLabel")
+TaskListLabel = NodePath("DataContainer/TaskListLabel")
+TaskContainer = NodePath("DataContainer/TaskBoxContainer")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=527621139]
 layout_mode = 2
 texture = SubResource("NoiseTexture2D_rvx1w")
+expand_mode = 2
 stretch_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=476202835]
+[node name="DataContainer" type="VBoxContainer" parent="." unique_id=476202835]
 layout_mode = 2
+theme_override_constants/separation = 9
 
-[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=526636175]
+[node name="NameLabel" type="Label" parent="DataContainer" unique_id=526636175]
 layout_mode = 2
 text = "Name"
+label_settings = SubResource("LabelSettings_gjptt")
 
-[node name="DescriptionLabel" type="Label" parent="VBoxContainer" unique_id=137666952]
+[node name="DescriptionLabel" type="Label" parent="DataContainer" unique_id=137666952]
 layout_mode = 2
 text = "Description"
 
-[node name="TaskListLabel" type="Label" parent="VBoxContainer" unique_id=375394395]
+[node name="TaskListLabel" type="Label" parent="DataContainer" unique_id=375394395]
 layout_mode = 2
 text = "TaskListName"
+
+[node name="TaskBoxContainer" type="VBoxContainer" parent="DataContainer" unique_id=52065172]
+layout_mode = 2
+theme_override_constants/separation = 4

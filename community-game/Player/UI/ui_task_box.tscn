@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://nofc4vb6hicf"]
 
 [ext_resource type="Script" uid="uid://cwtxgryytubup" path="res://Player/UI/ui_task_box.gd" id="1_sxxh0"]
+[ext_resource type="Texture2D" uid="uid://crwdp137ihmbu" path="res://placeholders/done.png" id="2_e3hk7"]
+[ext_resource type="Texture2D" uid="uid://cu3ott1a6p2py" path="res://placeholders/not_done.png" id="2_pnp5y"]
 
-[node name="UiTaskBox" type="HBoxContainer" unique_id=1333406088]
+[node name="UiTaskBox" type="HBoxContainer" unique_id=1333406088 node_paths=PackedStringArray("CheckMark", "AmountLabel", "DescriptionLabel")]
+theme_override_constants/separation = 13
 script = ExtResource("1_sxxh0")
+CheckMark = NodePath("TextureRect")
+DoneSprite = ExtResource("2_e3hk7")
+NotDoneSprite = ExtResource("2_pnp5y")
+AmountLabel = NodePath("TaskAmount")
+DescriptionLabel = NodePath("TaskDescription")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=996465245]
+layout_mode = 2
+texture = ExtResource("2_pnp5y")
+
+[node name="TaskAmount" type="Label" parent="." unique_id=552448999]
+layout_mode = 2
+text = "0/1"
+
+[node name="TaskDescription" type="Label" parent="." unique_id=2087230264]
+layout_mode = 2
+text = "Description"

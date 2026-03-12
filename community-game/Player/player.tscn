@@ -31,12 +31,25 @@ Description = "How about you uuuuuuh... click those damn orbs??"
 Tasks = Array[ExtResource("5_vtle1")]([SubResource("Resource_k53q1"), SubResource("Resource_fhl08")])
 metadata/_custom_type_script = "uid://d23h7xp3s8yao"
 
+[sub_resource type="Resource" id="Resource_00tjw"]
+script = ExtResource("5_vtle1")
+Description = "Drink a soda can"
+Tag = "drinkSoda"
+AmountNeeded = 3
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_x3vf3"]
+script = ExtResource("4_fhl08")
+Description = "Now go slurp some soda! Yeah... that'll show 'em..."
+Tasks = Array[ExtResource("5_vtle1")]([SubResource("Resource_00tjw")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
 [sub_resource type="Resource" id="Resource_od3ui"]
 script = ExtResource("3_k53q1")
 Name = "Testing!"
 Description = "Testing if my shii work"
 State = 2
-TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1")])
+TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1"), SubResource("Resource_x3vf3")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManage", "InteractCast") groups=["Player"]]

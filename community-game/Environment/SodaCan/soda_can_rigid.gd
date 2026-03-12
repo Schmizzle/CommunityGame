@@ -5,4 +5,5 @@ extends RigidBody3D
 
 func _on_interactable_component__interaction_signal() -> void:
 	print(Message)
+	Globals.PlayerReference.QuestManage.try_increment_task("drinkSoda")
 	queue_free()
