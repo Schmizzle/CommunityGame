@@ -1,0 +1,35 @@
+if {Speaker} == "a":
+	if {Learnt} == false:
+		a: Oh C.. your so dreamy
+		b: We dont want you here!
+		d: This is the lamest houseparty ive ever been invited to
+		c: ...
+	else:
+		a: I must give C my eternal wish.. but everyone will get mad at me if I do it now..
+		We're well past that point. Nevertheless, b and d are blocking this communication.
+elif {Speaker} == "b":
+	b: Man this party sucks. I fucking hate these people.
+	- Want this invite? | [if {X} == true]
+		jump bLeave
+	- Welp
+
+elif {Speaker} == "c":
+	c: I don't want to embarrass myself in front of my friends. 
+	Such 'friends'..
+elif {Speaker} == "d":
+	d: Man, wheres the BEER round this place??
+	d: I wanna get SLOSHED BRO!
+	He's already sloshed.
+	d: Hey mate, I got a invite to a way cooler party after this, want it?
+	- Yes
+		set {X} = true
+	- No
+		set {X} = false
+elif {Speaker} == "intro":
+	Looks like a is being being ganged up on in this house.
+	b, c, and d are all telling a to piss off, but he wont. What's going on here?
+return
+label bLeave
+b: Oh fuck yes, Finally!
+[signal arg="leave"]
+return

@@ -5,10 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
 [ext_resource type="PackedScene" uid="uid://b0qjgpg6v2fw5" path="res://Environment/TestingStuff/VendingMachine/vending_machine.tscn" id="4_kcxp8"]
 [ext_resource type="PackedScene" uid="uid://gfqc05knf2c5" path="res://addons/dialogic/Testing/test_talker.tscn" id="5_4jjoa"]
+[ext_resource type="Texture2D" uid="uid://6pe3ge0mt00b" path="res://Player/Quests/HateConeQuest/a.png" id="6_i7i0x"]
 [ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="6_s6hch"]
+[ext_resource type="Texture2D" uid="uid://dj0o1oxda6k14" path="res://Player/Quests/HateConeQuest/eye.png" id="7_kxvnc"]
 [ext_resource type="ArrayMesh" uid="uid://c8unmikkqq3vm" path="res://Environment/Elements/Rooms/room5.obj" id="7_ol1f0"]
+[ext_resource type="Texture2D" uid="uid://bvba0xp7dor5w" path="res://Player/Quests/HateConeQuest/b.png" id="7_w3mwu"]
 [ext_resource type="Script" uid="uid://xxtcpiic3op2" path="res://Levels/Gym/key_interactable.gd" id="8_l8u6m"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="9_l8u6m"]
+[ext_resource type="Texture2D" uid="uid://dsk1pjel183ij" path="res://Player/Quests/HateConeQuest/c.png" id="9_vof03"]
+[ext_resource type="Texture2D" uid="uid://cqas2h14kjimv" path="res://Player/Quests/HateConeQuest/d.png" id="10_q3vh4"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -95,9 +100,41 @@ QuestTag = "orb1"
 [node name="VendingMachine" parent="InteractableTesting" unique_id=306594449 instance=ExtResource("4_kcxp8")]
 transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.15642905, 0.754381, 4.14131)
 
+[node name="QuestTest" type="Node3D" parent="." unique_id=1559638322]
+
+[node name="a" parent="QuestTest" unique_id=31493115 instance=ExtResource("5_4jjoa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.322767, 2.9857123, 6.313065)
+texture = ExtResource("6_i7i0x")
+timelineToRun = "TL_Hatecone"
+myName = "a"
+
+[node name="intro" parent="QuestTest" unique_id=555501498 instance=ExtResource("5_4jjoa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.965537, 2.9857123, 9.899121)
+texture = ExtResource("7_kxvnc")
+timelineToRun = "TL_Hatecone"
+myName = "intro"
+
+[node name="b" parent="QuestTest" unique_id=158899088 instance=ExtResource("5_4jjoa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.824666, 2.9857123, 3.2940202)
+texture = ExtResource("7_w3mwu")
+timelineToRun = "TL_Hatecone"
+myName = "b"
+
+[node name="c" parent="QuestTest" unique_id=1070479869 instance=ExtResource("5_4jjoa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.311987, 2.9857123, 4.7910457)
+texture = ExtResource("9_vof03")
+timelineToRun = "TL_Hatecone"
+myName = "c"
+
+[node name="d" parent="QuestTest" unique_id=1421305036 instance=ExtResource("5_4jjoa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.768961, 2.9857123, 2.2057593)
+texture = ExtResource("10_q3vh4")
+timelineToRun = "TL_Hatecone"
+myName = "d"
+
 [node name="NPCTesting" type="Node3D" parent="." unique_id=887366026]
 
-[node name="TestTalker" parent="NPCTesting" unique_id=31493115 instance=ExtResource("5_4jjoa")]
+[node name="TestTalker" parent="NPCTesting" unique_id=2013454606 instance=ExtResource("5_4jjoa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.740415, 1.2987777, -3.9297)
 
 [node name="CodeTesting" type="Node3D" parent="." unique_id=1162120206]
@@ -115,7 +152,7 @@ mesh = ExtResource("7_ol1f0")
 shape = SubResource("ConcavePolygonShape3D_ol1f0")
 
 [node name="Room2" type="MeshInstance3D" parent="." unique_id=883798613]
-transform = Transform3D(0.3023621, 0, -0.39821747, 0, 0.5, 0, 0.39821747, 0, 0.3023621, -11.330718, 1.1144695, 4.1215897)
+transform = Transform3D(0.3023621, 0, -0.39821747, 0, 0.5, 0, 0.39821747, 0, 0.3023621, -11.336726, 1.1007347, 4.1258216)
 mesh = ExtResource("7_ol1f0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room2" unique_id=794074710]
