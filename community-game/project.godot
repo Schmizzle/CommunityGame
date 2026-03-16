@@ -24,10 +24,15 @@ Globals="*uid://u0roaemhptg6"
 
 directories/dch_directory={
 "Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
+"a": "res://Player/Quests/HateConeQuest/a.dch",
+"b": "res://Player/Quests/HateConeQuest/b.dch",
+"c": "res://Player/Quests/HateConeQuest/c.dch",
+"d": "res://Player/Quests/HateConeQuest/d.dch",
 "test_character": "res://addons/dialogic/Testing/test_character.dch"
 }
 directories/dtl_directory={
 "FirstObstacle": "res://Player/Quests/LeakQuest/FirstObstacle.dtl",
+"TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl"
 }
 layout/style_directory={}
@@ -64,7 +69,14 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-variables={}
+variables={
+"Fullfilled": 0,
+"Learnt": false,
+"Speaker": "n",
+"X": false,
+"Y": false,
+"Z": false
+}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
