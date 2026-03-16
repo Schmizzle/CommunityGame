@@ -34,7 +34,7 @@ func try_increment_task(tag: String) -> bool:
 		if x.State == x.QuestStates.Active:
 			var ListToCheck: TaskList = x.ActiveTaskList
 			for y in ListToCheck.Tasks:
-				if y.Tag == tag:
+				if (y.Tag == tag) and (not y.Complete):
 					y.Amount += 1
 					y.Amount = clamp(y.Amount, 0, y.AmountNeeded)
 					IncrementedTask = y
