@@ -147,3 +147,17 @@ func update_tasklist_display(quest: Quest):
 	ExistingQuestBoxes[quest].TaskListLabel.text = quest.ActiveTaskList.Description
 
 #endregion
+
+
+#region Queries WIP!!!!!
+
+"func query_tasklist_complete(tag: String) -> bool:
+	var ReturnValue: bool = false
+	
+	for x in Quests:
+		for y in x.TaskLists:
+			if y.
+	
+	return ReturnValue"
+
+#endregion
