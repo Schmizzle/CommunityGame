@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dyh7vjipo6bau"]
+
+[ext_resource type="PackedScene" uid="uid://cb0udm0xjtkip" path="res://NPCs/Base/npc_talking_component.tscn" id="1_47mba"]
+[ext_resource type="Script" uid="uid://cgleeltfvpd4w" path="res://NPCs/Testing/test_npc.gd" id="2_22h6c"]
+[ext_resource type="Texture2D" uid="uid://bo1cogvetaidl" path="res://icon.svg" id="3_22h6c"]
+[ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="4_dbbdd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dbbdd"]
+radius = 0.92670655
+
+[node name="TestNpc" type="Node3D" unique_id=706979957]
+script = ExtResource("2_22h6c")
+
+[node name="NpcTalkingComponent" parent="." unique_id=815252161 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("1_47mba")]
+NPCParent = NodePath("..")
+InteractComponent = NodePath("../InteractableComponent")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=100663402]
+billboard = 2
+texture = ExtResource("3_22h6c")
+
+[node name="InteractableComponent" parent="." unique_id=1550476877 instance=ExtResource("4_dbbdd")]
+
+[node name="CollisionShape3D" parent="InteractableComponent" index="0" unique_id=364242616]
+shape = SubResource("SphereShape3D_dbbdd")
+
+[editable path="NpcTalkingComponent"]
+[editable path="InteractableComponent"]

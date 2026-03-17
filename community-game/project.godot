@@ -36,7 +36,10 @@ directories/dtl_directory={
 "TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://NPCs/DialogicData/new_style.tres",
+"default_style": "res://NPCs/DialogicData/new_style.tres"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -79,8 +82,8 @@ variables={
 "Z": false
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://NPCs/DialogicData/new_style.tres"]
+layout/default_style="res://NPCs/DialogicData/new_style.tres"
 
 [display]
 

@@ -37,6 +37,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+#region Input
+	
 #region Moving
 	# Gets the player's movement input
 	InputDirection = Input.get_vector("move-backward","move-forward","move-right","move-left")
@@ -82,6 +84,7 @@ func _process(delta: float) -> void:
 		InteractCast.get_collider().call("on_interacted")
 #endregion
 	
+#endregion
 	
 
 func _input(event):
@@ -95,6 +98,7 @@ func _input(event):
 	
 
 
-func change_input_enabled(move: bool, look: bool) -> void:
+func change_input_enabled(move: bool, look: bool, mouseMode: Input.MouseMode) -> void:
 	CanMove = move
 	CanLook = look
+	Input.set_mouse_mode(mouseMode)

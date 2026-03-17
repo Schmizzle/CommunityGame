@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cb0udm0xjtkip"]
+
+[ext_resource type="Script" uid="uid://bm8672ksxh38w" path="res://NPCs/Base/npc_talking_component.gd" id="1_4llrw"]
+
+[node name="NpcTalkingComponent" type="Node3D" unique_id=815252161]
+script = ExtResource("1_4llrw")
