@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 Globals="*uid://u0roaemhptg6"
+ProgressionTracker="*uid://cl3w886dp13td"
 
 [dialogic]
 
