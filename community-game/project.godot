@@ -34,7 +34,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "FirstObstacle": "res://Player/Quests/LeakQuest/FirstObstacle.dtl",
 "TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
-"test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl"
+"test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
+"test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl"
 }
 layout/style_directory={
 "": "res://NPCs/DialogicData/new_style.tres",

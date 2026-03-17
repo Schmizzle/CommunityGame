@@ -99,6 +99,6 @@ func _input(event):
 
 
 func change_input_enabled(move: bool, look: bool, mouseMode: Input.MouseMode) -> void:
+	Input.set_mouse_mode(mouseMode)
 	CanMove = move
 	CanLook = look
-	Input.set_mouse_mode(mouseMode)

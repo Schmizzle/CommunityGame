@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dsk1pjel183ij" path="res://Player/Quests/HateConeQuest/c.png" id="9_vof03"]
 [ext_resource type="Texture2D" uid="uid://cqas2h14kjimv" path="res://Player/Quests/HateConeQuest/d.png" id="10_q3vh4"]
 [ext_resource type="PackedScene" uid="uid://dyh7vjipo6bau" path="res://NPCs/Testing/test_npc.tscn" id="15_q3vh4"]
-[ext_resource type="Resource" uid="uid://c0woyqg48dbpp" path="res://addons/dialogic/Testing/test_timeline.dtl" id="16_yy33a"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -220,13 +219,12 @@ shape = SubResource("BoxShape3D_sh7xe")
 
 [node name="InteractableComponent" parent="BedRoomKey" unique_id=1550476877 instance=ExtResource("9_l8u6m")]
 
-[node name="TestNpc" parent="BedRoomKey" unique_id=706979957 instance=ExtResource("15_q3vh4")]
-transform = Transform3D(1.3725003, 0, 0, 0, 8.84494, 0, 0, 0, 6.6952944, -9.193947, 7.329162, -35.056274)
-DefaultTimelineToSay = ExtResource("16_yy33a")
-
 [node name="TestTalker" parent="BedRoomKey" unique_id=1824888519 instance=ExtResource("5_4jjoa")]
 transform = Transform3D(1.3725003, 0, 0, 0, 8.844939, 0, 0, 0, 6.695294, -2.3963041, 2.8220963, -37.074406)
 timelineToRun = "test_timeline"
 myName = "testicle"
+
+[node name="TestNpc" parent="." unique_id=706979957 instance=ExtResource("15_q3vh4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.8504562, -4)
 
 [connection signal="_interaction_signal" from="BedRoomKey/InteractableComponent" to="BedRoomKey" method="_on_interactable_component__interaction_signal"]

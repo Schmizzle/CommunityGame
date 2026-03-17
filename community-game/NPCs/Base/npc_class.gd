@@ -1,4 +1,5 @@
 @abstract
+@icon("res://NPCs/Base/NPCIcon.png")
 extends Node3D
 class_name NPC
 

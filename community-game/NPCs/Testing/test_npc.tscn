@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://dyh7vjipo6bau"]
 
 [ext_resource type="PackedScene" uid="uid://cb0udm0xjtkip" path="res://NPCs/Base/npc_talking_component.tscn" id="1_47mba"]
+[ext_resource type="Resource" uid="uid://c0woyqg48dbpp" path="res://addons/dialogic/Testing/test_timeline.dtl" id="2_6xa5f"]
 [ext_resource type="Script" uid="uid://cgleeltfvpd4w" path="res://NPCs/Testing/test_npc.gd" id="2_22h6c"]
+[ext_resource type="Resource" uid="uid://5he65uxvag7l" path="res://addons/dialogic/Testing/test_timeline_2.dtl" id="3_3cmus"]
 [ext_resource type="Texture2D" uid="uid://bo1cogvetaidl" path="res://icon.svg" id="3_22h6c"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="4_dbbdd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dbbdd"]
 radius = 0.92670655
 
-[node name="TestNpc" type="Node3D" unique_id=706979957]
+[node name="TestNpc" type="Node3D" unique_id=706979957 node_paths=PackedStringArray("TalkingComponent")]
 script = ExtResource("2_22h6c")
+DefaultTimelineToSay = ExtResource("2_6xa5f")
+DifferentTimeline = ExtResource("3_3cmus")
+TalkingComponent = NodePath("NpcTalkingComponent")
 
 [node name="NpcTalkingComponent" parent="." unique_id=815252161 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("1_47mba")]
 NPCParent = NodePath("..")

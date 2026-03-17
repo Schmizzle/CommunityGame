@@ -1,0 +1,10 @@
+join test_character left
+test_character: Now THIS is a different timeline
+test_character: Phew!
+test_character: Who would've thought!
+- Not me!
+	test_character: Well now you know!
+- I mean I could've guessed...
+	test_character: All right, no need to get ahead of yourself
+test_character: Goodbye!!!
+[end_timeline]
