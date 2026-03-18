@@ -5,5 +5,5 @@ extends RigidBody3D
 
 func _on_interactable_component__interaction_signal() -> void:
 	print(Message)
-	Globals.PlayerReference.QuestManagerNode.try_increment_task("drinkSoda")
+	Globals.PlayerReference.QuestManagerNode.try_increment_task(ProgressionTracker.TaskTags.Test_SodaDrink)
 	queue_free()

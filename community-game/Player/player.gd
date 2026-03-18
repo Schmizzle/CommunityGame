@@ -95,7 +95,6 @@ func _input(event):
 		LookRotation.y = clamp(LookRotation.y, -75, 89)
 #endregion
 	
-	
 
 
 func change_input_enabled(move: bool, look: bool, mouseMode: Input.MouseMode) -> void:

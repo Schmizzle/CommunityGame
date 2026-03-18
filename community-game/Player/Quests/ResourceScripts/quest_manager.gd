@@ -17,7 +17,7 @@ func activate_quest(id: int):
 	pass
 
 
-func try_increment_task(tag: String) -> bool:
+func try_increment_task(tag: ProgressionTracker.TaskTags) -> bool:
 	var IncrementedSomething: bool = false
 	var IncrementedTask: Task
 	var TaskCompleted: bool = false
@@ -34,32 +34,33 @@ func try_increment_task(tag: String) -> bool:
 		if x.State == x.QuestStates.Active:
 			var ListToCheck: TaskList = x.ActiveTaskList
 			for y in ListToCheck.Tasks:
-				if (y.Tag == tag) and (not y.Complete):
+				if (y.Tag == tag) and (not y.Completed):
 					y.Amount += 1
 					y.Amount = clamp(y.Amount, 0, y.AmountNeeded)
 					IncrementedTask = y
 					IncrementedSomething = true
 					
 					update_task_display(y)
-					print("task of tag " + tag + " incremented")
+					print("task of tag " + str(tag) + " incremented")
 	
 	# checks if the task was completed
 	if IncrementedTask != null:
 		if IncrementedTask.Amount >= IncrementedTask.AmountNeeded:
-			IncrementedTask.Complete = true
+			IncrementedTask.Completed = true
 			TaskCompleted = true
-			print("task of tag " + tag + " completed")
+			print("task of tag " + str(tag) + " completed")
 	
 	# Checks if the active tasklist was completed
 	if TaskCompleted:
 		TaskListCompleted = true
 		for x in QuestChecked.ActiveTaskList.Tasks:
-			if not x.Complete:
+			if not x.Completed:
 				TaskListCompleted = false
 				print("task list not completed")
 	
 	if TaskListCompleted:
 		print("Whole task list completed")
+		QuestChecked.ActiveTaskList.Completed = true
 		
 		var CurrentQuestIndex: int
 		CurrentQuestIndex = QuestChecked.TaskLists.find(QuestChecked.ActiveTaskList)
@@ -151,13 +152,34 @@ func update_tasklist_display(quest: Quest):
 
 #region Queries WIP!!!!!
 
-"func query_tasklist_complete(tag: String) -> bool:
+func query_quest_complete(tag: ProgressionTracker.QuestTags) -> bool:
+	var ReturnValue: bool = false
+	
+	for x in Quests:
+		if (x.Tag == tag) and (x.State == Quest.QuestStates.Complete):
+			ReturnValue = true
+	
+	return ReturnValue
+
+func query_tasklist_complete(tag: ProgressionTracker.TasklistTags) -> bool:
 	var ReturnValue: bool = false
 	
 	for x in Quests:
 		for y in x.TaskLists:
-			if y.
+			if (y.Tag == tag) and (y.Completed):
+				ReturnValue = true
 	
-	return ReturnValue"
+	return ReturnValue
+
+func query_task_complete(tag: ProgressionTracker.TaskTags) -> bool:
+	var ReturnValue: bool = false
+	
+	for x in Quests:
+		for y in x.TaskLists:
+			for z in y.Tasks:
+				if (z.Tag == tag) and (z.Completed):
+					ReturnValue = true
+	
+	return ReturnValue
 
 #endregion

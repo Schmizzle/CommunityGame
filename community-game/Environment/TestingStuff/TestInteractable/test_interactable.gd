@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 @export var Message: String = "N/A"
-@export var QuestTag: String
+@export var QuestTag: ProgressionTracker.TaskTags
 
 
 func _on_interactable_component__interaction_signal() -> void:

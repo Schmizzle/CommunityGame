@@ -1,6 +1,7 @@
 extends Resource
 class_name Quest
 
+@export var Tag: ProgressionTracker.QuestTags
 @export var Name: String = "DEFAULT"
 @export var Description: String = "DEFAULT"
 
