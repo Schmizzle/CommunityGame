@@ -15,9 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://dsk1pjel183ij" path="res://Player/Quests/HateConeQuest/c.png" id="9_vof03"]
 [ext_resource type="Texture2D" uid="uid://cqas2h14kjimv" path="res://Player/Quests/HateConeQuest/d.png" id="10_q3vh4"]
 [ext_resource type="PackedScene" uid="uid://dyh7vjipo6bau" path="res://NPCs/Testing/test_npc.tscn" id="15_q3vh4"]
+[ext_resource type="Script" uid="uid://bc5t7nwjpa0fv" path="res://Levels/Gym/camera_manager.gd" id="16_ontrh"]
 [ext_resource type="Texture2D" uid="uid://cafs67a4yidnq" path="res://Levels/Gym/LevelSprites/backgroundbuildingblurred.png" id="16_ygpug"]
+[ext_resource type="PackedScene" uid="uid://cssh8bw1tfdfv" path="res://Levels/Gym/Cameras/camera_scene.tscn" id="17_ontrh"]
 [ext_resource type="Texture2D" uid="uid://cdaprkaalqqpa" path="res://Levels/Gym/LevelSprites/foregroundfliers.png" id="17_x4v8x"]
-[ext_resource type="PackedScene" uid="uid://dlj6hyt2nse2d" path="res://Levels/Gym/cameras_all.tscn" id="18_n2iit"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -86,7 +87,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5017912, 0)
 [node name="Blocks" type="Node3D" parent="." unique_id=862098181]
 
 [node name="Node3D" parent="Blocks" unique_id=239868963 instance=ExtResource("1_kit3i")]
-transform = Transform3D(11.732837, 0, 0, 0, 1, 0, 0, 0, 28.08171, 0, -0.50626767, -5.5678425)
+transform = Transform3D(11.732837, 0, 0, 0, 1, 0, 0, 0, 11.732837, 0, -0.50626767, 0)
 
 [node name="Node3D2" parent="Blocks" unique_id=983906796 instance=ExtResource("1_kit3i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.2789426, 5.955337, 1.7551073, 0)
@@ -96,12 +97,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.2789426, 5.955337, 1.7551073, 
 [node name="TestInteractable" parent="InteractableTesting" unique_id=326215504 instance=ExtResource("3_0l8pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.567909, 2.1201885, 1.6327581)
 Message = "This object always lies"
-QuestTag = 2
+QuestTag = "orb2"
 
 [node name="TestInteractable2" parent="InteractableTesting" unique_id=1737886960 instance=ExtResource("3_0l8pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.567909, 2.1201885, -1.5182796)
 Message = "This object always tells the truth"
-QuestTag = 1
+QuestTag = "orb1"
 
 [node name="VendingMachine" parent="InteractableTesting" unique_id=306594449 instance=ExtResource("4_kcxp8")]
 transform = Transform3D(-0.2730717, 0, -0.043880787, 0, 0.2765749, 0, 0.043880787, 0, -0.2730717, -0.15642905, 0.754381, 4.14131)
@@ -316,32 +317,54 @@ texture = ExtResource("16_ygpug")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6458769, 0.5551243, -1.9733517)
 texture = ExtResource("17_x4v8x")
 
-[node name="Sprite3D5" type="Sprite3D" parent="Decoration/Sprite3D5" unique_id=275032971]
-transform = Transform3D(1.6179445, 0, 0, 0, 1.5573378, 0, 0, 0, 1, -10.949286, 0.5551243, 7.7744145)
-texture = ExtResource("17_x4v8x")
-
 [node name="fliers2" type="Sprite3D" parent="Decoration" unique_id=1872588589]
 transform = Transform3D(-0.91915596, 0, 0.39389375, 0, 1, 0, -0.39389375, 0, -0.91915596, -3.5543687, 2.1486864, -3.713035)
 texture = ExtResource("17_x4v8x")
 
-[node name="Cameras" parent="." unique_id=1583813655 instance=ExtResource("18_n2iit")]
+[node name="Cameras" type="Node3D" parent="." unique_id=551347748]
+script = ExtResource("16_ontrh")
+fixedCamMode = false
 
-[node name="Camera3D" parent="Cameras/Camera1" parent_id_path=PackedInt32Array(1583813655, 278465853) index="0" unique_id=16740598]
-transform = Transform3D(-0.8121752, 0.31325316, -0.4921828, 0, 0.84362584, 0.5369316, 0.5834136, 0.4360825, -0.685172, -4.6657686, 6.7450533, -7.522494)
+[node name="Camera1" parent="Cameras" unique_id=278465853 instance=ExtResource("17_ontrh")]
 
-[node name="Area3D" parent="Cameras/Camera1" parent_id_path=PackedInt32Array(1583813655, 278465853) index="1" unique_id=374430727]
-followPlayer = true
-offset = Vector3(-5, 5, -5)
+[node name="Camera3D" parent="Cameras/Camera1" index="0" unique_id=16740598]
+transform = Transform3D(-0.8121752, 0, -0.58341354, 0, 1, 0, 0.5834136, 0, -0.81217515, -5.0185204, 4.000229, -5.4252825)
+fov = 58.3
+size = 4.553
 
-[node name="CollisionShape3D" parent="Cameras/Camera1/Area3D" index="0" unique_id=172106046]
-transform = Transform3D(1, 5.2154064e-08, -2.2351742e-07, 0, 0.9999999, -9.313226e-08, 0, -1.4901161e-07, 0.99999976, 4.6416183, -2.6426384, -4.405661)
+[node name="Area3D" parent="Cameras/Camera1" index="1" unique_id=374430727]
+collision_layer = 2
+collision_mask = 3
 
-[node name="CollisionShape3D" parent="Cameras/Camera3/Area3D" parent_id_path=PackedInt32Array(1583813655, 549397179, 374430727) index="0" unique_id=172106046]
-transform = Transform3D(1, 5.2154064e-08, -2.2351742e-07, 0, 0.9999999, -9.313226e-08, 0, -1.4901161e-07, 0.99999976, 5.685814, -2.642639, 1.4181976)
+[node name="Camera2" parent="Cameras" unique_id=1901651717 instance=ExtResource("17_ontrh")]
+transform = Transform3D(-0.07245485, 0, 0.9973717, 0, 1, 0, -0.9973717, 0, -0.07245485, -3.2768884, 4.7683716e-07, 6.310877)
+
+[node name="Camera3D" parent="Cameras/Camera2" index="0" unique_id=16740598]
+transform = Transform3D(-0.06848713, 0.41227666, -0.90848076, 0.052333772, 0.9108499, 0.40940648, 0.99627846, -0.019505143, -0.08395747, -5.0378394, 5.232009, -4.505389)
+fov = 58.3
+
+[node name="Area3D" parent="Cameras/Camera2" index="1" unique_id=374430727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9107385, 3.5928645, -5.2373934)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" parent="Cameras/Camera2/Area3D" index="0" unique_id=172106046]
+transform = Transform3D(1.0000114, 5.215486e-08, -3.799796e-07, 0, 0.9999999, -9.313226e-08, 1.7881393e-07, -1.4901433e-07, 1.000009, 4.121449, -1.4759216, 0.5256882)
+
+[node name="Camera3" parent="Cameras" unique_id=1593001447 instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.3102045, -1.9073486e-06, -4.436125)
+
+[node name="Camera3D" parent="Cameras/Camera3" index="0" unique_id=16740598]
+transform = Transform3D(0.355936, 0.1731175, -0.91833544, 0.029645309, 0.9801052, 0.19625205, 0.93404, -0.097077504, 0.34372258, -11.171196, 7.5667033, 2.5598273)
+fov = 72.3
+size = 4.553
+
+[node name="Area3D" parent="Cameras/Camera3" index="1" unique_id=374430727]
+collision_layer = 2
+collision_mask = 3
 
 [connection signal="_interaction_signal" from="BedRoomKey/InteractableComponent" to="BedRoomKey" method="_on_interactable_component__interaction_signal"]
 
-[editable path="Cameras"]
 [editable path="Cameras/Camera1"]
 [editable path="Cameras/Camera2"]
 [editable path="Cameras/Camera3"]

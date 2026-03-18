@@ -8,6 +8,10 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b4nnr"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_k53q1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k53q1"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_l8h54"]
 font_size = 53
 outline_size = 28
@@ -50,8 +54,7 @@ metadata/_custom_type_script = "uid://d23h7xp3s8yao"
 script = ExtResource("3_k53q1")
 Name = "Testing!"
 Description = "Testing if my shii work"
-State = 2
-TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1"), SubResource("Resource_00tjw")])
+TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1"), SubResource("Resource_od3ui")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "InteractCast") groups=["Player"]]
@@ -69,6 +72,13 @@ InteractCast = NodePath("Pivot/InteractCast")
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1736355451]
 shape = SubResource("CapsuleShape3D_b4nnr")
 debug_color = Color(0.8182316, 0.0018720936, 0.97130984, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerCollision" unique_id=1075509356]
+mesh = SubResource("CapsuleMesh_k53q1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerCollision/MeshInstance3D" unique_id=1766986244]
+transform = Transform3D(1, 0, 0, 0, 0.2446379, 0, 0, 0, 0.5273694, 0.45905465, 0.539125, 0)
+mesh = SubResource("BoxMesh_k53q1")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=501292623]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
