@@ -4,7 +4,7 @@ extends NPC
 @export var DifferentTimeline: DialogicTimeline
 
 
-func get_timeline_to_say() -> DialogicTimeline:
+func _get_timeline_to_say() -> DialogicTimeline:
 	if ProgressionTracker.TestBool:
 		return DifferentTimeline
 	else:

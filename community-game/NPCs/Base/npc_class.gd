@@ -7,4 +7,4 @@ class_name NPC
 
 
 @abstract
-func get_timeline_to_say() -> DialogicTimeline
+func _get_timeline_to_say() -> DialogicTimeline

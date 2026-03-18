@@ -19,7 +19,7 @@ func on_interacted_with() -> void:
 func start_talking():
 	Globals.PlayerReference.change_input_enabled(false, false, Input.MOUSE_MODE_VISIBLE)
 	BeingTalkedTo = true
-	Dialogic.start(NPCParent.get_timeline_to_say())
+	Dialogic.start(NPCParent._get_timeline_to_say())
 	Dialogic.timeline_ended.connect(stop_talking)
 
 
