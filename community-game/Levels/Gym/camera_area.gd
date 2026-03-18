@@ -1,4 +1,5 @@
 extends Area3D
+class_name CameraArea
 
 @onready var cameras = get_tree().get_nodes_in_group("Camera Group")
 @onready var myCam: Camera3D = $"../Camera3D"
@@ -9,7 +10,7 @@ extends Area3D
 func _on_body_entered(body: Node3D) -> void:
 	if(!camerasParent.fixedCamMode):
 		print(body.name)
-		if body.name == "Player":
+		if body is Player:
 			print("cam change")
 			#for c in cameras:
 			myCam.current = true	

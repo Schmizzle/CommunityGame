@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dyh7vjipo6bau" path="res://NPCs/Testing/test_npc.tscn" id="15_q3vh4"]
 [ext_resource type="Texture2D" uid="uid://cafs67a4yidnq" path="res://Levels/Gym/LevelSprites/backgroundbuildingblurred.png" id="16_ygpug"]
 [ext_resource type="Texture2D" uid="uid://cdaprkaalqqpa" path="res://Levels/Gym/LevelSprites/foregroundfliers.png" id="17_x4v8x"]
-[ext_resource type="PackedScene" uid="uid://dlj6hyt2nse2d" path="res://Levels/Gym/cameras_all.tscn" id="18_n2iit"]
+[ext_resource type="PackedScene" path="res://Levels/Gym/cameras_all.tscn" id="18_n2iit"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 

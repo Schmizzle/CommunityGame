@@ -1,4 +1,5 @@
 extends Node3D
+class_name CameraManager
 
 @export var fixedCamMode: bool = true
 

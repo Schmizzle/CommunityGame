@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b2bgc3rw5uf45" path="res://Player/Quests/ResourceScripts/quest_manager.tscn" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://bs5wutnvkbjir" path="res://Player/Quests/ResourceScripts/quest_resource.gd" id="3_k53q1"]
 [ext_resource type="Script" uid="uid://d23h7xp3s8yao" path="res://Player/Quests/ResourceScripts/tasklist_resource.gd" id="4_fhl08"]
-[ext_resource type="Script" uid="uid://dutlivtx32sdj" path="res://Player/Quests/ResourceScripts/task_resource.gd" id="5_vtle1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b4nnr"]
 
@@ -17,44 +16,11 @@ font_size = 53
 outline_size = 28
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Resource" id="Resource_k53q1"]
-script = ExtResource("5_vtle1")
-Tag = 1
-Description = "Click the orb that always tells the truth"
-metadata/_custom_type_script = "uid://dutlivtx32sdj"
-
-[sub_resource type="Resource" id="Resource_fhl08"]
-script = ExtResource("5_vtle1")
-Tag = 2
-Description = "Click the orb that always lies"
-metadata/_custom_type_script = "uid://dutlivtx32sdj"
-
-[sub_resource type="Resource" id="Resource_vtle1"]
-script = ExtResource("4_fhl08")
-Tag = 1
-Description = "How about you uuuuuuh... click those damn orbs??"
-Tasks = Array[ExtResource("5_vtle1")]([SubResource("Resource_k53q1"), SubResource("Resource_fhl08")])
-metadata/_custom_type_script = "uid://d23h7xp3s8yao"
-
-[sub_resource type="Resource" id="Resource_od3ui"]
-script = ExtResource("5_vtle1")
-Tag = 3
-Description = "Drink a soda can"
-AmountNeeded = 3
-metadata/_custom_type_script = "uid://dutlivtx32sdj"
-
-[sub_resource type="Resource" id="Resource_00tjw"]
-script = ExtResource("4_fhl08")
-Tag = 2
-Description = "Now go slurp some soda! Yeah... that'll show 'em..."
-Tasks = Array[ExtResource("5_vtle1")]([SubResource("Resource_od3ui")])
-metadata/_custom_type_script = "uid://d23h7xp3s8yao"
-
 [sub_resource type="Resource" id="Resource_x3vf3"]
 script = ExtResource("3_k53q1")
 Name = "Testing!"
 Description = "Testing if my shii work"
-TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_vtle1"), SubResource("Resource_od3ui")])
+State = 2
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("CameraPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "InteractCast") groups=["Player"]]
