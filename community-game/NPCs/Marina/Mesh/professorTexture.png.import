@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3ott1a6p2py"
-path="res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"
+uid="uid://bf4p26d3spif8"
+path="res://.godot/imported/professorTexture.png-7a8a0a801a6a4e9ac3de10fedb1006a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholders/not_done.png"
-dest_files=["res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"]
+source_file="res://NPCs/Marina/Mesh/professorTexture.png"
+dest_files=["res://.godot/imported/professorTexture.png-7a8a0a801a6a4e9ac3de10fedb1006a9.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

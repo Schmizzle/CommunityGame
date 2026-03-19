@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3ott1a6p2py"
-path="res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"
+uid="uid://cnou0skephfhl"
+path="res://.godot/imported/marinaGlasses.png-7e1701eb798fd75862b01e5a86496270.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholders/not_done.png"
-dest_files=["res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"]
+source_file="res://NPCs/Marina/Mesh/marinaGlasses.png"
+dest_files=["res://.godot/imported/marinaGlasses.png-7e1701eb798fd75862b01e5a86496270.ctex"]
 
 [params]
 

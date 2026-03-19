@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="27_c8vk2"]
 [ext_resource type="Script" uid="uid://j7pdxvhrysxc" path="res://Player/Quests/water_well.gd" id="27_mb3nd"]
 [ext_resource type="PackedScene" uid="uid://dkw1s6sc3xtxg" path="res://Environment/Elements/Interior/chair.glb" id="28_io07x"]
+[ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="30_c8vk2"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
 
@@ -536,5 +537,8 @@ debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
 
 [node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume4" unique_id=1199433678]
 transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86602545, 0.5, 0.50000006, 0.4330127, -0.75, -1.9598064, 4.375637, -3.234871)
+
+[node name="MarinaNPC" parent="." unique_id=1446232392 instance=ExtResource("30_c8vk2")]
+transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.742434, 0.9275619, -23.750753)
 
 [connection signal="_interaction_signal" from="Buildings/WaterWell/InteractableComponent" to="Buildings/WaterWell" method="_on_interactable_component__interaction_signal"]
