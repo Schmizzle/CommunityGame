@@ -13,6 +13,7 @@ elif {DeliverWaterQuest.hasWater} == true:
 	Marina: None of my readings are showing up anything.
 	Marina: Where'd you even get this sample??
 	Marina: Fine I'll do it myself.
+	set 
 	Marina: Outta my way.
 	set {DeliverWaterQuest.deliveredWater} = true
 else:
