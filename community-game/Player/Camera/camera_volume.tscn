@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dce77hwdbi0bn"]
+
+[ext_resource type="Script" uid="uid://bfdwv5hoxxbij" path="res://Player/Camera/camera_volume.gd" id="1_j41ol"]
+
+[node name="CameraVolume" type="Area3D" unique_id=1125341515 node_paths=PackedStringArray("Camera")]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_j41ol")
+Camera = NodePath("")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
