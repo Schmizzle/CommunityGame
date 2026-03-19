@@ -12,6 +12,7 @@ var TargetVelocity: Vector3
 # Look variables
 var CanLook: bool = true
 @export var Sensitivity: float = 0.3
+var ControllerLookMultiplier: float = 2
 var LookRotation: Vector2 = Vector2.ZERO
 @export var LookPivot: Node3D
 var YRotationDirection: float
@@ -53,7 +54,7 @@ func _process(delta: float) -> void:
 	else:
 		YRotationDirection = LookPivot.global_rotation.y
 	
-	InputDirection = Input.get_vector("move-right","move-left","move-forward","move-backward")
+	InputDirection = Input.get_vector("move-left", "move-right","move-forward","move-backward")
 	Direction = Vector3(InputDirection.x, 0, InputDirection.y).rotated(Vector3.UP, YRotationDirection)
 	
 	# Sets the horizontal components of target velocity
@@ -68,7 +69,7 @@ func _process(delta: float) -> void:
 		TargetVelocity.y = 0
 	
 	# lets the player jump
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+	if is_on_floor() and Input.is_action_just_pressed("jump") and CanMove:
 		TargetVelocity.y = JumpForce
 	
 	# Sets velocity to be the target velocity and moves the player according to it
@@ -79,6 +80,9 @@ func _process(delta: float) -> void:
 #region Looking
 	if CanLook:
 		if not UsingFixedCamera:
+			var LookVector = Input.get_vector("look_left","look_right","look_up","look_down")
+			add_look_rotation(LookVector * ControllerLookMultiplier)
+			
 			rotation_degrees.y = LookRotation.x
 			LookPivot.rotation_degrees.x = LookRotation.y
 		elif Direction != Vector3.ZERO:
@@ -105,18 +109,18 @@ func _process(delta: float) -> void:
 func _input(event):
 #region Getting mouse look data
 	if event is InputEventMouseMotion:
-		LookRotation.y -= (event.relative.y * Sensitivity)
-		LookRotation.x -= (event.relative.x * Sensitivity)
-		LookRotation.y = clamp(LookRotation.y, -75, 89)
+		add_look_rotation(event.relative)
 #endregion
-	
 
+func add_look_rotation(vector: Vector2):
+	LookRotation.y -= (vector.y * Sensitivity)
+	LookRotation.x -= (vector.x * Sensitivity)
+	LookRotation.y = clamp(LookRotation.y, -75, 89)
 
 func change_input_enabled(move: bool, look: bool, mouseMode: Input.MouseMode) -> void:
 	Input.set_mouse_mode(mouseMode)
 	CanMove = move
 	CanLook = look
-
 
 func switch_to_fp_camera():
 	FPCamera.make_current()
