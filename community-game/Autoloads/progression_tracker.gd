@@ -11,7 +11,7 @@ enum TasklistTags {
 	NaN, 
 	Test_OrbClicking, Test_SodaDrinking,
 	Sleepy_Lavender, Sleepy_SlothWax, Sleepy_EssenceOfMoonlight,
-	Deliver_Water
+	Deliver_Water_Meet, Deliver_Water_Collect, Deliver_Water_Deliver,
 	}
 
 enum TaskTags {
