@@ -86,33 +86,6 @@ State = 2
 TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_5htga"), SubResource("Resource_p5o4e"), SubResource("Resource_gu6f8")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
-[sub_resource type="Resource" id="Resource_5htga"]
-script = ExtResource("4_fhl08")
-Tag = 3
-Description = "Get the lavender from the forbidden plains"
-metadata/_custom_type_script = "uid://d23h7xp3s8yao"
-
-[sub_resource type="Resource" id="Resource_p5o4e"]
-script = ExtResource("4_fhl08")
-Tag = 4
-Description = "Get the sloth wax"
-metadata/_custom_type_script = "uid://d23h7xp3s8yao"
-
-[sub_resource type="Resource" id="Resource_gu6f8"]
-script = ExtResource("4_fhl08")
-Tag = 5
-Description = "Get the essence of moonlight"
-metadata/_custom_type_script = "uid://d23h7xp3s8yao"
-
-[sub_resource type="Resource" id="Resource_k53q1"]
-script = ExtResource("3_k53q1")
-Tag = 2
-Name = "Conk the FUCK out"
-Description = "Help this sleepy man in need"
-State = 2
-TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_5htga"), SubResource("Resource_p5o4e"), SubResource("Resource_gu6f8")])
-metadata/_custom_type_script = "uid://bs5wutnvkbjir"
-
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "CameraManagerNode", "FPCamera", "InteractCast") groups=["Player"]]
 collision_layer = 2
 collision_mask = 5
