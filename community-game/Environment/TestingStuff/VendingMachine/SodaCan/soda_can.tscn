@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://egpaculqw1o8"]
 
-[ext_resource type="Script" uid="uid://bpu4acc1nbkhm" path="res://Environment/SodaCan/soda_can_rigid.gd" id="1_23iha"]
+[ext_resource type="Script" uid="uid://bpu4acc1nbkhm" path="res://Environment/TestingStuff/VendingMachine/SodaCan/soda_can_rigid.gd" id="1_23iha"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="2_sh4ay"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_s6hch"]

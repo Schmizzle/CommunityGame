@@ -37,10 +37,7 @@ directories/dtl_directory={
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
 "test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl"
 }
-layout/style_directory={
-"": "res://NPCs/DialogicData/new_style.tres",
-"default_style": "res://NPCs/DialogicData/new_style.tres"
-}
+layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

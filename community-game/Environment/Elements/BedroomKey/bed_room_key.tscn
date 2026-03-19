@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bjgmlrrvdph75"]
+
+[ext_resource type="Script" uid="uid://xxtcpiic3op2" path="res://Environment/Elements/BedroomKey/key_interactable.gd" id="1_0v3ur"]
+[ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="2_bkhxd"]
+[ext_resource type="PackedScene" uid="uid://gfqc05knf2c5" path="res://addons/dialogic/Testing/test_talker.tscn" id="3_0mg0a"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l8u6m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sh7xe"]
+
+[node name="BedRoomKey" type="StaticBody3D" unique_id=1324610407]
+transform = Transform3D(0.7285974, 0, 0, 0, 0.11305903, 0, 0, 0, 0.14935867, 0, 0, 0)
+script = ExtResource("1_0v3ur")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=261728500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6944618, 0)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=977586434]
+transform = Transform3D(-4.371139e-08, 0, -0.14356881, 0, 1, 0, 1, 0, -6.275592e-09, 0.41351348, 0.021274328, -0.9428608)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1887993743]
+transform = Transform3D(-4.371139e-08, 0, -0.14356881, 0, 1, 0, 1, 0, -6.275592e-09, 0.13090628, 0.021274328, -0.9428608)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D" unique_id=2060345416]
+transform = Transform3D(-1.0070061e-07, 0, -0.47535896, 0, 1, 0, 2.3037615, 0, -2.07786e-08, -0.5999986, 0.021274328, 0.032788455)
+mesh = SubResource("BoxMesh_l8u6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1499501411]
+shape = SubResource("BoxShape3D_sh7xe")
+
+[node name="InteractableComponent" parent="." unique_id=1550476877 instance=ExtResource("2_bkhxd")]
+
+[node name="TestTalker" parent="." unique_id=31493115 instance=ExtResource("3_0mg0a")]
+transform = Transform3D(1.3725003, 0, 0, 0, 8.844939, 0, 0, 0, 6.695294, -2.3963041, 2.8220963, -37.074406)
+timelineToRun = "test_timeline"
+myName = "testicle"
+
+[connection signal="_interaction_signal" from="InteractableComponent" to="." method="_on_interactable_component__interaction_signal"]
