@@ -83,13 +83,13 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 size = Vector3(12.121277, 6.459961, 28.954102)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ontrh"]
-size = Vector3(23.171265, 14.8359375, 14.457581)
+size = Vector3(23.171265, 14.8359375, 12.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ygpug"]
 size = Vector3(25.9375, 17.385742, 21.285156)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x4v8x"]
-size = Vector3(31.84668, 9.435547, 14.27832)
+size = Vector3(18, 8.5, 11.5)
 
 [node name="Gym" type="Node3D" unique_id=952443488]
 
@@ -298,7 +298,7 @@ mesh = SubResource("BoxMesh_uakrt")
 shape = SubResource("ConvexPolygonShape3D_l8u6m")
 
 [node name="ShutInRoom" type="Node3D" parent="Buildings" unique_id=1840649786]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2, 2.1, -23.8)
+transform = Transform3D(-0.34862316, 0, -3.984779, 0, 4, 0, 3.984779, 0, -0.34862316, 19.507713, 2.1, -25.928543)
 
 [node name="desk" parent="Buildings/ShutInRoom" unique_id=1204518294 instance=ExtResource("22_macmo")]
 transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, 0.63750005, -0.40000004, -0.6000004)
@@ -377,6 +377,9 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 [node name="chair" parent="Buildings/ShutInRoom" unique_id=377084213 instance=ExtResource("28_io07x")]
 transform = Transform3D(0.37499997, 0, 0.6495191, 0, 0.75, 0, -0.6495191, 0, 0.37499997, 0.5, -0.39999998, -0.3000002)
 
+[node name="bedSingle" parent="Buildings/ShutInRoom" unique_id=1123090864 instance=ExtResource("21_qeedx")]
+transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, 0, -0.39999998, 0.07499981)
+
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Buildings/ShutInRoom" unique_id=121948593]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.5, -0.525, 5.95)
 use_collision = true
@@ -453,8 +456,6 @@ texture = ExtResource("17_x4v8x")
 transform = Transform3D(-0.91915596, 0, 0.39389375, 0, 1, 0, -0.39389375, 0, -0.91915596, -3.5543687, 2.1486864, -3.713035)
 texture = ExtResource("17_x4v8x")
 
-[node name="bedSingle" parent="." unique_id=1123090864 instance=ExtResource("21_qeedx")]
-transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, 2, 0.5, -23.5)
 [node name="Cameras" type="Node3D" parent="." unique_id=1524875198]
 
 [node name="StartCameraVolume" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
@@ -474,7 +475,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.442562, 9.536743e-07, -13.
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume2" unique_id=1978599420]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5765991, 0, 1.0960388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5765991, 0, 2.074829)
 shape = SubResource("BoxShape3D_ontrh")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
@@ -496,7 +497,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.505733, 0, -26.456854)
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume" unique_id=36468907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7499995, 0, 0)
 shape = SubResource("BoxShape3D_x4v8x")
+debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
 
 [node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume" unique_id=2066015915]
 transform = Transform3D(-0.99498075, 0.03696359, -0.092989296, -0.00468586, 0.91104424, 0.41228196, 0.09995676, 0.41064835, -0.90629834, 0, 7.075637, -10.854486)
+
+[node name="CameraVolume4" parent="Cameras" unique_id=1517366719 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.705734, 0, -25.156853)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume4" unique_id=1879467371]
+transform = Transform3D(0.9961946, 0, -0.08715573, 0, 1, 0, 0.08715573, 0, 0.9961946, 4.485117, 2.9677734, -2.626583)
+shape = SubResource("BoxShape3D_x4v8x")
+debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume4" unique_id=1199433678]
+transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86602545, 0.5, 0.50000006, 0.4330127, -0.75, -1.9598064, 4.375637, -3.234871)
