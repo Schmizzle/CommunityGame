@@ -92,23 +92,37 @@ Tag = 4
 Description = "Meet the Scientist"
 metadata/_custom_type_script = "uid://dutlivtx32sdj"
 
-[sub_resource type="Resource" id="Resource_pisgm"]
-script = ExtResource("5_k53q1")
-Tag = 5
-Description = "Collect Water for Scientist"
-metadata/_custom_type_script = "uid://dutlivtx32sdj"
-
-[sub_resource type="Resource" id="Resource_b1ygp"]
-script = ExtResource("5_k53q1")
-Tag = 6
-Description = "Deliver her water"
-metadata/_custom_type_script = "uid://dutlivtx32sdj"
-
 [sub_resource type="Resource" id="Resource_o28un"]
 script = ExtResource("4_fhl08")
 Tag = 6
-Description = "Get Her Water"
-Tasks = Array[ExtResource("5_k53q1")]([SubResource("Resource_lfmf2"), SubResource("Resource_pisgm"), SubResource("Resource_b1ygp")])
+Description = "Meet Scientist"
+Tasks = Array[ExtResource("5_k53q1")]([SubResource("Resource_lfmf2")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_b1ygp"]
+script = ExtResource("5_k53q1")
+Tag = 5
+Description = "Collect Water"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_pisgm"]
+script = ExtResource("4_fhl08")
+Tag = 7
+Description = "Collect Water"
+Tasks = Array[ExtResource("5_k53q1")]([SubResource("Resource_b1ygp")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_7emwf"]
+script = ExtResource("5_k53q1")
+Tag = 6
+Description = "Deliver Water"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_n471f"]
+script = ExtResource("4_fhl08")
+Tag = 8
+Description = "Deliver Water"
+Tasks = Array[ExtResource("5_k53q1")]([SubResource("Resource_7emwf")])
 metadata/_custom_type_script = "uid://d23h7xp3s8yao"
 
 [sub_resource type="Resource" id="Resource_dkpta"]
@@ -117,7 +131,7 @@ Tag = 3
 Name = "H2U"
 Description = "The human body and the Earth is mostly water"
 State = 2
-TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_o28un")])
+TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_o28un"), SubResource("Resource_pisgm"), SubResource("Resource_n471f")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "CameraManagerNode", "FPCamera", "InteractCast") groups=["Player"]]
