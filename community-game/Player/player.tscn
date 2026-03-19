@@ -13,6 +13,9 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_k53q1"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_fhl08"]
+radius = 0.4
+
 [sub_resource type="LabelSettings" id="LabelSettings_l8h54"]
 font_size = 53
 outline_size = 28
@@ -160,14 +163,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Camera" type="Camera3D" parent="Pivot" unique_id=503390998]
 
-[node name="InteractCast" type="RayCast3D" parent="Pivot" unique_id=1963017549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.031040609, 0)
-target_position = Vector3(0, 0, -2)
-collision_mask = 8
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1766986244]
 transform = Transform3D(-4.371139e-08, 0, 0.5273693, 0, 0.2446379, 0, -1, 0, -2.3052046e-08, 0.012667149, 0, -0.15388177)
 mesh = SubResource("BoxMesh_k53q1")
+
+[node name="InteractCast" type="ShapeCast3D" parent="Pivot" unique_id=893917627]
+shape = SubResource("SphereShape3D_fhl08")
+target_position = Vector3(0, 0, -2)
+collision_mask = 8
 
 [node name="PlayerUI" type="Control" parent="." unique_id=2144263866]
 layout_mode = 3
