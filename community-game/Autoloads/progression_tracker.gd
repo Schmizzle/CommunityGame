@@ -3,19 +3,21 @@ extends Node
 enum QuestTags {
 	NaN, 
 	Test, 
-	Sleepy
+	Sleepy,
+	Deliver_Water
 	}
 
 enum TasklistTags {
 	NaN, 
 	Test_OrbClicking, Test_SodaDrinking,
-	Sleepy_Lavender, Sleepy_SlothWax, Sleepy_EssenceOfMoonlight
+	Sleepy_Lavender, Sleepy_SlothWax, Sleepy_EssenceOfMoonlight,
+	Deliver_Water
 	}
 
 enum TaskTags {
 	NaN, 
 	Test_Orb1, Test_Orb2, Test_SodaDrink,
-	
+	Deliver_Water_Meet, Deliver_Water_Collect, Deliver_Water_Deliver, 
 	}
 
 var TestBool: bool = true
