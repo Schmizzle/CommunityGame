@@ -31,7 +31,7 @@ var YRotationDirection: float
 var UsingFixedCamera: bool = false
 
 @export_group("")
-@export var InteractCast: RayCast3D
+@export var InteractCast: ShapeCast3D
 
 
 func _ready() -> void:
@@ -95,12 +95,12 @@ func _process(delta: float) -> void:
 #endregion
 	
 #region Interacting
-	var DetectingInteractable: bool = InteractCast.get_collider() != null
+	var DetectingInteractable: bool = InteractCast.get_collider(0) != null
 	InteractUI.visible = DetectingInteractable
-	var DetectedInteractable = InteractCast.get_collider()
+	var DetectedInteractable = InteractCast.get_collider(0)
 	
 	if Input.is_action_just_pressed("interact") and DetectingInteractable:
-		InteractCast.get_collider().call("on_interacted")
+		InteractCast.get_collider(0).call("on_interacted")
 #endregion
 	
 #endregion
