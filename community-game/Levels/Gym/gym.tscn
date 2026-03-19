@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bjgmlrrvdph75" path="res://Environment/Elements/BedroomKey/bed_room_key.tscn" id="12_yy33a"]
 [ext_resource type="PackedScene" uid="uid://dyh7vjipo6bau" path="res://NPCs/Testing/test_npc.tscn" id="15_q3vh4"]
 [ext_resource type="Texture2D" uid="uid://cafs67a4yidnq" path="res://Levels/Gym/LevelSprites/backgroundbuildingblurred.png" id="16_ygpug"]
+[ext_resource type="PackedScene" uid="uid://dce77hwdbi0bn" path="res://Player/Camera/camera_volume.tscn" id="17_ontrh"]
 [ext_resource type="Texture2D" uid="uid://cdaprkaalqqpa" path="res://Levels/Gym/LevelSprites/foregroundfliers.png" id="17_x4v8x"]
 
 [sub_resource type="Gradient" id="Gradient_sa4en"]
@@ -66,6 +67,18 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l8u6m"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2iit"]
+size = Vector3(12.121277, 6.459961, 28.954102)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ontrh"]
+size = Vector3(23.171265, 14.8359375, 14.457581)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ygpug"]
+size = Vector3(25.9375, 17.385742, 21.285156)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x4v8x"]
+size = Vector3(31.84668, 9.435547, 14.27832)
+
 [node name="Gym" type="Node3D" unique_id=952443488]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1375572134]
@@ -81,6 +94,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5017912, 0)
 
 [node name="Node3D" parent="Blocks" unique_id=239868963 instance=ExtResource("1_kit3i")]
 transform = Transform3D(11.732837, 0, 0, 0, 1, 0, 0, 0, 28.08171, 0, -0.50626767, -5.5678425)
+
+[node name="Node3D3" parent="Blocks" unique_id=1062948524 instance=ExtResource("1_kit3i")]
+transform = Transform3D(1.4977347, 0, -27.851973, 0, 1, 0, 11.636848, 0, 3.584721, 7.3625164, -0.50626767, -25.566738)
 
 [node name="Node3D2" parent="Blocks" unique_id=983906796 instance=ExtResource("1_kit3i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.2789426, 5.955337, 1.7551073, 0)
@@ -238,10 +254,12 @@ mesh = SubResource("CylinderMesh_ygpug")
 shape = SubResource("ConvexPolygonShape3D_uakrt")
 
 [node name="Pillar4" type="MeshInstance3D" parent="Buildings" unique_id=467624048]
-transform = Transform3D(19.726427, 0, 0, 0, 20, 0, 0, 0, 12.240456, 43.511703, -15.894588, -21.668324)
+transform = Transform3D(19.726427, 0, 0, 0, 20, 0, 0, 0, 12.240456, 38.437294, -14.806746, -18.194403)
 mesh = SubResource("CylinderMesh_ygpug")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Buildings/Pillar4" unique_id=1809565488]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0.4904655, 0)
+collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Pillar4/StaticBody3D" unique_id=236078094]
 shape = SubResource("ConvexPolygonShape3D_uakrt")
@@ -263,7 +281,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.9477108, -4.1653996, -21.6
 texture = ExtResource("16_ygpug")
 
 [node name="Sprite3D" type="Sprite3D" parent="Decoration/Sprite3D" unique_id=623819551]
-transform = Transform3D(3, 0, 1.1920929e-07, 0, 3, 0, -1.1920929e-07, 0, 3, -9.158869, 5.0122404, 2.5578675)
+transform = Transform3D(3, 0, 2.3841858e-07, 0, 3, 0, -2.3841858e-07, 0, 3, -12.321595, 5.0122404, 2.3945649)
 billboard = 1
 texture = ExtResource("16_ygpug")
 
@@ -290,3 +308,49 @@ texture = ExtResource("17_x4v8x")
 [node name="fliers2" type="Sprite3D" parent="Decoration" unique_id=1872588589]
 transform = Transform3D(-0.91915596, 0, 0.39389375, 0, 1, 0, -0.39389375, 0, -0.91915596, -3.5543687, 2.1486864, -3.713035)
 texture = ExtResource("17_x4v8x")
+
+[node name="Cameras" type="Node3D" parent="." unique_id=1524875198]
+
+[node name="StartCameraVolume" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.641017, -4.8519726)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/StartCameraVolume" unique_id=346765692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21298218, 0.099199295, -0.33559656)
+shape = SubResource("BoxShape3D_n2iit")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/StartCameraVolume" unique_id=786012726]
+transform = Transform3D(-0.05677986, 0.44982344, -0.89131075, 1.671351e-08, 0.89275104, 0.4505503, 0.99838674, 0.025582168, -0.050690286, -9.776372, 4.539567, -2.9073954)
+
+[node name="CameraVolume2" parent="Cameras" unique_id=1094653332 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.442562, 9.536743e-07, -13.074266)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume2" unique_id=1978599420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5765991, 0, 1.0960388)
+shape = SubResource("BoxShape3D_ontrh")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume2" unique_id=1330043736]
+transform = Transform3D(-0.85624903, 0.17637002, -0.4855216, 9.64562e-09, 0.9399073, 0.34142965, 0.51656336, 0.2923488, -0.8047947, -8.431371, 11.736745, -13.960684)
+
+[node name="CameraVolume3" parent="Cameras" unique_id=768845493 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.33467, 9.32308, -20.323717)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume3" unique_id=552947763]
+shape = SubResource("BoxShape3D_ygpug")
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume3" unique_id=1965241365]
+transform = Transform3D(1, 0, 0, 0, 0.846035, 0.53312737, 0, -0.53312737, 0.846035, -3.5023155, 0.07961559, 10.521941)
+
+[node name="CameraVolume" parent="Cameras" unique_id=933095402 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.505733, 0, -26.456854)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume" unique_id=36468907]
+shape = SubResource("BoxShape3D_x4v8x")
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/CameraVolume" unique_id=2066015915]
+transform = Transform3D(-0.99498075, 0.03696359, -0.092989296, -0.00468586, 0.91104424, 0.41228196, 0.09995676, 0.41064835, -0.90629834, 0, 7.075637, -10.854486)
