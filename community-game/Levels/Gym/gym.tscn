@@ -5,11 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
 [ext_resource type="PackedScene" uid="uid://b0qjgpg6v2fw5" path="res://Environment/TestingStuff/VendingMachine/vending_machine.tscn" id="4_kcxp8"]
 [ext_resource type="PackedScene" uid="uid://gfqc05knf2c5" path="res://addons/dialogic/Testing/test_talker.tscn" id="5_4jjoa"]
+[ext_resource type="PackedScene" uid="uid://bm23wy8ui7nq3" path="res://Environment/Elements/Buildings/building-sample-house-b.glb" id="5_70fpi"]
 [ext_resource type="Texture2D" uid="uid://6pe3ge0mt00b" path="res://Player/Quests/HateConeQuest/a.png" id="6_i7i0x"]
+[ext_resource type="PackedScene" uid="uid://b5yrycnf7xeqq" path="res://Environment/Elements/Buildings/building-sample-tower-c.glb" id="6_macmo"]
 [ext_resource type="PackedScene" uid="uid://cseqjecln4kp1" path="res://Environment/TestingStuff/InitTester/init-tester.tscn" id="6_s6hch"]
+[ext_resource type="PackedScene" uid="uid://hana6xrx8fdw" path="res://Environment/Elements/Buildings/building-sample-tower-d.glb" id="7_5xqaw"]
 [ext_resource type="Texture2D" uid="uid://dj0o1oxda6k14" path="res://Player/Quests/HateConeQuest/eye.png" id="7_kxvnc"]
 [ext_resource type="ArrayMesh" uid="uid://c8unmikkqq3vm" path="res://Environment/Elements/Rooms/room5.obj" id="7_ol1f0"]
 [ext_resource type="Texture2D" uid="uid://bvba0xp7dor5w" path="res://Player/Quests/HateConeQuest/b.png" id="7_w3mwu"]
+[ext_resource type="PackedScene" uid="uid://dtjyxbt4j7gpy" path="res://Environment/Elements/Buildings/building-sample-house-c.glb" id="8_io07x"]
 [ext_resource type="Texture2D" uid="uid://dsk1pjel183ij" path="res://Player/Quests/HateConeQuest/c.png" id="9_vof03"]
 [ext_resource type="Texture2D" uid="uid://cqas2h14kjimv" path="res://Player/Quests/HateConeQuest/d.png" id="10_q3vh4"]
 [ext_resource type="PackedScene" uid="uid://bjgmlrrvdph75" path="res://Environment/Elements/BedroomKey/bed_room_key.tscn" id="12_yy33a"]
@@ -100,6 +104,18 @@ transform = Transform3D(1.4977347, 0, -27.851973, 0, 1, 0, 11.636848, 0, 3.58472
 
 [node name="Node3D2" parent="Blocks" unique_id=983906796 instance=ExtResource("1_kit3i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.2789426, 5.955337, 1.7551073, 0)
+
+[node name="building-sample-house-b2" parent="Blocks" unique_id=1527830655 instance=ExtResource("5_70fpi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -18.5)
+
+[node name="building-sample-tower-c2" parent="Blocks" unique_id=1083498352 instance=ExtResource("6_macmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -18.5)
+
+[node name="building-sample-tower-d2" parent="Blocks" unique_id=1795729421 instance=ExtResource("7_5xqaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -17)
+
+[node name="building-sample-house-c2" parent="Blocks" unique_id=2120560420 instance=ExtResource("8_io07x")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -6, 0, -15.5)
 
 [node name="InteractableTesting" type="Node3D" parent="." unique_id=2021349824]
 
