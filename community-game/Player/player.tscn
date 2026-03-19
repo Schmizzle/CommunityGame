@@ -82,8 +82,42 @@ script = ExtResource("3_k53q1")
 Tag = 2
 Name = "Conk the FUCK out"
 Description = "Help this sleepy man in need"
-State = 2
+State = 0
 TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_5htga"), SubResource("Resource_p5o4e"), SubResource("Resource_gu6f8")])
+metadata/_custom_type_script = "uid://bs5wutnvkbjir"
+
+[sub_resource type="Resource" id="Resource_lfmf2"]
+script = ExtResource("5_k53q1")
+Tag = 4
+Description = "Meet the Scientist"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_pisgm"]
+script = ExtResource("5_k53q1")
+Tag = 5
+Description = "Collect Water for Scientist"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_b1ygp"]
+script = ExtResource("5_k53q1")
+Tag = 6
+Description = "Deliver her water"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_o28un"]
+script = ExtResource("4_fhl08")
+Tag = 6
+Description = "Get Her Water"
+Tasks = Array[ExtResource("5_k53q1")]([SubResource("Resource_lfmf2"), SubResource("Resource_pisgm"), SubResource("Resource_b1ygp")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_dkpta"]
+script = ExtResource("3_k53q1")
+Tag = 3
+Name = "H2U"
+Description = "The human body and the Earth is mostly water"
+State = 2
+TaskLists = Array[ExtResource("4_fhl08")]([SubResource("Resource_o28un")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
 [node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "CameraManagerNode", "FPCamera", "InteractCast") groups=["Player"]]
@@ -156,7 +190,7 @@ offset_right = 832.0
 offset_bottom = 361.0
 
 [node name="QuestManager" parent="." unique_id=774256434 node_paths=PackedStringArray("QuestUIParent") instance=ExtResource("2_4ntmi")]
-Quests = Array[ExtResource("3_k53q1")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1")])
+Quests = Array[ExtResource("3_k53q1")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1"), SubResource("Resource_dkpta")])
 QuestUIParent = NodePath("../PlayerUI/QuestContainer")
 
 [node name="CameraManager" parent="." unique_id=895131971 instance=ExtResource("6_fhl08")]
