@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3ott1a6p2py"
-path="res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"
+uid="uid://cdf2bj740bm5y"
+path="res://.godot/imported/waterpuddle2.png-8c873c706062a9340c8ec0b2e3a7f7e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholders/not_done.png"
-dest_files=["res://.godot/imported/not_done.png-4bd83adb0b22ba3240813a239215d7ce.ctex"]
+source_file="res://Player/Quests/WaterBringingQuest/waterpuddle2.png"
+dest_files=["res://.godot/imported/waterpuddle2.png-8c873c706062a9340c8ec0b2e3a7f7e9.ctex"]
 
 [params]
 
