@@ -22,9 +22,9 @@ collision_mask = 5
 input_ray_pickable = false
 script = ExtResource("1_l8h54")
 LookPivot = NodePath("Pivot")
-UIReference = NodePath("PlayerUI")
-InteractUI = NodePath("PlayerUI/InteractText")
-QuestContainer = NodePath("PlayerUI/QuestContainer")
+UIReference = NodePath("CanvasLayer/PlayerUI")
+InteractUI = NodePath("CanvasLayer/PlayerUI/InteractText")
+QuestContainer = NodePath("CanvasLayer/PlayerUI/QuestContainer")
 QuestManagerNode = NodePath("")
 CameraManagerNode = NodePath("")
 FPCamera = NodePath("Pivot/Camera")
@@ -51,7 +51,10 @@ shape = SubResource("SphereShape3D_fhl08")
 target_position = Vector3(0, 0, -2)
 collision_mask = 8
 
-[node name="PlayerUI" type="Control" parent="." unique_id=2144263866]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1852586958]
+layer = 3
+
+[node name="PlayerUI" type="Control" parent="CanvasLayer" unique_id=2144263866]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,7 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="InteractText" type="Label" parent="PlayerUI" unique_id=587150643]
+[node name="InteractText" type="Label" parent="CanvasLayer/PlayerUI" unique_id=587150643]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -78,7 +81,7 @@ label_settings = SubResource("LabelSettings_l8h54")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuestContainer" type="VBoxContainer" parent="PlayerUI" unique_id=1152965132]
+[node name="QuestContainer" type="VBoxContainer" parent="CanvasLayer/PlayerUI" unique_id=1152965132]
 layout_mode = 1
 offset_left = 70.0
 offset_top = 70.0

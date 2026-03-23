@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxrnv4l03xrmv"]
 
-[ext_resource type="Script" uid="uid://dpa4jl6hpypli" path="res://Levels/Gym/day_night_manager.gd" id="1_aqird"]
+[ext_resource type="Script" path="res://Levels/Gym/day_night_manager.gd" id="1_aqird"]
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
 [ext_resource type="Texture2D" uid="uid://bf5rbnbkiljd2" path="res://Environment/Elements/DayNight/SkyDay.tres" id="2_4ubef"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dtjyxbt4j7gpy" path="res://Environment/Elements/Buildings/building-sample-house-c.glb" id="8_io07x"]
 [ext_resource type="Texture2D" uid="uid://dsk1pjel183ij" path="res://Player/Quests/HateConeQuest/c.png" id="9_vof03"]
 [ext_resource type="Texture2D" uid="uid://cqas2h14kjimv" path="res://Player/Quests/HateConeQuest/d.png" id="10_q3vh4"]
-[ext_resource type="PackedScene" uid="uid://bjgmlrrvdph75" path="res://Environment/Elements/BedroomKey/bed_room_key.tscn" id="12_yy33a"]
 [ext_resource type="PackedScene" uid="uid://dyh7vjipo6bau" path="res://NPCs/Testing/test_npc.tscn" id="15_q3vh4"]
 [ext_resource type="Texture2D" uid="uid://cafs67a4yidnq" path="res://Levels/Gym/LevelSprites/backgroundbuildingblurred.png" id="16_ygpug"]
 [ext_resource type="PackedScene" uid="uid://dce77hwdbi0bn" path="res://Player/Camera/camera_volume.tscn" id="17_ontrh"]
@@ -34,6 +33,7 @@
 [ext_resource type="Script" uid="uid://j7pdxvhrysxc" path="res://Player/Quests/water_well.gd" id="27_mb3nd"]
 [ext_resource type="PackedScene" uid="uid://dkw1s6sc3xtxg" path="res://Environment/Elements/Interior/chair.glb" id="28_io07x"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="30_c8vk2"]
+[ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="34_aqird"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
 panorama = ExtResource("2_4ubef")
@@ -90,7 +90,6 @@ size = Vector3(18, 8.5, 11.5)
 
 [node name="DayNightManager" type="Node3D" parent="." unique_id=998587662]
 script = ExtResource("1_aqird")
-time_current = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DayNightManager" unique_id=1375572134]
 transform = Transform3D(0.90107703, 0.35479805, -0.24935628, 0, 0.5750053, 0.8181497, 0.4336591, -0.7372159, 0.51812404, 0, 6.843994, 0)
@@ -173,16 +172,13 @@ myName = "d"
 
 [node name="NPCTesting" type="Node3D" parent="." unique_id=887366026]
 
+[node name="TestNpc" parent="NPCTesting" unique_id=706979957 instance=ExtResource("15_q3vh4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.8504562, -4)
+
 [node name="CodeTesting" type="Node3D" parent="." unique_id=1162120206]
 
 [node name="InitTester" parent="CodeTesting" unique_id=1480506836 instance=ExtResource("6_s6hch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2830935, 1.1643171, 4.091482)
-
-[node name="BedRoomKey" parent="." unique_id=1324610407 instance=ExtResource("12_yy33a")]
-transform = Transform3D(0.7285974, 0, 0, 0, 0.11305903, 0, 0, 0, 0.14935867, 2.5192316, 0.7098447, 0.932549)
-
-[node name="TestNpc" parent="." unique_id=706979957 instance=ExtResource("15_q3vh4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.8504562, -4)
 
 [node name="Buildings" type="Node3D" parent="." unique_id=470529473]
 
@@ -529,5 +525,7 @@ transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86
 
 [node name="MarinaNPC" parent="." unique_id=1446232392 instance=ExtResource("30_c8vk2")]
 transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.742434, 0.9275619, -23.750753)
+
+[node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("34_aqird")]
 
 [connection signal="_interaction_signal" from="Buildings/WaterWell/InteractableComponent" to="Buildings/WaterWell" method="_on_interactable_component__interaction_signal"]
