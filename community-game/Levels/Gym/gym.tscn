@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dxrnv4l03xrmv"]
 
+[ext_resource type="Script" uid="uid://dpa4jl6hpypli" path="res://Levels/Gym/day_night_manager.gd" id="1_aqird"]
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
+[ext_resource type="Texture2D" uid="uid://bf5rbnbkiljd2" path="res://Environment/Elements/DayNight/SkyDay.tres" id="2_4ubef"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
 [ext_resource type="PackedScene" uid="uid://dith8khycdp61" path="res://Environment/TestingStuff/TestInteractable/test-interactable.tscn" id="3_0l8pt"]
 [ext_resource type="PackedScene" uid="uid://b0qjgpg6v2fw5" path="res://Environment/TestingStuff/VendingMachine/vending_machine.tscn" id="4_kcxp8"]
@@ -33,25 +35,8 @@
 [ext_resource type="PackedScene" uid="uid://dkw1s6sc3xtxg" path="res://Environment/Elements/Interior/chair.glb" id="28_io07x"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="30_c8vk2"]
 
-[sub_resource type="Gradient" id="Gradient_sa4en"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kit3i"]
-frequency = 0.0015
-fractal_type = 2
-fractal_octaves = 4
-fractal_lacunarity = 2.39
-fractal_gain = 0.355
-fractal_weighted_strength = 0.65
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5qgok"]
-width = 2560
-height = 2560
-noise = SubResource("FastNoiseLite_kit3i")
-color_ramp = SubResource("Gradient_sa4en")
-seamless = true
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
-panorama = SubResource("NoiseTexture2D_5qgok")
+panorama = ExtResource("2_4ubef")
 
 [sub_resource type="Sky" id="Sky_kcxp8"]
 sky_material = SubResource("PanoramaSkyMaterial_0l8pt")
@@ -103,10 +88,14 @@ size = Vector3(18, 8.5, 11.5)
 
 [node name="Gym" type="Node3D" unique_id=952443488]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1375572134]
-transform = Transform3D(0.90073615, 0.368416, -0.2300957, 0, 0.52972704, 0.8481684, 0.43436673, -0.76397604, 0.47714433, 0, 6.843994, 0)
+[node name="DayNightManager" type="Node3D" parent="." unique_id=998587662]
+script = ExtResource("1_aqird")
+time_current = 1
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1608423285]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DayNightManager" unique_id=1375572134]
+transform = Transform3D(0.90107703, 0.35479805, -0.24935628, 0, 0.5750053, 0.8181497, 0.4336591, -0.7372159, 0.51812404, 0, 6.843994, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="DayNightManager" unique_id=1608423285]
 environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("2_5qgok")]
