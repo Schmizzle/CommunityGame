@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Player
 
+var GameManagerNode: GameManager
+
 # Movement variables
 var CanMove: bool = true
 @export var Speed: int = 700
@@ -39,6 +41,12 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	Globals.PlayerReference = self
+	
+	GameManagerNode = get_tree().get_first_node_in_group("GameManager")
+	CameraManagerNode = GameManagerNode.CameraManagerNode
+	QuestManagerNode = GameManagerNode.QuestManagerNode
+	QuestManagerNode.QuestUIParent = QuestContainer
+	QuestManagerNode.create_quest_boxes()
 
 
 func _process(delta: float) -> void:
@@ -95,11 +103,9 @@ func _process(delta: float) -> void:
 #endregion
 	
 #region Interacting
-	var DetectingInteractable: bool = InteractCast.get_collider(0) != null
-	InteractUI.visible = DetectingInteractable
-	var DetectedInteractable = InteractCast.get_collider(0)
+	InteractUI.visible = InteractCast.is_colliding()
 	
-	if Input.is_action_just_pressed("interact") and DetectingInteractable:
+	if Input.is_action_just_pressed("interact") and InteractCast.is_colliding():
 		InteractCast.get_collider(0).call("on_interacted")
 #endregion
 	

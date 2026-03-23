@@ -10,7 +10,8 @@ var ExistingTaskBoxes: Dictionary[Task, UITaskBox]
 func _ready() -> void:
 	set_active_tasklists()
 	
-	create_quest_boxes()
+	# QUEST BOXES GET CREATED FROM THE PLAYER ON READY
+	# SINCE IT CONCERNS THEIR UI THEY HAVE TO GIVE IT TO THIS SCRIPT FIRST
 
 
 func activate_quest(id: int):

@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://ceyls3eoyd8du"]
+
+[ext_resource type="Script" uid="uid://b33emvsr4jba8" path="res://GameManagement/game_manager.gd" id="1_14qgn"]
+[ext_resource type="PackedScene" uid="uid://dxrnv4l03xrmv" path="res://Levels/Gym/gym.tscn" id="2_xl6yi"]
+[ext_resource type="PackedScene" uid="uid://b2bgc3rw5uf45" path="res://Player/Quests/ResourceScripts/quest_manager.tscn" id="3_adhdh"]
+[ext_resource type="Script" uid="uid://bs5wutnvkbjir" path="res://Player/Quests/ResourceScripts/quest_resource.gd" id="4_4cflx"]
+[ext_resource type="PackedScene" uid="uid://b44gocdkpkp74" path="res://Player/Camera/camera_manager.tscn" id="4_lgjux"]
+[ext_resource type="Script" uid="uid://d23h7xp3s8yao" path="res://Player/Quests/ResourceScripts/tasklist_resource.gd" id="5_2voxf"]
+[ext_resource type="Script" uid="uid://dutlivtx32sdj" path="res://Player/Quests/ResourceScripts/task_resource.gd" id="6_50xdj"]
+
+[sub_resource type="Resource" id="Resource_fhl08"]
+script = ExtResource("6_50xdj")
+Tag = 1
+Description = "Click the orb that always lies"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_vtle1"]
+script = ExtResource("6_50xdj")
+Tag = 2
+Description = "Click the orb that always tells the truth"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_od3ui"]
+script = ExtResource("5_2voxf")
+Tag = 1
+Description = "Why don't you uuuuh... click those two purple things for starters"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_fhl08"), SubResource("Resource_vtle1")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_00tjw"]
+script = ExtResource("6_50xdj")
+Tag = 3
+Description = "Drink soda cans"
+AmountNeeded = 3
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_x3vf3"]
+script = ExtResource("5_2voxf")
+Tag = 2
+Description = "That must've tuckered you out, get some soda to refresh yourself"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_00tjw")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_apopc"]
+script = ExtResource("4_4cflx")
+Tag = 1
+Name = "Testing!!!"
+Description = "Testing if this stuff even works at all... you know, regular stuff..."
+TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_od3ui"), SubResource("Resource_x3vf3")])
+metadata/_custom_type_script = "uid://bs5wutnvkbjir"
+
+[sub_resource type="Resource" id="Resource_5htga"]
+script = ExtResource("5_2voxf")
+Tag = 3
+Description = "Get the lavender from the forbidden plains"
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_p5o4e"]
+script = ExtResource("5_2voxf")
+Tag = 4
+Description = "Get the sloth wax"
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_gu6f8"]
+script = ExtResource("5_2voxf")
+Tag = 5
+Description = "Get the essence of moonlight"
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_k53q1"]
+script = ExtResource("4_4cflx")
+Tag = 2
+Name = "Conk the FUCK out"
+Description = "Help this sleepy man in need"
+State = 0
+TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_5htga"), SubResource("Resource_p5o4e"), SubResource("Resource_gu6f8")])
+metadata/_custom_type_script = "uid://bs5wutnvkbjir"
+
+[sub_resource type="Resource" id="Resource_lfmf2"]
+script = ExtResource("6_50xdj")
+Tag = 4
+Description = "Meet the Scientist"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_o28un"]
+script = ExtResource("5_2voxf")
+Tag = 6
+Description = "Meet Scientist"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_lfmf2")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_b1ygp"]
+script = ExtResource("6_50xdj")
+Tag = 5
+Description = "Collect Water"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_pisgm"]
+script = ExtResource("5_2voxf")
+Tag = 7
+Description = "Collect Water"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_b1ygp")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_7emwf"]
+script = ExtResource("6_50xdj")
+Tag = 6
+Description = "Deliver Water"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_n471f"]
+script = ExtResource("5_2voxf")
+Tag = 8
+Description = "Deliver Water"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_7emwf")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_dkpta"]
+script = ExtResource("4_4cflx")
+Tag = 3
+Name = "H2U"
+Description = "The human body and the Earth is mostly water"
+State = 2
+TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_o28un"), SubResource("Resource_pisgm"), SubResource("Resource_n471f")])
+metadata/_custom_type_script = "uid://bs5wutnvkbjir"
+
+[node name="GameManager" type="Node" unique_id=2071329493 node_paths=PackedStringArray("QuestManagerNode", "CameraManagerNode", "LevelParent") groups=["GameManager"]]
+script = ExtResource("1_14qgn")
+QuestManagerNode = NodePath("QuestManager")
+CameraManagerNode = NodePath("CameraManager")
+LevelParent = NodePath("LevelParent")
+StartUpLevel = ExtResource("2_xl6yi")
+
+[node name="QuestManager" parent="." unique_id=774256434 instance=ExtResource("3_adhdh")]
+Quests = Array[ExtResource("4_4cflx")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1"), SubResource("Resource_dkpta")])
+
+[node name="CameraManager" parent="." unique_id=895131971 instance=ExtResource("4_lgjux")]
+
+[node name="LevelParent" type="Node" parent="." unique_id=1193318240]
