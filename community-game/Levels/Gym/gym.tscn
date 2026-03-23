@@ -481,7 +481,7 @@ texture = ExtResource("17_x4v8x")
 [node name="Cameras" type="Node3D" parent="." unique_id=1524875198]
 
 [node name="StartCameraVolume" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.772795, -4.8519726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0377164, -4.8519726)
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/StartCameraVolume" unique_id=346765692]
