@@ -1,0 +1,6 @@
+[gd_resource type="PanoramaSkyMaterial" format=3 uid="uid://b6yd2a7nvk85v"]
+
+[ext_resource type="Texture2D" uid="uid://bf5rbnbkiljd2" path="res://Environment/Elements/DayNight/SkyDay.tres" id="1_3ekog"]
+
+[resource]
+panorama = ExtResource("1_3ekog")
