@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ceyls3eoyd8du"]
 
 [ext_resource type="Script" uid="uid://b33emvsr4jba8" path="res://GameManagement/game_manager.gd" id="1_14qgn"]
-[ext_resource type="PackedScene" uid="uid://dxrnv4l03xrmv" path="res://Levels/Gym/gym.tscn" id="2_xl6yi"]
+[ext_resource type="PackedScene" uid="uid://dt2rladsytr2c" path="res://Levels/CityBlock/city_block.tscn" id="2_lgjux"]
 [ext_resource type="PackedScene" uid="uid://b2bgc3rw5uf45" path="res://Player/Quests/ResourceScripts/quest_manager.tscn" id="3_adhdh"]
 [ext_resource type="Script" uid="uid://bs5wutnvkbjir" path="res://Player/Quests/ResourceScripts/quest_resource.gd" id="4_4cflx"]
 [ext_resource type="PackedScene" uid="uid://b44gocdkpkp74" path="res://Player/Camera/camera_manager.tscn" id="4_lgjux"]
@@ -129,7 +129,7 @@ script = ExtResource("1_14qgn")
 QuestManagerNode = NodePath("QuestManager")
 CameraManagerNode = NodePath("CameraManager")
 LevelParent = NodePath("LevelParent")
-StartUpLevel = ExtResource("2_xl6yi")
+StartUpLevel = ExtResource("2_lgjux")
 
 [node name="QuestManager" parent="." unique_id=774256434 instance=ExtResource("3_adhdh")]
 Quests = Array[ExtResource("4_4cflx")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1"), SubResource("Resource_dkpta")])

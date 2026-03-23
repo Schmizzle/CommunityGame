@@ -464,6 +464,7 @@ data = PackedVector3Array(-0.75, 1, -0.9288, -1, 1, 1, -1, 1, -1, -0.75, 1, -0.9
 
 [node name="DayNightManager" type="Node3D" parent="." unique_id=325687392]
 script = ExtResource("1_faylj")
+time_current = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DayNightManager" unique_id=21541149]
 transform = Transform3D(0.90107703, 0.35479805, -0.24935628, 0, 0.5750053, 0.8181497, 0.4336591, -0.7372159, 0.51812404, 0, 6.843994, 0)
