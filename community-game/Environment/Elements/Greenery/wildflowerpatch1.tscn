@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://fkaw5txdjki7"]
+
+[ext_resource type="Texture2D" uid="uid://cnlbqpeg0hb66" path="res://Environment/Elements/Greenery/wildflowers1.png" id="1_q4a5f"]
+[ext_resource type="Script" uid="uid://ij8gcb5koke4" path="res://Environment/Elements/Greenery/wildflowerpatch_1.gd" id="2_yvj5b"]
+
+[node name="wildflower" type="Sprite3D" unique_id=1002204564]
+offset = Vector2(0, 8)
+pixel_size = 0.075
+texture_filter = 0
+texture = ExtResource("1_q4a5f")
+script = ExtResource("2_yvj5b")
