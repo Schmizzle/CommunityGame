@@ -24,6 +24,8 @@ ProgressionTracker="*uid://cl3w886dp13td"
 [dialogic]
 
 directories/dch_directory={
+"Bono": "res://NPCs/Bono/Bono.dch",
+"Illianos": "res://NPCs/Illianos/Illianos.dch",
 "Marina": "res://Player/Quests/Marina.dch",
 "Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
 "a": "res://Player/Quests/HateConeQuest/a.dch",
@@ -37,7 +39,8 @@ directories/dtl_directory={
 "FirstObstacle": "res://Player/Quests/LeakQuest/FirstObstacle.dtl",
 "TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
-"test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl"
+"test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
+"tl_escapeQuest": "res://Player/Quests/EscapeeQuest/tl_escapeQuest.dtl"
 }
 layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
@@ -78,6 +81,9 @@ variables={
 "GotQuest": false,
 "deliveredWater": false,
 "hasWater": false
+},
+"EscapeQuest": {
+"hasPlanks": false
 },
 "Fullfilled": 0,
 "Learnt": false,

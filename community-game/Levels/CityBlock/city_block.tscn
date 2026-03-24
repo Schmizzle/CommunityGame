@@ -16,6 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://cdweq8rji64kb" path="res://Levels/CityBlock/Elements/Props/plank.tscn" id="15_htl84"]
 [ext_resource type="Script" uid="uid://j7pdxvhrysxc" path="res://Player/Quests/water_well.gd" id="16_16d1u"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="17_3iw64"]
+[ext_resource type="Script" uid="uid://2gddfvdb66kn" path="res://Levels/CityBlock/bono_npc.gd" id="18_n2e8l"]
+[ext_resource type="PackedScene" uid="uid://cb0udm0xjtkip" path="res://NPCs/Base/npc_talking_component.tscn" id="19_otv0e"]
+[ext_resource type="Resource" uid="uid://dx2ueu8hv80ji" path="res://Player/Quests/EscapeeQuest/tl_escapeQuest.dtl" id="19_wkx8g"]
+[ext_resource type="Texture2D" uid="uid://dk4v8lab5blqn" path="res://NPCs/Bono/Screenshot 2026-03-23 132342.png" id="21_wkx8g"]
+[ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
+[ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -1514,9 +1520,45 @@ mesh = SubResource("ArrayMesh_fep6o")
 transform = Transform3D(0.25, 0, 0.4330127, 0, 2.9150002, 0, -0.4330127, 0, 0.25, -2, -3, -3)
 mesh = SubResource("ArrayMesh_j2m4b")
 
+[node name="BonoNPC" type="Node3D" parent="." unique_id=1438076005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4025755, 6.213746, -29.828672)
+script = ExtResource("18_n2e8l")
+Timeline1 = ExtResource("19_wkx8g")
+
+[node name="InteractableComponent" parent="BonoNPC" unique_id=105973743 instance=ExtResource("17_3iw64")]
+
+[node name="NpcTalkingComponent" parent="BonoNPC" unique_id=815252161 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("19_otv0e")]
+NPCParent = NodePath("..")
+InteractComponent = NodePath("../InteractableComponent")
+
+[node name="Sprite3D" type="Sprite3D" parent="BonoNPC" unique_id=2110386774]
+transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, 0, 0, 0)
+billboard = 1
+texture = ExtResource("21_wkx8g")
+
+[node name="IllianosNPC" type="Node3D" parent="." unique_id=2029713953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.942999, 5.7553353, -30.848274)
+script = ExtResource("22_kwo3p")
+Timeline1 = ExtResource("19_wkx8g")
+
+[node name="InteractableComponent" parent="IllianosNPC" unique_id=2035142665 instance=ExtResource("17_3iw64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2993965, 0, -1.5698433)
+
+[node name="NpcTalkingComponent" parent="IllianosNPC" unique_id=581970494 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("19_otv0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5169401, 0.2683425, -1.9726143)
+NPCParent = NodePath("..")
+InteractComponent = NodePath("../InteractableComponent")
+
+[node name="Sprite3D" type="Sprite3D" parent="IllianosNPC" unique_id=651360949]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.8518972, 0.1720891, -0.7078953)
+billboard = 1
+texture = ExtResource("23_kh6jt")
+
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
 
 [editable path="LevelGeometry/ShutInRoom/MarinaNPC"]
 [editable path="LevelGeometry/ShutInRoom/MarinaNPC/NpcTalkingComponent"]
 [editable path="LevelGeometry/ShutInRoom/MarinaNPC/InteractableComponent"]
 [editable path="LevelGeometry/ShutInRoom/MarinaNPC/marina"]
+[editable path="BonoNPC/InteractableComponent"]
+[editable path="IllianosNPC/InteractableComponent"]
