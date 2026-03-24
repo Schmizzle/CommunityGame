@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ceyls3eoyd8du"]
 
 [ext_resource type="Script" uid="uid://b33emvsr4jba8" path="res://GameManagement/game_manager.gd" id="1_14qgn"]
-[ext_resource type="PackedScene" uid="uid://dt2rladsytr2c" path="res://Levels/CityBlock/city_block.tscn" id="2_lgjux"]
+[ext_resource type="PackedScene" uid="uid://c4ldptrmx4kyg" path="res://Levels/MainMenu/main_menu.tscn" id="2_lgjux"]
 [ext_resource type="PackedScene" uid="uid://b2bgc3rw5uf45" path="res://Player/Quests/ResourceScripts/quest_manager.tscn" id="3_adhdh"]
 [ext_resource type="Script" uid="uid://bs5wutnvkbjir" path="res://Player/Quests/ResourceScripts/quest_resource.gd" id="4_4cflx"]
 [ext_resource type="PackedScene" uid="uid://b44gocdkpkp74" path="res://Player/Camera/camera_manager.tscn" id="4_lgjux"]
