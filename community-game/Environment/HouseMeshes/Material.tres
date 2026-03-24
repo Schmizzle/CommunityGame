@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cr087oi7dlo8p"]
+
+[ext_resource type="Texture2D" uid="uid://bsiag2uhn1ate" path="res://Environment/HouseMeshes/textures/roofTexture.png" id="1_vhy5p"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_vhy5p")
+metallic_specular = 0.0
+texture_filter = 2
