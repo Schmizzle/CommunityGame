@@ -87,7 +87,7 @@ variables={
 "Z": false
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://NPCs/DialogicData/new_style.tres"]
+layout/style_list=[]
 layout/default_style="res://NPCs/DialogicData/new_style.tres"
 
 [display]
