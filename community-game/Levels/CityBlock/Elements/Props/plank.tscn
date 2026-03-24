@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cdweq8rji64kb"]
+
+[ext_resource type="PackedScene" uid="uid://d3xkdt1xkommg" path="res://Levels/CityBlock/Elements/Props/plank.glb" id="1_e4ahh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n00cy"]
+points = PackedVector3Array(-0.9983637, -1.2655534, -1.0133245, 0.980007, 1.2405801, 1.0090101, 1.0139427, 1.5078285, -0.9926854, -1.0226285, 1.5078285, -0.9926854, -0.9898461, -1.3420047, 1.010189, 0.98967785, -1.2655534, -1.0133245, 0.9811603, -1.3420047, 1.010189, -0.9886928, 1.2405801, 1.0090101, 0.99179924, 1.4763355, -1.015493, -1, 1.4756457, -1.0149972)
+
+[node name="plank" unique_id=44868257 instance=ExtResource("1_e4ahh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" parent_id_path=PackedInt32Array(165496579) index="0" unique_id=979034448]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0" unique_id=22040945]
+shape = SubResource("ConvexPolygonShape3D_n00cy")

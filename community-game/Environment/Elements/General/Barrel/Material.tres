@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwk8hoc2qt3rc"]
+
+[ext_resource type="Texture2D" uid="uid://od1atueq11sb" path="res://Environment/Elements/General/Barrel/textures/barrelTexture.png" id="1_kkxly"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_kkxly")
+metallic_specular = 0.0
+texture_filter = 2

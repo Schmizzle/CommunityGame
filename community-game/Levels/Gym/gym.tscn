@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxrnv4l03xrmv"]
 
-[ext_resource type="Script" path="res://Levels/Gym/day_night_manager.gd" id="1_aqird"]
+[ext_resource type="Script" uid="uid://dpa4jl6hpypli" path="res://Levels/Gym/day_night_manager.gd" id="1_aqird"]
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="1_kit3i"]
 [ext_resource type="Texture2D" uid="uid://bf5rbnbkiljd2" path="res://Environment/Elements/DayNight/SkyDay.tres" id="2_4ubef"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="2_5qgok"]
@@ -22,16 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://cafs67a4yidnq" path="res://Levels/Gym/LevelSprites/backgroundbuildingblurred.png" id="16_ygpug"]
 [ext_resource type="PackedScene" uid="uid://dce77hwdbi0bn" path="res://Player/Camera/camera_volume.tscn" id="17_ontrh"]
 [ext_resource type="Texture2D" uid="uid://cdaprkaalqqpa" path="res://Levels/Gym/LevelSprites/foregroundfliers.png" id="17_x4v8x"]
-[ext_resource type="PackedScene" uid="uid://c2l32e2pywcy3" path="res://Environment/Elements/Interior/bedSingle.glb" id="21_qeedx"]
-[ext_resource type="PackedScene" uid="uid://bh428u47m175w" path="res://Environment/Elements/Interior/bathtub.glb" id="22_70fpi"]
-[ext_resource type="PackedScene" uid="uid://cdyxifbkuoxiy" path="res://Environment/Elements/Interior/desk.glb" id="22_macmo"]
-[ext_resource type="PackedScene" uid="uid://dqkrjubr2hffx" path="res://Environment/Elements/Interior/books.glb" id="23_macmo"]
-[ext_resource type="PackedScene" uid="uid://bor0f8x36e8mn" path="res://Environment/Elements/Interior/ceilingFan.glb" id="24_5xqaw"]
-[ext_resource type="PackedScene" uid="uid://0sod4dxbgatc" path="res://Environment/Elements/Interior/computerScreen.glb" id="26_5xqaw"]
-[ext_resource type="PackedScene" uid="uid://bowqjedydqffg" path="res://Environment/Elements/Interior/plantSmall1.glb" id="27_5xqaw"]
+[ext_resource type="PackedScene" uid="uid://pw156n4w07hb" path="res://Levels/CityBlock/Elements/Buildings/shut_in_room.tscn" id="20_5xqaw"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="27_c8vk2"]
 [ext_resource type="Script" uid="uid://j7pdxvhrysxc" path="res://Player/Quests/water_well.gd" id="27_mb3nd"]
-[ext_resource type="PackedScene" uid="uid://dkw1s6sc3xtxg" path="res://Environment/Elements/Interior/chair.glb" id="28_io07x"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="30_c8vk2"]
 [ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="34_aqird"]
 
@@ -292,128 +285,8 @@ mesh = SubResource("BoxMesh_uakrt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Ground2/StaticBody3D" unique_id=1533072516]
 shape = SubResource("ConvexPolygonShape3D_l8u6m")
 
-[node name="ShutInRoom" type="Node3D" parent="Buildings" unique_id=1840649786]
-transform = Transform3D(-0.34862316, 0, -3.984779, 0, 4, 0, 3.984779, 0, -0.34862316, 19.507713, 1.6999999, -25.928543)
-
-[node name="desk" parent="Buildings/ShutInRoom" unique_id=1204518294 instance=ExtResource("22_macmo")]
-transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, 0.63750005, -0.40000004, -0.6000004)
-
-[node name="bathtub" parent="Buildings/ShutInRoom" unique_id=1910070269 instance=ExtResource("22_70fpi")]
-transform = Transform3D(0.5, 0, -7.450581e-09, 0, 0.5, 0, 7.450581e-09, 0, 0.5, 0.25, -0.39999998, 0.375)
-
-[node name="plantSmall1" parent="Buildings/ShutInRoom" unique_id=911012259 instance=ExtResource("27_5xqaw")]
-
-[node name="books" parent="Buildings/ShutInRoom" unique_id=1716892614 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.625, -0.39999998, 0.07499981)
-
-[node name="books2" parent="Buildings/ShutInRoom" unique_id=2023702615 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.46249998, -0.39999998, 0.07499981)
-
-[node name="books3" parent="Buildings/ShutInRoom" unique_id=77327296 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.29999995, -0.39999998, 0.07499981)
-
-[node name="books4" parent="Buildings/ShutInRoom" unique_id=1653814120 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.13749993, -0.39999998, 0.07499981)
-
-[node name="books5" parent="Buildings/ShutInRoom" unique_id=905862549 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.7125001, -0.29999998, 0.07499981)
-
-[node name="books6" parent="Buildings/ShutInRoom" unique_id=441118406 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.54999995, -0.29999998, 0.07499981)
-
-[node name="books7" parent="Buildings/ShutInRoom" unique_id=1206171774 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.38749993, -0.29999998, 0.07499981)
-
-[node name="books8" parent="Buildings/ShutInRoom" unique_id=1316024088 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.2249999, -0.29999998, 0.07499981)
-
-[node name="books9" parent="Buildings/ShutInRoom" unique_id=1100355255 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.76250005, -0.21249998, 0.07499981)
-
-[node name="books10" parent="Buildings/ShutInRoom" unique_id=1686387841 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.5999999, -0.21249998, 0.07499981)
-
-[node name="books11" parent="Buildings/ShutInRoom" unique_id=551831885 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.43749994, -0.21249998, 0.07499981)
-
-[node name="books12" parent="Buildings/ShutInRoom" unique_id=14394123 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.27499992, -0.21249998, 0.07499981)
-
-[node name="books13" parent="Buildings/ShutInRoom" unique_id=1469488039 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, -0.025000095, -0.39999998, 0.07499981)
-
-[node name="books14" parent="Buildings/ShutInRoom" unique_id=1831567456 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.06249988, -0.29999998, 0.07499981)
-
-[node name="books15" parent="Buildings/ShutInRoom" unique_id=1037285567 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.11249989, -0.21249998, 0.07499981)
-
-[node name="books16" parent="Buildings/ShutInRoom" unique_id=2001434433 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, -0.2000001, -0.39999998, 0.07499981)
-
-[node name="books17" parent="Buildings/ShutInRoom" unique_id=1084939365 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, -0.11250013, -0.29999998, 0.07499981)
-
-[node name="books18" parent="Buildings/ShutInRoom" unique_id=1854761206 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, -0.06250012, -0.21249998, 0.07499981)
-
-[node name="books19" parent="Buildings/ShutInRoom" unique_id=1254759314 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, 0.099999905, -0.099999964, 0.07499981)
-
-[node name="books20" parent="Buildings/ShutInRoom" unique_id=1440106283 instance=ExtResource("23_macmo")]
-transform = Transform3D(1.0175, 0, 0, 0, 1.0175, 0, 0, 0, 1.0175, -0.07500011, -0.099999964, 0.07499981)
-
-[node name="ceilingFan" parent="Buildings/ShutInRoom" unique_id=2073397824 instance=ExtResource("24_5xqaw")]
-transform = Transform3D(0.94499993, 0, 0, 0, 0.94499993, 0, 0, 0, 0.94499993, -0.25, 0.725, -0.17500019)
-
-[node name="computerScreen" parent="Buildings/ShutInRoom" unique_id=294746009 instance=ExtResource("26_5xqaw")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 0.73749995, -0.099999964, -0.5125003)
-
-[node name="chair" parent="Buildings/ShutInRoom" unique_id=377084213 instance=ExtResource("28_io07x")]
-transform = Transform3D(0.37499997, 0, 0.6495191, 0, 0.75, 0, -0.6495191, 0, 0.37499997, 0.5, -0.39999998, -0.3000002)
-
-[node name="bedSingle" parent="Buildings/ShutInRoom" unique_id=1123090864 instance=ExtResource("21_qeedx")]
-transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, 0, -0.39999998, 0.07499981)
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Buildings/ShutInRoom" unique_id=121948593]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.5, -0.525, 5.95)
-use_collision = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=2112507341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, 0, -24.5)
-size = Vector3(16.5, 1, 8)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=251379861]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 6.25, 2.25, -24.5)
-size = Vector3(7, 1, 8)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=261546441]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4, 2.2499998, -24.5)
-size = Vector3(7, 7.5, 8)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=1794543215]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 1, 2.25, -27)
-size = Vector3(7, 1, 10.5)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=865209735]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, -1.5, 2.25, -20)
-size = Vector3(7, 1, 15.5)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D/CSGBox3D6" unique_id=1245173470]
-transform = Transform3D(-4.3711385e-08, 7.1054274e-15, -1, -8.742276e-08, -1, 0, -1, 8.742277e-08, 4.371139e-08, -0.25000262, 0, -2.7500007)
-operation = 2
-size = Vector3(2, 2, 3)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Buildings/ShutInRoom/CSGCombiner3D" unique_id=550948854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5.501133, -24.5)
-size = Vector3(14, 0.4428711, 8)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Buildings/ShutInRoom" unique_id=1280508600]
-transform = Transform3D(-0.06470478, 0, 0.24148145, 0, 0.25, 0, -0.24148145, 0, -0.06470478, 0.8375, 0.087499976, -0.3249998)
-light_color = Color(0.14117648, 1, 1, 1)
-light_energy = 2.965
-light_size = 0.143
-spot_range = 8.0
+[node name="ShutInRoom" parent="Buildings" unique_id=101925429 instance=ExtResource("20_5xqaw")]
+transform = Transform3D(-0.34862307, 0, -3.984779, 0, 4, 0, 3.984779, 0, -0.34862307, 19.507713, 1.6999999, -25.928543)
 
 [node name="WaterWell" type="MeshInstance3D" parent="Buildings" unique_id=1684958769]
 transform = Transform3D(1, 0, 0, 0, 4.2, 0, 0, 0, 1, 0, 0, -25.5)
@@ -524,7 +397,7 @@ debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
 transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86602545, 0.5, 0.50000006, 0.4330127, -0.75, -1.9598064, 4.375637, -3.234871)
 
 [node name="MarinaNPC" parent="." unique_id=1446232392 instance=ExtResource("30_c8vk2")]
-transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.742434, 0.9275619, -23.750753)
+transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.785986, 0.9275619, -23.73531)
 
 [node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("34_aqird")]
 
