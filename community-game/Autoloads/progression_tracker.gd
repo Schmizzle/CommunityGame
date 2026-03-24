@@ -21,3 +21,8 @@ enum TaskTags {
 	}
 
 var TestBool: bool = true
+
+
+func try_increment_task(tag: TaskTags):
+	var GameManagerNode: GameManager = get_tree().get_first_node_in_group("GameManager")
+	GameManagerNode.QuestManagerNode.try_increment_task(tag)
