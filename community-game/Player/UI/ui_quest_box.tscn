@@ -20,18 +20,31 @@ noise = SubResource("FastNoiseLite_gjptt")
 color_ramp = SubResource("Gradient_ystvm")
 seamless = true
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjptt"]
+content_margin_left = 50.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="LabelSettings" id="LabelSettings_gjptt"]
-font_size = 24
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_ystvm"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvx1w"]
+font_size = 40
 
 [node name="UiQuestBox" type="PanelContainer" unique_id=2076595825 node_paths=PackedStringArray("NameLabel", "DescriptionLabel", "TaskListLabel", "TaskContainer")]
-offset_right = 436.0
-offset_bottom = 191.0
+offset_right = 933.0
+offset_bottom = 226.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ystvm")
 script = ExtResource("1_ystvm")
-NameLabel = NodePath("DataContainer/NameLabel")
-DescriptionLabel = NodePath("DataContainer/DescriptionLabel")
-TaskListLabel = NodePath("DataContainer/TaskListLabel")
-TaskContainer = NodePath("DataContainer/TaskBoxContainer")
+NameLabel = NodePath("PanelContainer/DataContainer/NameLabel")
+DescriptionLabel = NodePath("PanelContainer/DataContainer/DescriptionLabel")
+TaskListLabel = NodePath("PanelContainer/DataContainer/TaskListLabel")
+TaskContainer = NodePath("PanelContainer/DataContainer/TaskBoxContainer")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=527621139]
 layout_mode = 2
@@ -39,23 +52,29 @@ texture = SubResource("NoiseTexture2D_rvx1w")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="DataContainer" type="VBoxContainer" parent="." unique_id=476202835]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1693143296]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gjptt")
+
+[node name="DataContainer" type="VBoxContainer" parent="PanelContainer" unique_id=476202835]
 layout_mode = 2
 theme_override_constants/separation = 9
 
-[node name="NameLabel" type="Label" parent="DataContainer" unique_id=526636175]
+[node name="NameLabel" type="Label" parent="PanelContainer/DataContainer" unique_id=526636175]
 layout_mode = 2
 text = "Name"
 label_settings = SubResource("LabelSettings_gjptt")
 
-[node name="DescriptionLabel" type="Label" parent="DataContainer" unique_id=137666952]
+[node name="DescriptionLabel" type="Label" parent="PanelContainer/DataContainer" unique_id=137666952]
 layout_mode = 2
 text = "Description"
+label_settings = SubResource("LabelSettings_ystvm")
 
-[node name="TaskListLabel" type="Label" parent="DataContainer" unique_id=375394395]
+[node name="TaskListLabel" type="Label" parent="PanelContainer/DataContainer" unique_id=375394395]
 layout_mode = 2
 text = "TaskListName"
+label_settings = SubResource("LabelSettings_rvx1w")
 
-[node name="TaskBoxContainer" type="VBoxContainer" parent="DataContainer" unique_id=52065172]
+[node name="TaskBoxContainer" type="VBoxContainer" parent="PanelContainer/DataContainer" unique_id=52065172]
 layout_mode = 2
 theme_override_constants/separation = 4
