@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cvv6wgw7vrcm4"]
+
+[ext_resource type="PackedScene" uid="uid://dce77hwdbi0bn" path="res://Player/Camera/camera_volume.tscn" id="1_ah6k2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2iit"]
+size = Vector3(31.794968, 13.766357, 29.786633)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vipn"]
+size = Vector3(11.00415, 22.09253, 26.01841)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16d1u"]
+size = Vector3(26.741821, 22.09253, 19.221888)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htl84"]
+size = Vector3(57.02246, 28.214233, 34.873062)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ku0i2"]
+size = Vector3(33.782593, 27.745483, 32.196323)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3iw64"]
+size = Vector3(7.3841553, 6.417572, 14.86976)
+
+[node name="Cameras" type="Node3D" unique_id=872106360]
+
+[node name="WidePortCam" parent="." unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WidePortCam" unique_id=2038680130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3358493, -3.553999, -4.170376)
+shape = SubResource("BoxShape3D_n2iit")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="WidePortCam" unique_id=334350336]
+transform = Transform3D(-0.43162915, -0.23772328, 0.87016314, 0, 0.96464944, 0.26353636, -0.90205115, 0.11374997, -0.4163708, 8.272992, 2.7179995, -6.9232597)
+
+[node name="EnteringTownCAm" parent="." unique_id=245209950 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnteringTownCAm" unique_id=1336466026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.600353, -4.4268017, 0.5802498)
+shape = SubResource("BoxShape3D_5vipn")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="EnteringTownCAm" unique_id=1029548428]
+transform = Transform3D(-0.9649202, 0, 0.2625429, 0, 1, 0, -0.2625429, 0, -0.9649203, -28.369198, -0.99717045, -13.41608)
+
+[node name="PortHutCam" parent="." unique_id=931935196 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PortHutCam" unique_id=1944656801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.731518, -4.4268017, -22.674038)
+shape = SubResource("BoxShape3D_16d1u")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="PortHutCam" unique_id=1324807651]
+transform = Transform3D(-0.4424451, 0, 0.8967955, 0, 1, 0, -0.8967955, 0, -0.44244516, -4.372304, -0.99717045, -33.737022)
+
+[node name="MountainClimbCam" parent="." unique_id=79740155 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.682476, 10.772795, 0.5556221)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MountainClimbCam" unique_id=871880543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.22572, -1.3659496, -7.251817)
+shape = SubResource("BoxShape3D_htl84")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="MountainClimbCam" unique_id=2031599308]
+transform = Transform3D(0.93250203, 0.12564836, 0.33860382, -0.056352727, 0.9766686, -0.20722672, -0.35674146, 0.1741581, 0.917826, -9.271936, -0.07528782, 20.728975)
+
+[node name="MidMountainCam" parent="." unique_id=1968960697 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.682476, 10.772795, 0.5556221)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MidMountainCam" unique_id=90942130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.845654, 18.624727, -37.752937)
+shape = SubResource("BoxShape3D_ku0i2")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="MidMountainCam" unique_id=2075827769]
+transform = Transform3D(0.05726786, 0.49304032, -0.8681196, -1.8626451e-09, 0.8695466, 0.49385083, 0.99835885, -0.028281778, 0.049797077, -38.841625, 25.793118, -32.552425)
+
+[node name="ShutInCam" parent="." unique_id=330292491 node_paths=PackedStringArray("Camera") instance=ExtResource("1_ah6k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.682476, 10.772795, 0.5556221)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShutInCam" unique_id=1955714289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.700634, 11.261156, -34.50263)
+shape = SubResource("BoxShape3D_3iw64")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="ShutInCam" unique_id=1294208954]
+transform = Transform3D(-0.7904544, 0.29831082, -0.53496957, -1.4901161e-08, 0.87338996, 0.4870215, 0.6125208, 0.38496834, -0.6903749, -16.63567, 13.334703, -33.64822)

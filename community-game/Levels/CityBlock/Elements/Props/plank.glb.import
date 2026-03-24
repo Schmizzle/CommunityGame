@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://i8qsk0r48d4x"
-path="res://.godot/imported/port2.glb-ff5e5a1f78643b2289a94a9e55675907.scn"
+uid="uid://d3xkdt1xkommg"
+path="res://.godot/imported/plank.glb-8889bd12ae4ed536233e7e231edc025f.scn"
 
 [deps]
 
-source_file="res://Levels/CityBlock/port2.glb"
-dest_files=["res://.godot/imported/port2.glb-ff5e5a1f78643b2289a94a9e55675907.scn"]
+source_file="res://Levels/CityBlock/Elements/Props/plank.glb"
+dest_files=["res://.godot/imported/plank.glb-8889bd12ae4ed536233e7e231edc025f.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbq5idwc7ka7j"
-path="res://.godot/imported/plank.blend-94f89ba230647dbec90e23a40f819fc6.scn"
+uid="uid://ct4x7n1djx2rl"
+path="res://.godot/imported/hut.blend-a1b6e0dc364f37be1db50350c7e5f7f1.scn"
 
 [deps]
 
-source_file="res://Levels/CityBlock/plank.blend"
-dest_files=["res://.godot/imported/plank.blend-94f89ba230647dbec90e23a40f819fc6.scn"]
+source_file="res://Levels/CityBlock/Elements/Buildings/hut.blend"
+dest_files=["res://.godot/imported/hut.blend-a1b6e0dc364f37be1db50350c7e5f7f1.scn"]
 
 [params]
 
