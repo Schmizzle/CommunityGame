@@ -23,12 +23,16 @@
 [ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
 [ext_resource type="Resource" uid="uid://dwfwc6ferotss" path="res://Player/Quests/LeakQuest/FirstObstacle.dtl" id="23_4dyk3"]
 [ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
-[ext_resource type="PackedScene" uid="uid://dnpq0buwqruca" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
+[ext_resource type="PackedScene" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
+[ext_resource type="PackedScene" uid="uid://deh8rmw58pns5" path="res://Environment/Elements/General/Crate/woodencrate.blend" id="25_4dyk3"]
 [ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="25_8no60"]
 [ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="25_f8nk5"]
+[ext_resource type="PackedScene" uid="uid://dm5eky8ob3jbx" path="res://Environment/Elements/General/Barrel/barrel.blend" id="26_g7h24"]
 [ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="27_64ght"]
+[ext_resource type="PackedScene" uid="uid://p5u1vlhlglsl" path="res://Environment/Elements/General/ShippingContainer/shippingContainer.blend" id="27_g7h24"]
 [ext_resource type="Texture2D" uid="uid://dah33avekysft" path="res://NPCs/LumberJack/Icon_psychopath.png" id="28_pquts"]
-[ext_resource type="Resource" uid="uid://dg8hkr7euexih" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="29_g7h24"]
+[ext_resource type="Resource" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="29_g7h24"]
+[ext_resource type="Material" uid="uid://2rwr1jpl5axt" path="res://Environment/AllPurposeTextures/WoodTextures/darkwoodTriplanar.tres" id="29_h7olt"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -64,7 +68,6 @@ albedo_color = Color(0.67058825, 0.99607843, 0.8862745, 0.34509805)
 
 [node name="DayNightManager" type="Node3D" parent="." unique_id=325687392]
 script = ExtResource("1_faylj")
-time_current = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DayNightManager" unique_id=21541149]
 transform = Transform3D(0.901077, 0.35479808, -0.24935627, 0.33995926, -0.9349171, -0.10177159, -0.26923588, 0.0069330633, -0.9630492, 0, 6.843994, 0)
@@ -295,11 +298,32 @@ transform = Transform3D(0.20789169, 0, -0.13885632, 0, 0.25, 0, 0.13885632, 0, 0
 [node name="marina" parent="ShutInRoom/MarinaNPC" index="3" unique_id=678181806]
 OutsideLocation = Vector3(-2.2, 1, 4.5)
 
-[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" parent_id_path=PackedInt32Array(706979957, 678181806, 2115837156) index="0" unique_id=220762527]
+[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 311245224) index="0" unique_id=820263244]
+bones/0/rotation = Quaternion(0.7070358, 0.010022881, -0.01002288, 0.7070358)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/3/rotation = Quaternion(-0.81124115, 6.970309e-08, -9.670747e-08, 0.5847118)
+bones/4/rotation = Quaternion(-0.23457125, 2.5582784e-14, -5.5926137e-08, 0.97209895)
+bones/5/rotation = Quaternion(-0.010507828, -1.3384131e-15, -2.5052616e-09, 0.9999448)
+bones/6/rotation = Quaternion(-0.009517498, 2.0098549e-14, -2.269154e-09, 0.9999547)
+bones/7/rotation = Quaternion(0, 0, 0, 1)
+bones/8/rotation = Quaternion(0, 0, 0, 1)
+bones/9/rotation = Quaternion(0.81124115, 6.9703056e-08, 9.670741e-08, 0.5847118)
+bones/10/rotation = Quaternion(0.23457125, 8.0859866e-14, 5.5926126e-08, 0.97209895)
+bones/11/rotation = Quaternion(0.010507828, -4.250307e-17, 2.5052578e-09, 0.9999448)
+bones/12/rotation = Quaternion(0.009517498, 2.9636238e-09, 2.297359e-09, 0.9999547)
+bones/14/rotation = Quaternion(-0.7006804, -8.716751e-08, 8.5604256e-08, 0.71347535)
+bones/15/rotation = Quaternion(0.0044630365, 2.9637501e-09, -1.0772979e-09, 0.99999005)
+bones/16/rotation = Quaternion(3.229019e-08, 2.0087758e-07, -0.70710677, 0.70710677)
+bones/18/rotation = Quaternion(0.7006804, -8.716751e-08, -8.5604256e-08, 0.71347535)
+bones/19/rotation = Quaternion(-0.0044633495, 2.9637592e-09, 1.0773735e-09, 0.99999005)
+bones/20/rotation = Quaternion(-1.7877335e-07, -1.0185976e-08, -0.70710677, 0.70710677)
+
+[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=958569564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00016467273, 0.00013720989, 0.0001628995)
 
 [node name="Ocean" parent="." unique_id=1206046621 instance=ExtResource("4_4objx")]
-transform = Transform3D(17.533104, 0, -239.73341, 0, 1, 0, 136.2258, 0, 30.855171, 2.6457162, 0.5045109, -42.473873)
+transform = Transform3D(17.533104, 0, -239.73341, 0, 1, 0, 136.2258, 0, 30.855171, 2.7381463, 0.5756645, -42.394924)
 
 [node name="BonoNPC" type="Node3D" parent="." unique_id=1438076005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.20131, 5.3023205, -31.76274)
@@ -333,6 +357,30 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
 billboard = 1
 texture = ExtResource("23_kh6jt")
 
+[node name="barrel" parent="IllianosNPC" unique_id=1395489784 instance=ExtResource("26_g7h24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.944338, -4.4213357, 19.226818)
+
+[node name="woodencrate" parent="IllianosNPC" unique_id=876858970 instance=ExtResource("25_4dyk3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.045677, -4.421335, 17.931458)
+
+[node name="woodencrate2" parent="IllianosNPC" unique_id=1101343318 instance=ExtResource("25_4dyk3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.943247, -4.4213347, 16.8009)
+
+[node name="woodencrate3" parent="IllianosNPC" unique_id=810289143 instance=ExtResource("25_4dyk3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.231367, -4.421335, 17.93473)
+
+[node name="woodencrate4" parent="IllianosNPC" unique_id=461409758 instance=ExtResource("25_4dyk3")]
+transform = Transform3D(0.9121916, 0, 0.4097638, 0, 1, 0, -0.4097638, 0, 0.9121916, 13.084278, -3.4367871, 17.479755)
+
+[node name="shippingContainer" parent="IllianosNPC" unique_id=1369561007 instance=ExtResource("27_g7h24")]
+transform = Transform3D(0.9017118, 0, 0.43233755, 0, 1, 0, -0.43233755, 0, 0.9017118, 19.068817, -4.9213347, 18.721594)
+
+[node name="shippingContainer2" parent="IllianosNPC" unique_id=562607092 instance=ExtResource("27_g7h24")]
+transform = Transform3D(0.025409304, 0, 0.9996771, 0, 1, 0, -0.9996771, 0, 0.025409304, 5.140204, -2.0085182, 14.198963)
+
+[node name="shippingContainer3" parent="IllianosNPC" unique_id=672434746 instance=ExtResource("27_g7h24")]
+transform = Transform3D(0.025409304, 0, 0.9996771, 0, 1, 0, -0.9996771, 0, 0.025409304, 1.9354558, -2.0085173, 14.045574)
+
 [node name="LevelGeometry" type="Node3D" parent="." unique_id=195991727]
 
 [node name="Dockyard" type="Node3D" parent="LevelGeometry" unique_id=1620623748]
@@ -343,6 +391,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67067, 2.9743667, -40.80149
 
 [node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("25_8no60")]
 transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
+
+[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=492985748]
+transform = Transform3D(6.4, 0, 0, 0, 0.19999999, 0, 0, 0, 2.88, 2.98378, 2.3841858e-07, 0.016954422)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=1410618290]
+transform = Transform3D(1.7881393e-07, 0, -3.2, 0, 1, 0, 1, 0, 5.364418e-07, 6.283779, 0.7000003, -3.9000015)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=1981168863]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, -1.9830456)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=945676481]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, 2.0169525)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=388323397]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 2.0169525)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=509826400]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 4.98378, -1.1999998, 2.0169525)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=100254002]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 5.0169525)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=2065705843]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.483778, -1.1999998, 15.016956)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=339398506]
+transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 11.0169525)
+surface_material_override/0 = ExtResource("29_h7olt")
+
+[node name="barrel" parent="LevelGeometry/dock" unique_id=1825469223 instance=ExtResource("26_g7h24")]
+transform = Transform3D(-0.14584135, 0, -0.989308, 0, 1, 0, 0.989308, 0, -0.14584135, -1.9352531, 0.69999886, 0.24101639)
 
 [node name="LumberMill" type="Node3D" parent="LevelGeometry" unique_id=54891236]
 
@@ -382,8 +469,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5672245, 0.8213005, -1.213
 
 [connection signal="new_day" from="DayNightManager" to="BonoNPC" method="_on_day_night_manager_new_day"]
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
-[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
 [connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_bed_sleep"]
+[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
 
 [editable path="ShutInRoom/MarinaNPC"]
 [editable path="ShutInRoom/MarinaNPC/NpcTalkingComponent"]
@@ -391,5 +478,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5672245, 0.8213005, -1.213
 [editable path="ShutInRoom/MarinaNPC/marina"]
 [editable path="BonoNPC/InteractableComponent"]
 [editable path="IllianosNPC/InteractableComponent"]
+[editable path="LevelGeometry/dock"]
 [editable path="LumberJack/InteractableComponent"]
 [editable path="PlayerBed/InteractableComponent"]
