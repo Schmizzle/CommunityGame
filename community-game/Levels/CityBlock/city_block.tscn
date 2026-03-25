@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf5rbnbkiljd2" path="res://Environment/Elements/DayNight/SkyDay.tres" id="2_e8nn5"]
 [ext_resource type="PackedScene" uid="uid://dir4y2agytnmg" path="res://Player/player.tscn" id="3_2e13l"]
 [ext_resource type="PackedScene" uid="uid://ba84msgb7twy3" path="res://Environment/TestingStuff/BasicBlock/basic-block.tscn" id="4_4objx"]
-[ext_resource type="PackedScene" uid="uid://cvv6wgw7vrcm4" path="res://Levels/CityBlock/cameras.tscn" id="5_16d1u"]
+[ext_resource type="PackedScene" uid="uid://dce77hwdbi0bn" path="res://Player/Camera/camera_volume.tscn" id="4_xu544"]
 [ext_resource type="PackedScene" uid="uid://cdyxifbkuoxiy" path="res://Environment/Elements/Interior/desk.glb" id="7_htl84"]
 [ext_resource type="PackedScene" uid="uid://bh428u47m175w" path="res://Environment/Elements/Interior/bathtub.glb" id="8_ku0i2"]
 [ext_resource type="PackedScene" uid="uid://bowqjedydqffg" path="res://Environment/Elements/Interior/plantSmall1.glb" id="9_16d1u"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dk4v8lab5blqn" path="res://NPCs/Bono/Screenshot 2026-03-23 132342.png" id="21_wkx8g"]
 [ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
 [ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
+[ext_resource type="PackedScene" uid="uid://dnpq0buwqruca" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -33,6 +34,12 @@ sky_material = SubResource("PanoramaSkyMaterial_0l8pt")
 [sub_resource type="Environment" id="Environment_4jjoa"]
 background_mode = 2
 sky = SubResource("Sky_kcxp8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2iit"]
+size = Vector3(18.793707, 13.766357, 19.461063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3iw64"]
+size = Vector3(7.3841553, 6.417572, 14.86976)
 
 [sub_resource type="TorusMesh" id="TorusMesh_n2e8l"]
 
@@ -54,9 +61,34 @@ transform = Transform3D(0.901077, 0.35479808, -0.24935627, 0.33995926, -0.934917
 environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("3_2e13l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7090786, 6.0685034, -31.161772)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.04962, 7.587364, -44.229687)
 
-[node name="Cameras" parent="." unique_id=872106360 instance=ExtResource("5_16d1u")]
+[node name="Cameras" type="Node3D" parent="." unique_id=872106360]
+
+[node name="WidePortCam" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/WidePortCam" unique_id=2038680130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2715273, -3.553999, -10.932518)
+shape = SubResource("BoxShape3D_n2iit")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/WidePortCam" unique_id=334350336]
+transform = Transform3D(-0.6631558, -0.30037192, 0.6855663, -2.2351742e-08, 0.915943, 0.40130848, -0.74848145, 0.26612997, -0.60741293, 8.48183, 0.6829251, -21.25982)
+fov = 50.0
+
+[node name="ShutInCam" parent="Cameras" unique_id=330292491 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.682476, 10.772795, 0.5556221)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/ShutInCam" unique_id=1955714289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.700634, 11.261156, -34.50263)
+shape = SubResource("BoxShape3D_3iw64")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/ShutInCam" unique_id=1294208954]
+transform = Transform3D(-0.7904544, 0.29831082, -0.53496957, -1.4901161e-08, 0.87338996, 0.4870215, 0.6125208, 0.38496834, -0.6903749, -16.63567, 13.334703, -33.64822)
 
 [node name="LevelInteractables" type="Node3D" parent="." unique_id=962601878]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.394712, 4.6845074, -27.297054)
@@ -247,7 +279,7 @@ billboard = 1
 texture = ExtResource("21_wkx8g")
 
 [node name="IllianosNPC" type="Node3D" parent="." unique_id=2029713953]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.942999, 5.7553353, -6.655884)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1057825, 7.238734, -49.559864)
 script = ExtResource("22_kwo3p")
 Timeline1 = ExtResource("19_wkx8g")
 
@@ -260,9 +292,16 @@ NPCParent = NodePath("..")
 InteractComponent = NodePath("../InteractableComponent")
 
 [node name="Sprite3D" type="Sprite3D" parent="IllianosNPC" unique_id=651360949]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.8518972, 0.1720891, -0.7078953)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.8518972, -2.209479, -0.7078953)
 billboard = 1
 texture = ExtResource("23_kh6jt")
+
+[node name="LevelGeometry" type="Node3D" parent="." unique_id=195991727]
+
+[node name="Dockyard" type="Node3D" parent="LevelGeometry" unique_id=1620623748]
+
+[node name="dockyard" parent="LevelGeometry/Dockyard" unique_id=838492386 instance=ExtResource("24_xu544")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.700192, 3.2779531, -40.904255)
 
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
 
