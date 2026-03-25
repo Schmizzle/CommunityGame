@@ -14,8 +14,17 @@ func _ready() -> void:
 	# SINCE IT CONCERNS THEIR UI THEY HAVE TO GIVE IT TO THIS SCRIPT FIRST
 
 
-func activate_quest(id: int):
-	pass
+func make_quest_available(tag: ProgressionTracker.QuestTags):
+	for x in Quests:
+		if (x.State == Quest.QuestStates.Unavaible) and (x.Tag == tag):
+			x.State = Quest.QuestStates.Available
+
+
+func activate_quest(tag: ProgressionTracker.QuestTags):
+	for x in Quests:
+		if (x.Tag == tag) and (x.State == Quest.QuestStates.Available):
+			x.State = Quest.QuestStates.Active
+			create_quest_boxes()
 
 
 func try_increment_task(tag: ProgressionTracker.TaskTags) -> bool:
@@ -87,6 +96,7 @@ func try_increment_task(tag: ProgressionTracker.TaskTags) -> bool:
 	
 	return IncrementedSomething
 
+
 # TEMPORARY UNTIL WE HAVE ACTUAL DATA LOADING
 func set_active_tasklists():
 	for x in Quests:
@@ -151,7 +161,7 @@ func update_tasklist_display(quest: Quest):
 #endregion
 
 
-#region Queries WIP!!!!!
+#region Queries 
 
 func query_quest_complete(tag: ProgressionTracker.QuestTags) -> bool:
 	var ReturnValue: bool = false
