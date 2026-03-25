@@ -23,6 +23,10 @@
 [ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
 [ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
 [ext_resource type="PackedScene" uid="uid://dnpq0buwqruca" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
+[ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="25_8no60"]
+[ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="25_f8nk5"]
+[ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="27_64ght"]
+[ext_resource type="Texture2D" uid="uid://dah33avekysft" path="res://NPCs/LumberJack/Icon_psychopath.png" id="28_pquts"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -37,6 +41,9 @@ sky = SubResource("Sky_kcxp8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n2iit"]
 size = Vector3(18.793707, 13.766357, 19.461063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8no60"]
+size = Vector3(22.865295, 13.766357, 25.26874)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3iw64"]
 size = Vector3(7.3841553, 6.417572, 14.86976)
@@ -62,21 +69,35 @@ environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("3_2e13l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.04962, 7.587364, -44.229687)
+Speed = 400
 
 [node name="Cameras" type="Node3D" parent="." unique_id=872106360]
 
-[node name="WidePortCam" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
+[node name="DockYard" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
 Camera = NodePath("Camera3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/WidePortCam" unique_id=2038680130]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/DockYard" unique_id=2038680130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2715273, -3.553999, -10.932518)
 shape = SubResource("BoxShape3D_n2iit")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="Camera3D" type="Camera3D" parent="Cameras/WidePortCam" unique_id=334350336]
+[node name="Camera3D" type="Camera3D" parent="Cameras/DockYard" unique_id=334350336]
 transform = Transform3D(-0.6631558, -0.30037192, 0.6855663, -2.2351742e-08, 0.915943, 0.40130848, -0.74848145, 0.26612997, -0.60741293, 8.48183, 0.6829251, -21.25982)
 fov = 50.0
+
+[node name="Dock" parent="Cameras" unique_id=7030018 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/Dock" unique_id=818990461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.932358, -3.553999, -8.028679)
+shape = SubResource("BoxShape3D_8no60")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/Dock" unique_id=611731303]
+transform = Transform3D(-0.01134099, 0.18328813, 0.98299384, 0.23467344, 0.9560887, -0.17556396, -0.9720081, 0.22869147, -0.05385585, 33.61086, -5.650773, -4.5161896)
+fov = 59.0
 
 [node name="ShutInCam" parent="Cameras" unique_id=330292491 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.682476, 10.772795, 0.5556221)
@@ -263,7 +284,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00016467273, 0.00013720989,
 transform = Transform3D(17.533104, 0, -239.73341, 0, 1, 0, 136.2258, 0, 30.855171, 2.6457162, 0.5045109, -42.473873)
 
 [node name="BonoNPC" type="Node3D" parent="." unique_id=1438076005]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4025755, 6.213746, -29.828672)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.20131, 5.3023205, -31.76274)
 script = ExtResource("18_n2e8l")
 Timeline1 = ExtResource("19_wkx8g")
 
@@ -279,29 +300,56 @@ billboard = 1
 texture = ExtResource("21_wkx8g")
 
 [node name="IllianosNPC" type="Node3D" parent="." unique_id=2029713953]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1057825, 7.238734, -49.559864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.447249, 8.204767, -49.559864)
 script = ExtResource("22_kwo3p")
 Timeline1 = ExtResource("19_wkx8g")
 
 [node name="InteractableComponent" parent="IllianosNPC" unique_id=2035142665 instance=ExtResource("17_3iw64")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2993965, 0, -1.5698433)
 
 [node name="NpcTalkingComponent" parent="IllianosNPC" unique_id=581970494 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("19_otv0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5169401, 0.2683425, -1.9726143)
 NPCParent = NodePath("..")
 InteractComponent = NodePath("../InteractableComponent")
 
 [node name="Sprite3D" type="Sprite3D" parent="IllianosNPC" unique_id=651360949]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.8518972, -2.209479, -0.7078953)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
 billboard = 1
 texture = ExtResource("23_kh6jt")
 
 [node name="LevelGeometry" type="Node3D" parent="." unique_id=195991727]
 
 [node name="Dockyard" type="Node3D" parent="LevelGeometry" unique_id=1620623748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9218826, 0)
 
 [node name="dockyard" parent="LevelGeometry/Dockyard" unique_id=838492386 instance=ExtResource("24_xu544")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.700192, 3.2779531, -40.904255)
+
+[node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("25_8no60")]
+transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
+
+[node name="LumberMill" type="Node3D" parent="LevelGeometry" unique_id=54891236]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LevelGeometry/LumberMill" unique_id=1406612088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7181015, 7.8634424, -37.83383)
+size = Vector3(16.795166, 1, 13.819641)
+
+[node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("25_f8nk5")]
+
+[node name="LumberJack" type="Node3D" parent="." unique_id=1372362738 node_paths=PackedStringArray("TalkingComponent")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.459444, 10.511706, -40.089493)
+script = ExtResource("27_64ght")
+Timeline1 = ExtResource("19_wkx8g")
+TalkingComponent = NodePath("NpcTalkingComponent")
+
+[node name="InteractableComponent" parent="LumberJack" unique_id=1959754130 instance=ExtResource("17_3iw64")]
+
+[node name="NpcTalkingComponent" parent="LumberJack" unique_id=1587590997 node_paths=PackedStringArray("NPCParent", "InteractComponent") instance=ExtResource("19_otv0e")]
+NPCParent = NodePath("..")
+InteractComponent = NodePath("../InteractableComponent")
+
+[node name="Sprite3D" type="Sprite3D" parent="LumberJack" unique_id=1234215649]
+transform = Transform3D(0.46945113, 0, 0, 0, 0.4221582, 0, 0, 0, 1, 0, 0, 0)
+billboard = 1
+texture = ExtResource("28_pquts")
 
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
 
@@ -311,3 +359,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.700192, 3.2779531, -40.9042
 [editable path="ShutInRoom/MarinaNPC/marina"]
 [editable path="BonoNPC/InteractableComponent"]
 [editable path="IllianosNPC/InteractableComponent"]
+[editable path="LumberJack/InteractableComponent"]

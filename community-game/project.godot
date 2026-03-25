@@ -26,6 +26,7 @@ ProgressionTracker="*uid://cl3w886dp13td"
 directories/dch_directory={
 "Bono": "res://NPCs/Bono/Bono.dch",
 "Illianos": "res://NPCs/Illianos/Illianos.dch",
+"LumberJack": "res://NPCs/LumberJack/LumberJack.dch",
 "Marina": "res://Player/Quests/Marina.dch",
 "Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
 "a": "res://Player/Quests/HateConeQuest/a.dch",
@@ -83,6 +84,7 @@ variables={
 "hasWater": false
 },
 "EscapeQuest": {
+"escapeMeet": false,
 "hasPlanks": false
 },
 "Fullfilled": 0,

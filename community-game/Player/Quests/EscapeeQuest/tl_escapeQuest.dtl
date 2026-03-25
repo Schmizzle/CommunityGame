@@ -1,7 +1,9 @@
-Bono: -h-h-h-h-hey
-Bono: You're not from around here.
-Bono: Can you help me out maybe?
-Bono: I'm making a boat for.. reasons..
-Bono: and I need some more planks to finish it.
-Bono: J-j-j-just dont mention it to anyone else please!!
-Bono: If you can find me one and give it to me today thatd be awesome thanks.
+if {EscapeQuest.escapeMeet} == false:
+	Bono: -h-h-h-h-hey
+	Bono: You're not from around here.
+	Bono: Can you help me out maybe?
+	Bono: I'm making a boat for.. reasons..
+	Bono: and I need some more planks to finish it.
+	Bono: J-j-j-just dont mention it to anyone else please!!
+	Bono: If you can find me one and give it to me today thatd be awesome thanks.
+	set {EscapeQuest.escapeMeet} = true
