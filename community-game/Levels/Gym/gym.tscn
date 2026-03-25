@@ -25,7 +25,10 @@
 [ext_resource type="PackedScene" uid="uid://pw156n4w07hb" path="res://Levels/CityBlock/Elements/Buildings/shut_in_room.tscn" id="20_5xqaw"]
 [ext_resource type="PackedScene" uid="uid://b3cuj7rpu1fl6" path="res://Environment/Elements/General/InteractableComponent/interactable-component.tscn" id="27_c8vk2"]
 [ext_resource type="Script" uid="uid://j7pdxvhrysxc" path="res://Player/Quests/water_well.gd" id="27_mb3nd"]
+[ext_resource type="PackedScene" uid="uid://fkaw5txdjki7" path="res://Environment/Elements/Greenery/wildflowerpatch1.tscn" id="28_ckih5"]
+[ext_resource type="PackedScene" uid="uid://dm5eky8ob3jbx" path="res://Environment/Elements/General/Barrel/barrel.blend" id="29_c8vk2"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="30_c8vk2"]
+[ext_resource type="Texture2D" uid="uid://ceyuf6ad6yg8" path="res://Environment/Elements/Greenery/groundgrasspatch.png" id="30_mb3nd"]
 [ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="34_aqird"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -85,7 +88,7 @@ size = Vector3(18, 8.5, 11.5)
 script = ExtResource("1_aqird")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DayNightManager" unique_id=1375572134]
-transform = Transform3D(0.90107703, 0.35479805, -0.24935628, 0, 0.5750053, 0.8181497, 0.4336591, -0.7372159, 0.51812404, 0, 6.843994, 0)
+transform = Transform3D(0.90107703, 0.34219348, 0.2663904, 0, -0.6142853, 0.789084, 0.4336591, -0.7110255, -0.55351835, 0, 6.843994, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="DayNightManager" unique_id=1608423285]
 environment = SubResource("Environment_4jjoa")
@@ -397,8 +400,31 @@ debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
 transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86602545, 0.5, 0.50000006, 0.4330127, -0.75, -1.9598064, 4.375637, -3.234871)
 
 [node name="MarinaNPC" parent="." unique_id=1446232392 instance=ExtResource("30_c8vk2")]
-transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.785986, 0.9275619, -23.73531)
+transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.766659, 0.92756164, -23.729254)
 
 [node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("34_aqird")]
+
+[node name="Node3D" parent="." unique_id=1002204564 instance=ExtResource("28_ckih5")]
+transform = Transform3D(0.99391305, 0, 0.110168025, 0, 1, 0, -0.110168025, 0, 0.99391305, 4.6341453, 0.004394591, -30.961517)
+
+[node name="Node3D2" parent="." unique_id=477350832 instance=ExtResource("28_ckih5")]
+transform = Transform3D(0.8202816, 0, 0.57195973, 0, 1, 0, -0.57195973, 0, 0.8202816, 12.612055, 0.0043950677, -29.553928)
+
+[node name="Node3D3" parent="." unique_id=905242871 instance=ExtResource("28_ckih5")]
+transform = Transform3D(0.99191, 0, 0.12694344, 0, 1, 0, -0.12694344, 0, 0.99191, 10.755248, 0.004395306, -28.809553)
+
+[node name="Node3D4" parent="." unique_id=881795659 instance=ExtResource("28_ckih5")]
+transform = Transform3D(0.9074918, 0, 0.42006993, 0, 1, 0, -0.42006993, 0, 0.9074918, 13.889591, 0.0043948293, -29.936853)
+
+[node name="barrel" parent="." unique_id=637174329 instance=ExtResource("29_c8vk2")]
+transform = Transform3D(1.5226641, 0, -0.08313089, 0, 1.5249317, 0, 0.08313089, 0, 1.5226641, 14.904334, 0.689348, -31.124949)
+
+[node name="Sprite3D" type="Sprite3D" parent="barrel" unique_id=42607454]
+transform = Transform3D(-4.649747, -3.287514, 1.8299913e-08, 0, 3.4209015e-07, 0.99662745, 2.1523266, -7.1021314, 3.953394e-08, -0.591033, -0.44916978, 0.77911377)
+texture = ExtResource("30_mb3nd")
+
+[node name="Sprite3D2" type="Sprite3D" parent="barrel" unique_id=1478855934]
+transform = Transform3D(-4.649747, -3.287514, 1.8299913e-08, 0, 3.4209015e-07, 0.99662745, 2.1523266, -7.1021314, 3.953394e-08, -2.6944227, -0.44916978, 1.4808044)
+texture = ExtResource("30_mb3nd")
 
 [connection signal="_interaction_signal" from="Buildings/WaterWell/InteractableComponent" to="Buildings/WaterWell" method="_on_interactable_component__interaction_signal"]
