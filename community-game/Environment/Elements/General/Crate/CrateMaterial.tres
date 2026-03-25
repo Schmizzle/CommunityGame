@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhmne6mu4gqwv"]
+
+[ext_resource type="Texture2D" uid="uid://b3dihr87yh65l" path="res://Environment/Elements/General/Crate/woodcratetexture.png" id="1_jwu3e"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_jwu3e")
+metallic_specular = 0.0
+texture_filter = 2

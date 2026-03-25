@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2rwr1jpl5axt"]
+
+[ext_resource type="Texture2D" uid="uid://bdv5bpi0w6cye" path="res://Environment/AllPurposeTextures/WoodTextures/woodtexturedark.png" id="1_tku0f"]
+
+[resource]
+albedo_texture = ExtResource("1_tku0f")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.78, 0.78, 0.78)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0

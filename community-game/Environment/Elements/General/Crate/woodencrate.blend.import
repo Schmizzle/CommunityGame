@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://deh8rmw58pns5"
-valid=false
+path="res://.godot/imported/woodencrate.blend-d67579710e88e96fe46f024884eddbad.scn"
 
 [deps]
 
 source_file="res://Environment/Elements/General/Crate/woodencrate.blend"
+dest_files=["res://.godot/imported/woodencrate.blend-d67579710e88e96fe46f024884eddbad.scn"]
 
 [params]
 
