@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dm5eky8ob3jbx"
-valid=false
+path="res://.godot/imported/barrel.blend-c20597ae7cf69cc2d904103d4e42b25c.scn"
 
 [deps]
 
 source_file="res://Environment/Elements/General/Barrel/barrel.blend"
+dest_files=["res://.godot/imported/barrel.blend-c20597ae7cf69cc2d904103d4e42b25c.scn"]
 
 [params]
 
@@ -40,7 +41,7 @@ _subresources={
 "materials": {
 "Material": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Environment/Elements/General/Barrel/Material.tres",
+"use_external/fallback_path": "res://Environment/Elements/General/Barrel/BarrelMaterial.tres",
 "use_external/path": "uid://dwk8hoc2qt3rc"
 }
 }
