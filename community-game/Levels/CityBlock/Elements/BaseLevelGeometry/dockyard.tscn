@@ -33,7 +33,7 @@ shape = SubResource("BoxShape3D_isxyb")
 [node name="StaticBody3D" type="StaticBody3D" parent="Stairs_001" parent_id_path=PackedInt32Array(28056271) index="0" unique_id=400881991]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stairs_001/StaticBody3D" index="0" unique_id=32599217]
-transform = Transform3D(0.7399364, -0.6726768, 0, 0.6726768, 0.7399364, 0, 0, 0, 1, -0.1740408, -0.39892197, -0.05065918)
+transform = Transform3D(0.44789955, -0.89408386, 0, 0.89408386, 0.44789955, 0, 0, 0, 1, -0.1740408, -0.39892197, -0.05065918)
 shape = SubResource("BoxShape3D_isxyb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" parent_id_path=PackedInt32Array(499175369) index="0" unique_id=1870054491]
