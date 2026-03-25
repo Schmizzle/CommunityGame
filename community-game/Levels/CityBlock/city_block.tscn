@@ -21,12 +21,14 @@
 [ext_resource type="Resource" uid="uid://dx2ueu8hv80ji" path="res://Player/Quests/EscapeeQuest/tl_escapeQuest.dtl" id="19_wkx8g"]
 [ext_resource type="Texture2D" uid="uid://dk4v8lab5blqn" path="res://NPCs/Bono/Screenshot 2026-03-23 132342.png" id="21_wkx8g"]
 [ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
+[ext_resource type="Resource" uid="uid://dwfwc6ferotss" path="res://Player/Quests/LeakQuest/FirstObstacle.dtl" id="23_4dyk3"]
 [ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
 [ext_resource type="PackedScene" uid="uid://dnpq0buwqruca" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
 [ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="25_8no60"]
 [ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="25_f8nk5"]
 [ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="27_64ght"]
 [ext_resource type="Texture2D" uid="uid://dah33avekysft" path="res://NPCs/LumberJack/Icon_psychopath.png" id="28_pquts"]
+[ext_resource type="Resource" uid="uid://dg8hkr7euexih" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="29_g7h24"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0l8pt"]
@@ -43,6 +45,9 @@ sky = SubResource("Sky_kcxp8")
 size = Vector3(18.793707, 13.766357, 19.461063)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8no60"]
+size = Vector3(22.865295, 13.766357, 25.26874)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pquts"]
 size = Vector3(22.865295, 13.766357, 25.26874)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3iw64"]
@@ -96,7 +101,20 @@ shape = SubResource("BoxShape3D_8no60")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Camera3D" type="Camera3D" parent="Cameras/Dock" unique_id=611731303]
-transform = Transform3D(-0.01134099, 0.18328813, 0.98299384, 0.23467344, 0.9560887, -0.17556396, -0.9720081, 0.22869147, -0.05385585, 33.61086, -5.650773, -4.5161896)
+transform = Transform3D(-0.7759762, -0.11114441, 0.6208928, -0.02348501, 0.9887616, 0.1476447, -0.6303248, 0.09998709, -0.76986563, 26.079292, -1.6305742, -13.710213)
+fov = 59.0
+
+[node name="LumberMill" parent="Cameras" unique_id=681573036 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.193156, 10.772795, -32.17427)
+Camera = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/LumberMill" unique_id=1574962398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.885876, -3.5540009, -9.270519)
+shape = SubResource("BoxShape3D_pquts")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Camera3D" type="Camera3D" parent="Cameras/LumberMill" unique_id=1938770475]
+transform = Transform3D(-0.9987596, 1.110223e-16, 0.049791127, 0.021908972, 0.89798915, 0.43947178, -0.04471189, 0.44001752, -0.8968753, -12.945542, 3.7647264, -15.07091)
 fov = 59.0
 
 [node name="ShutInCam" parent="Cameras" unique_id=330292491 node_paths=PackedStringArray("Camera") instance=ExtResource("4_xu544")]
@@ -302,7 +320,7 @@ texture = ExtResource("21_wkx8g")
 [node name="IllianosNPC" type="Node3D" parent="." unique_id=2029713953]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.447249, 8.204767, -49.559864)
 script = ExtResource("22_kwo3p")
-Timeline1 = ExtResource("19_wkx8g")
+Timeline1 = ExtResource("23_4dyk3")
 
 [node name="InteractableComponent" parent="IllianosNPC" unique_id=2035142665 instance=ExtResource("17_3iw64")]
 
@@ -321,7 +339,7 @@ texture = ExtResource("23_kh6jt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9218826, 0)
 
 [node name="dockyard" parent="LevelGeometry/Dockyard" unique_id=838492386 instance=ExtResource("24_xu544")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.700192, 3.2779531, -40.904255)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67067, 2.9743667, -40.801495)
 
 [node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("25_8no60")]
 transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
@@ -329,15 +347,17 @@ transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.1458
 [node name="LumberMill" type="Node3D" parent="LevelGeometry" unique_id=54891236]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="LevelGeometry/LumberMill" unique_id=1406612088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7181015, 7.8634424, -37.83383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7181015, 7.510993, -37.83383)
+use_collision = true
+collision_mask = 3
 size = Vector3(16.795166, 1, 13.819641)
 
 [node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("25_f8nk5")]
 
 [node name="LumberJack" type="Node3D" parent="." unique_id=1372362738 node_paths=PackedStringArray("TalkingComponent")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.459444, 10.511706, -40.089493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.459444, 9.2795515, -40.089493)
 script = ExtResource("27_64ght")
-Timeline1 = ExtResource("19_wkx8g")
+Timeline1 = ExtResource("29_g7h24")
 TalkingComponent = NodePath("NpcTalkingComponent")
 
 [node name="InteractableComponent" parent="LumberJack" unique_id=1959754130 instance=ExtResource("17_3iw64")]
@@ -351,7 +371,19 @@ transform = Transform3D(0.46945113, 0, 0, 0, 0.4221582, 0, 0, 0, 1, 0, 0, 0)
 billboard = 1
 texture = ExtResource("28_pquts")
 
+[node name="PlayerBed" type="Node3D" parent="." unique_id=716752308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4015636, 8.95142, -33.341164)
+
+[node name="bedSingle" parent="PlayerBed" unique_id=1152001509 instance=ExtResource("14_kwo3p")]
+transform = Transform3D(-8.265494e-08, 0, 2.1295986, 0, 1.9310675, 0, -1.8909247, 0, -9.308771e-08, -0.05618143, -0.92549515, 0.3080597)
+
+[node name="InteractableComponent" parent="PlayerBed" unique_id=2078702778 instance=ExtResource("17_3iw64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5672245, 0.8213005, -1.2139969)
+
+[connection signal="new_day" from="DayNightManager" to="BonoNPC" method="_on_day_night_manager_new_day"]
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
+[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
+[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_bed_sleep"]
 
 [editable path="ShutInRoom/MarinaNPC"]
 [editable path="ShutInRoom/MarinaNPC/NpcTalkingComponent"]
@@ -360,3 +392,4 @@ texture = ExtResource("28_pquts")
 [editable path="BonoNPC/InteractableComponent"]
 [editable path="IllianosNPC/InteractableComponent"]
 [editable path="LumberJack/InteractableComponent"]
+[editable path="PlayerBed/InteractableComponent"]

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://jf6hqk5g0m03"
-path="res://.godot/imported/roof.blend-2cbbaca9a46a8620df7bd50c73aac4c3.scn"
+valid=false
 
 [deps]
 
 source_file="res://Environment/HouseMeshes/roof.blend"
-dest_files=["res://.godot/imported/roof.blend-2cbbaca9a46a8620df7bd50c73aac4c3.scn"]
 
 [params]
 

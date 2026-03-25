@@ -7,3 +7,17 @@ if {EscapeQuest.escapeMeet} == false:
 	Bono: J-j-j-just dont mention it to anyone else please!!
 	Bono: If you can find me one and give it to me today thatd be awesome thanks.
 	set {EscapeQuest.escapeMeet} = true
+	set {EscapeQuest.escapeGoGetPlank} = true
+if {EscapeQuest.escapeGoGetPlank} == true:
+	if {EscapeQuest.hasPlanks} == true:
+		if {EscapeQuest.escapeDidToday} == false:
+			Bono: Oh w-w-w-wow. These will do amazingly.
+			Bono: I honestly dont really have a plan for when im out at sea. I'm just gonna.. hope for the best! heh..
+			[signal arg="advance_day"]
+			set {EscapeQuest.hasPlanks} = false
+			set {EscapeQuest.escapePlanksDelivered} += 1.0
+			set {EscapeQuest.escapeDidToday} = true
+		else:
+			Bono: Oh, i'm not ready for more for today
+	else:
+		Bono: D-d-did you get my planks yet?
