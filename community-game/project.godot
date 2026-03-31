@@ -25,19 +25,22 @@ ProgressionTracker="*uid://cl3w886dp13td"
 
 directories/dch_directory={
 "Marina": "res://Player/Quests/Marina.dch",
+"Testing/test_character": "res://addons/dialogic/Testing/test_character.dch",
 "Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
 "a": "res://Player/Quests/HateConeQuest/a.dch",
 "b": "res://Player/Quests/HateConeQuest/b.dch",
 "c": "res://Player/Quests/HateConeQuest/c.dch",
 "d": "res://Player/Quests/HateConeQuest/d.dch",
-"test_character": "res://addons/dialogic/Testing/test_character.dch"
+"test_character": "res://Addons/dialogic/Testing/test_character.dch"
 }
 directories/dtl_directory={
 "DeliverWaterQuest": "res://Player/Quests/DeliverWaterQuest.dtl",
 "FirstObstacle": "res://Player/Quests/LeakQuest/FirstObstacle.dtl",
 "TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
-"test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
-"test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl"
+"Testing/test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
+"Testing/test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
+"test_timeline": "res://Addons/dialogic/Testing/test_timeline.dtl",
+"test_timeline_2": "res://Addons/dialogic/Testing/test_timeline_2.dtl"
 }
 layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
