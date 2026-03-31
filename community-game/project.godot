@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Community Game"
-run/main_scene="uid://dxrnv4l03xrmv"
+run/main_scene="uid://ceyls3eoyd8du"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,9 @@ ProgressionTracker="*uid://cl3w886dp13td"
 [dialogic]
 
 directories/dch_directory={
+"Bono": "res://NPCs/Bono/Bono.dch",
+"Illianos": "res://NPCs/Illianos/Illianos.dch",
+"LumberJack": "res://NPCs/LumberJack/LumberJack.dch",
 "Marina": "res://Player/Quests/Marina.dch",
 "Testing/test_character": "res://addons/dialogic/Testing/test_character.dch",
 "Twerp": "res://Player/Quests/LeakQuest/Twerp.dch",
@@ -41,6 +44,10 @@ directories/dtl_directory={
 "Testing/test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
 "test_timeline": "res://Addons/dialogic/Testing/test_timeline.dtl",
 "test_timeline_2": "res://Addons/dialogic/Testing/test_timeline_2.dtl"
+"test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
+"test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
+"tl_escapeQuest": "res://Player/Quests/EscapeeQuest/tl_escapeQuest.dtl",
+"tl_lumberjack": "res://NPCs/LumberJack/tl_lumberjack.dtl"
 }
 layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
@@ -82,15 +89,25 @@ variables={
 "deliveredWater": false,
 "hasWater": false
 },
+"EscapeQuest": {
+"escapeDidToday": false,
+"escapeGoGetPlank": false,
+"escapeMeet": false,
+"escapePlanksDelivered": 0,
+"hasPlanks": false
+},
 "Fullfilled": 0,
 "Learnt": false,
+"LumberJack": {
+"lumberGavePlankToday": false
+},
 "Speaker": "n",
 "X": false,
 "Y": false,
 "Z": false
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://NPCs/DialogicData/new_style.tres"]
+layout/style_list=[]
 layout/default_style="res://NPCs/DialogicData/new_style.tres"
 
 [display]
@@ -108,6 +125,7 @@ enabled=PackedStringArray("res://addons/blender_godot_pipeline/plugin.cfg", "res
 [global_group]
 
 Player="This is the group the player is in"
+GameManager=""
 
 [input]
 

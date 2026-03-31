@@ -1,0 +1,9 @@
+LumberJack: Howdy
+if {EscapeQuest.escapeGoGetPlank} == true:
+	LumberJack: Ya need a plank?
+	- Yes | [if {EscapeQuest.escapeGoGetPlank} == true]
+		LumberJack: Alright here you go, thats yer lot for today
+		set {EscapeQuest.hasPlanks} = true
+		set {LumberJack.lumberGavePlankToday} = true
+	- No thanks
+		LumberJack: Alright

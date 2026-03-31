@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://h1mla6xbuki"]
+
+[ext_resource type="Script" uid="uid://bde4yxgp1q5gv" path="res://Shading/camera_shader.gd" id="1_g3gi7"]
+[ext_resource type="Shader" uid="uid://dn05o5ma658o6" path="res://Shading/pixelation.gdshader" id="2_mnt7i"]
+[ext_resource type="Shader" uid="uid://v2lyjasrxdnx" path="res://Shading/posterization.gdshader" id="3_ylftw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ylftw"]
+shader = ExtResource("2_mnt7i")
+shader_parameter/pixel_size = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uqlvc"]
+shader = ExtResource("3_ylftw")
+shader_parameter/shade_amount = 15
+
+[node name="CameraShader" type="Node" unique_id=7851634]
+script = ExtResource("1_g3gi7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1734475770]
+
+[node name="Pixelation" type="ColorRect" parent="CanvasLayer" unique_id=780788371]
+material = SubResource("ShaderMaterial_ylftw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=759353395]
+layer = 2
+
+[node name="Posterizing" type="ColorRect" parent="CanvasLayer2" unique_id=209050948]
+material = SubResource("ShaderMaterial_uqlvc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1514708671]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3" unique_id=70636301]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

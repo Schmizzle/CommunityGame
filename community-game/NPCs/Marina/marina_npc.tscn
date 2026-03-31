@@ -23,7 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.52949005, 0)
 script = ExtResource("3_oaveu")
 TalkingComponent = NodePath("../NpcTalkingComponent")
 
-[node name="Skeleton3D" parent="marina/Rig" parent_id_path=PackedInt32Array(678181806, 311245224) index="0" unique_id=820263244]
+[node name="Skeleton3D" parent="marina/Rig" parent_id_path=PackedInt32Array(678181806, 1745716735) index="0" unique_id=2115837156]
 bones/0/rotation = Quaternion(0.6126686, -0.35304, 0.35303995, 0.6126686)
 bones/1/position = Vector3(0, 0.002267105, 0)
 bones/1/rotation = Quaternion(5.373219e-15, 3.340224e-08, -0.24860469, 0.96860504)

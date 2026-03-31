@@ -1,11 +1,16 @@
-if {DeliverWaterQuest.GotQuest} == false:
-	Marina: Woaw.. you just walked into my room.
-	Marina: That's pretty wild
-	Marina: Now that you're here, can you get me some water?
-	Marina: Yeah just any water. I need to do some experiments but I got no organic material.
-	Marina: What are you waiting for?
-	set {DeliverWaterQuest.GotQuest} = true
+if {DeliverWaterQuest.deliveredWater} == true:
+	if {DeliverWaterQuest.hasWater} == true:
+		Marina: Oh wow.. the sky is so amazing.\
+		I am healed
+		[end_timeline]
+Marina: That's pretty wild
+Marina: Now that you're here, can you get me some water?
+Marina: Yeah just any water. I need to do some experiments but I got no organic material.
+Marina: What are you waiting for?
+do ProgressionTracker.try_increment_task(ProgressionTracker.TaskTags.Deliver_Water_Meet)
+set {DeliverWaterQuest.GotQuest} = true
 elif {DeliverWaterQuest.hasWater} == true:
+if {DeliverWaterQuest.deliveredWater} == false:
 	Marina: Sweet! Water!
 	*Marina does some science with it*
 	Marina: ...
@@ -13,12 +18,11 @@ elif {DeliverWaterQuest.hasWater} == true:
 	Marina: None of my readings are showing up anything.
 	Marina: Where'd you even get this sample??
 	Marina: Fine I'll do it myself.
-	set 
+	
 	Marina: Outta my way.
+	do ProgressionTracker.try_increment_task(ProgressionTracker.TaskTags.Deliver_Water_Deliver)
 	set {DeliverWaterQuest.deliveredWater} = true
+	[signal arg="moveOutside"]
 else:
-	if {DeliverWaterQuest.deliveredWater} == false:
-		Marina: Get me some Water
-	else:
-		Marina: Oh wow.. the sky is so amazing.\
-		I am healed
+if {DeliverWaterQuest.deliveredWater} == false:
+	Marina: Get me some Water
