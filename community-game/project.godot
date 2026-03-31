@@ -42,8 +42,6 @@ directories/dtl_directory={
 "TL_Hatecone": "res://Player/Quests/HateConeQuest/TL_Hatecone.dtl",
 "Testing/test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
 "Testing/test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
-"test_timeline": "res://Addons/dialogic/Testing/test_timeline.dtl",
-"test_timeline_2": "res://Addons/dialogic/Testing/test_timeline_2.dtl"
 "test_timeline": "res://addons/dialogic/Testing/test_timeline.dtl",
 "test_timeline_2": "res://addons/dialogic/Testing/test_timeline_2.dtl",
 "tl_escapeQuest": "res://Player/Quests/EscapeeQuest/tl_escapeQuest.dtl",
