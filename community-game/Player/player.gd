@@ -5,11 +5,15 @@ var GameManagerNode: GameManager
 
 # Movement variables
 var CanMove: bool = true
-@export var Speed: int = 700
+var Moving: bool = true
+@export var PushSpeed: int = 700
+var CurrentSpeed: float
+@export var PushTimer: Timer
 var Gravity: int = 20
 var JumpForce: int = 7
 var Direction: Vector3
 var TargetVelocity: Vector3
+var BodyRotSpeed: float = 50
 
 # Look variables
 var CanLook: bool = true
@@ -66,9 +70,23 @@ func _process(delta: float) -> void:
 	Direction = Vector3(InputDirection.x, 0, InputDirection.y).rotated(Vector3.UP, YRotationDirection)
 	
 	# Sets the horizontal components of target velocity
+	if (Direction != Vector3.ZERO) and (CanMove) and (not Moving):
+		Moving = true
+		push_off()
+		PushTimer.start()
+	
+	if Direction == Vector3.ZERO:
+		PushTimer.stop()
+		Moving = false
+	
+	CurrentSpeed = move_toward(CurrentSpeed, 0, 2)
+	
 	if CanMove:
-		TargetVelocity.x = Direction.x * Speed * delta
-		TargetVelocity.z = Direction.z * Speed * delta
+		TargetVelocity.x = Direction.x * CurrentSpeed * delta
+		TargetVelocity.z = Direction.z * CurrentSpeed * delta
+	else: 
+		TargetVelocity.x = 0
+		TargetVelocity.z = 0
 	
 	# Makes the player fall if they're not on the floor
 	if not is_on_floor():
@@ -113,10 +131,10 @@ func _process(delta: float) -> void:
 	
 
 func _input(event):
-#region Getting mouse look data
+	#region Getting mouse look data
 	if event is InputEventMouseMotion:
 		add_look_rotation(event.relative)
-#endregion
+	#endregion
 
 func add_look_rotation(vector: Vector2):
 	LookRotation.y -= (vector.y * Sensitivity)
@@ -126,6 +144,10 @@ func add_look_rotation(vector: Vector2):
 func change_input_enabled(move: bool, look: bool, mouseMode: Input.MouseMode) -> void:
 	Input.set_mouse_mode(mouseMode)
 	CanMove = move
+	if not CanMove:
+		CurrentSpeed = 0
+		velocity = Vector3.ZERO
+		Moving = false
 	CanLook = look
 
 func switch_to_fp_camera():
@@ -134,3 +156,9 @@ func switch_to_fp_camera():
 
 func switch_to_fixed_camera():
 	UsingFixedCamera = true
+
+func push_off():
+	CurrentSpeed = PushSpeed
+
+func _on_push_timer_timeout() -> void:
+	push_off()
