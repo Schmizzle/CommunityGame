@@ -16,7 +16,7 @@ font_size = 53
 outline_size = 28
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "QuestManagerNode", "CameraManagerNode", "FPCamera", "InteractCast") groups=["Player"]]
+[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "FPCamera", "InteractCast") groups=["Player"]]
 collision_layer = 2
 collision_mask = 5
 input_ray_pickable = false
@@ -25,8 +25,6 @@ LookPivot = NodePath("Pivot")
 UIReference = NodePath("CanvasLayer/PlayerUI")
 InteractUI = NodePath("CanvasLayer/PlayerUI/InteractText")
 QuestContainer = NodePath("CanvasLayer/PlayerUI/QuestContainer")
-QuestManagerNode = NodePath("")
-CameraManagerNode = NodePath("")
 FPCamera = NodePath("Pivot/Camera")
 InteractCast = NodePath("Pivot/InteractCast")
 
