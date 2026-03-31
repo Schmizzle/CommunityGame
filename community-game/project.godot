@@ -34,7 +34,7 @@ directories/dch_directory={
 "b": "res://Player/Quests/HateConeQuest/b.dch",
 "c": "res://Player/Quests/HateConeQuest/c.dch",
 "d": "res://Player/Quests/HateConeQuest/d.dch",
-"test_character": "res://Addons/dialogic/Testing/test_character.dch"
+"test_character": "res://addons/dialogic/Testing/test_character.dch"
 }
 directories/dtl_directory={
 "DeliverWaterQuest": "res://Player/Quests/DeliverWaterQuest.dtl",
