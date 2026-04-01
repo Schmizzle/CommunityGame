@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://bmxhs2mwbime6" path="res://NPCs/Illianos/illianos_npc.gd" id="22_kwo3p"]
 [ext_resource type="Resource" uid="uid://dwfwc6ferotss" path="res://Player/Quests/LeakQuest/FirstObstacle.dtl" id="23_4dyk3"]
 [ext_resource type="Texture2D" uid="uid://d0ykynak103cp" path="res://NPCs/Illianos/Screenshot 2026-03-23 132338.png" id="23_kh6jt"]
-[ext_resource type="PackedScene" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
+[ext_resource type="PackedScene" uid="uid://dnpq0buwqruca" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dockyard.tscn" id="24_xu544"]
 [ext_resource type="PackedScene" uid="uid://deh8rmw58pns5" path="res://Environment/Elements/General/Crate/woodencrate.blend" id="25_4dyk3"]
 [ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="25_8no60"]
 [ext_resource type="PackedScene" uid="uid://h1mla6xbuki" path="res://Shading/camera_shader.tscn" id="25_f8nk5"]
@@ -31,7 +31,7 @@
 [ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="27_64ght"]
 [ext_resource type="PackedScene" uid="uid://p5u1vlhlglsl" path="res://Environment/Elements/General/ShippingContainer/shippingContainer.blend" id="27_g7h24"]
 [ext_resource type="Texture2D" uid="uid://dah33avekysft" path="res://NPCs/LumberJack/Icon_psychopath.png" id="28_pquts"]
-[ext_resource type="Resource" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="29_g7h24"]
+[ext_resource type="Resource" uid="uid://dg8hkr7euexih" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="29_g7h24"]
 [ext_resource type="Material" uid="uid://2rwr1jpl5axt" path="res://Environment/AllPurposeTextures/WoodTextures/darkwoodTriplanar.tres" id="29_h7olt"]
 [ext_resource type="PackedScene" uid="uid://fbb4hjq6ydll" path="res://NPCs/Marina/marina_npc.tscn" id="34_fu2ta"]
 
@@ -298,7 +298,7 @@ transform = Transform3D(0.20789169, 0, -0.13885632, 0, 0.25, 0, 0.13885632, 0, 0
 [node name="marina" parent="ShutInRoom/MarinaNPC" index="3" unique_id=678181806]
 OutsideLocation = Vector3(-2.2, 1, 4.5)
 
-[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 311245224) index="0" unique_id=820263244]
+[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 44603572) index="0" unique_id=1460004692]
 bones/0/rotation = Quaternion(0.7070358, 0.010022881, -0.01002288, 0.7070358)
 bones/1/rotation = Quaternion(0, 0, 0, 1)
 bones/2/rotation = Quaternion(0, 0, 0, 1)
@@ -319,7 +319,7 @@ bones/18/rotation = Quaternion(0.7006804, -8.716751e-08, -8.5604256e-08, 0.71347
 bones/19/rotation = Quaternion(-0.0044633495, 2.9637592e-09, 1.0773735e-09, 0.99999005)
 bones/20/rotation = Quaternion(-1.7877335e-07, -1.0185976e-08, -0.70710677, 0.70710677)
 
-[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=958569564]
+[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=1697079701]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00016467273, 0.00013720989, 0.0001628995)
 
 [node name="Ocean" parent="." unique_id=1206046621 instance=ExtResource("4_4objx")]
@@ -392,39 +392,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67067, 2.9743667, -40.80149
 [node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("25_8no60")]
 transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
 
-[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=492985748]
+[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=1576113409]
 transform = Transform3D(6.4, 0, 0, 0, 0.19999999, 0, 0, 0, 2.88, 2.98378, 2.3841858e-07, 0.016954422)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=1410618290]
+[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=981231151]
 transform = Transform3D(1.7881393e-07, 0, -3.2, 0, 1, 0, 1, 0, 5.364418e-07, 6.283779, 0.7000003, -3.9000015)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=1981168863]
+[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=294546303]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, -1.9830456)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=945676481]
+[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=698958341]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=388323397]
+[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=1526789193]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=509826400]
+[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=587254369]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 4.98378, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=100254002]
+[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=794121355]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 5.0169525)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=2065705843]
+[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=498879361]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.483778, -1.1999998, 15.016956)
 surface_material_override/0 = ExtResource("29_h7olt")
 
-[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=339398506]
+[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=739495506]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 11.0169525)
 surface_material_override/0 = ExtResource("29_h7olt")
 
@@ -469,8 +469,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5672245, 0.8213005, -1.213
 
 [connection signal="new_day" from="DayNightManager" to="BonoNPC" method="_on_day_night_manager_new_day"]
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]
-[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_bed_sleep"]
 [connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
+[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_bed_sleep"]
 
 [editable path="ShutInRoom/MarinaNPC"]
 [editable path="ShutInRoom/MarinaNPC/NpcTalkingComponent"]
