@@ -16,12 +16,11 @@ font_size = 53
 outline_size = 28
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("PushTimer", "LookPivot", "UIReference", "InteractUI", "QuestContainer", "FPCamera", "InteractCast") groups=["Player"]]
+[node name="Player" type="CharacterBody3D" unique_id=1432177263 node_paths=PackedStringArray("LookPivot", "UIReference", "InteractUI", "QuestContainer", "FPCamera", "InteractCast") groups=["Player"]]
 collision_layer = 2
 collision_mask = 5
 input_ray_pickable = false
 script = ExtResource("1_l8h54")
-PushTimer = NodePath("Timers/PushTimer")
 LookPivot = NodePath("Pivot")
 UIReference = NodePath("CanvasLayer/PlayerUI")
 InteractUI = NodePath("CanvasLayer/PlayerUI/InteractText")
@@ -86,9 +85,3 @@ offset_left = 70.0
 offset_top = 70.0
 offset_right = 832.0
 offset_bottom = 361.0
-
-[node name="Timers" type="Node" parent="." unique_id=188401652]
-
-[node name="PushTimer" type="Timer" parent="Timers" unique_id=472932676]
-
-[connection signal="timeout" from="Timers/PushTimer" to="." method="_on_push_timer_timeout"]
