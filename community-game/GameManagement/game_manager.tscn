@@ -143,11 +143,29 @@ Tag = 17
 Description = "Deliver To the Cafe"
 metadata/_custom_type_script = "uid://dutlivtx32sdj"
 
+[sub_resource type="Resource" id="Resource_qglwc"]
+script = ExtResource("6_50xdj")
+Tag = 18
+Description = "Deliver to Balcony Guy"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_lwvmw"]
+script = ExtResource("6_50xdj")
+Tag = 19
+Description = "Deliver to the guy in the alley"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_pp0fw"]
+script = ExtResource("6_50xdj")
+Tag = 20
+Description = "Deliver to the Eelictrican"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
 [sub_resource type="Resource" id="Resource_50xdj"]
 script = ExtResource("5_2voxf")
 Tag = 14
 Description = "Deliver!"
-Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_lgjux"), SubResource("Resource_4cflx"), SubResource("Resource_2voxf")])
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_lgjux"), SubResource("Resource_4cflx"), SubResource("Resource_2voxf"), SubResource("Resource_qglwc"), SubResource("Resource_lwvmw"), SubResource("Resource_pp0fw")])
 metadata/_custom_type_script = "uid://d23h7xp3s8yao"
 
 [sub_resource type="Resource" id="Resource_hy2ry"]

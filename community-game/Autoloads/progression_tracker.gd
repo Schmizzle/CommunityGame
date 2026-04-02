@@ -23,7 +23,7 @@ enum TaskTags {
 	Test_Orb1, Test_Orb2, Test_SodaDrink,
 	Deliver_Water_Meet, Deliver_Water_Collect, Deliver_Water_Deliver, 
 	Escape_Meet, Escape_Get_Plank_Day1, Escape_Deliver_Plank_Day1, Escape_Get_Plank_Day2, Escape_Deliver_Plank_Day2, Escape_Get_Plank_Day3, Escape_Deliver_Plank_Day3, Escape_Resolution,
-	Postman_Deliver_Docks,Postman_Deliver_Library,Postman_Deliver_Cafe
+	Postman_Deliver_Docks,Postman_Deliver_Library,Postman_Deliver_Cafe, Postman_Deliver_Balcony,Postman_Deliver_Alley, Postman_Deliver_Electrician
 	}
 
 var TestBool: bool = true

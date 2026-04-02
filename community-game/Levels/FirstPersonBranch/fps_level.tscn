@@ -30,7 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="28_u5642"]
 [ext_resource type="Material" uid="uid://2rwr1jpl5axt" path="res://Environment/AllPurposeTextures/WoodTextures/darkwoodTriplanar.tres" id="29_66e0b"]
 [ext_resource type="Material" uid="uid://b06fsvhwqc1qo" path="res://Levels/FirstPersonBranch/Elements/JumpBlocks/jump_cube_material.tres" id="30_oqfl0"]
-[ext_resource type="Script" uid="uid://du7ksyg2h0nb" path="res://Levels/FirstPersonBranch/bouncepad.gd" id="31_fv7g2"]
 [ext_resource type="Material" uid="uid://cufdjn16qx2nr" path="res://Environment/TestingStuff/InitTester/test_mat1.tres" id="31_fv7g2"]
 [ext_resource type="Script" uid="uid://cnfpw6bvsplif" path="res://Levels/FirstPersonBranch/parcel_deliverer.gd" id="31_wojqa"]
 [ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="31_xafe4"]
@@ -486,7 +485,7 @@ transform = Transform3D(0.901077, 0.35479808, -0.24935627, 0.33995926, -0.934917
 environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("3_y77ps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.130527, 63.524017, 69.641174)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.188065, 9.911495, -33.37515)
 Speed = 600
 
 [node name="LevelInteractables" type="Node3D" parent="." unique_id=962601878]
@@ -655,7 +654,7 @@ transform = Transform3D(0.20789169, 0, -0.13885632, 0, 0.25, 0, 0.13885632, 0, 0
 [node name="marina" parent="ShutInRoom/MarinaNPC" index="3" unique_id=678181806]
 OutsideLocation = Vector3(-2.2, 1, 4.5)
 
-[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 149950082) index="0" unique_id=790309223]
+[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 44603572) index="0" unique_id=1460004692]
 bones/0/rotation = Quaternion(0.7070358, 0.010022881, -0.01002288, 0.7070358)
 bones/1/rotation = Quaternion(0, 0, 0, 1)
 bones/2/rotation = Quaternion(0, 0, 0, 1)
@@ -676,7 +675,7 @@ bones/18/rotation = Quaternion(0.7006804, -8.716751e-08, -8.5604256e-08, 0.71347
 bones/19/rotation = Quaternion(-0.0044633495, 2.9637592e-09, 1.0773735e-09, 0.99999005)
 bones/20/rotation = Quaternion(-1.7877335e-07, -1.0185976e-08, -0.70710677, 0.70710677)
 
-[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=2032903724]
+[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=1697079701]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004927665, 0.00033980608, 0.0006907433)
 
 [node name="Ocean" parent="." unique_id=1206046621 instance=ExtResource("16_mmo4w")]
@@ -749,39 +748,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67067, 2.9743667, -40.80149
 [node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("28_u5642")]
 transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
 
-[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=256878451]
+[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=1576113409]
 transform = Transform3D(6.4, 0, 0, 0, 0.19999999, 0, 0, 0, 2.88, 2.98378, 2.3841858e-07, 0.016954422)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=622480262]
+[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=981231151]
 transform = Transform3D(1.7881393e-07, 0, -3.2, 0, 1, 0, 1, 0, 5.364418e-07, 6.283779, 0.7000003, -3.9000015)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=1852739092]
+[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=294546303]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, -1.9830456)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=2132086557]
+[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=698958341]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=299225390]
+[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=1526789193]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=953287208]
+[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=587254369]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 4.98378, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=1532484495]
+[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=794121355]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 5.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=1182954658]
+[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=498879361]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.483778, -1.1999998, 15.016956)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=396530668]
+[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=739495506]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 11.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
@@ -1043,7 +1042,6 @@ shape = SubResource("ConvexPolygonShape3D_nkuuo")
 
 [node name="Bouncepad" type="Node3D" parent="LevelGeometry/LeftBuilding" unique_id=675245947]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -49.231373, 39.598824, 75.75124)
-script = ExtResource("31_fv7g2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/LeftBuilding/Bouncepad" unique_id=305378401]
 transform = Transform3D(4.9940786, 0, 0, 0, 0.999999, 0, 0, 0, 4.394213, 0, 0.7489357, 0)
@@ -1055,7 +1053,7 @@ transform = Transform3D(4.9940786, 0, 0, 0, 0.9999996, 0, 0, 0, 4.394218, 0, 1.0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/LeftBuilding/Bouncepad/Area3D" unique_id=1789731449]
-transform = Transform3D(0.2002371, 0, 0, 0, 0.9999589, 0, 0, 0, 0.22756603, 0, -0.5808878, 0)
+transform = Transform3D(0.2002371, 0, 0, 0, 0.99995875, 0, 0, 0, 0.22756602, -0.85980225, -0.58088684, 0.6867714)
 shape = SubResource("BoxShape3D_fv7g2")
 
 [node name="Area3D2" type="Area3D" parent="LevelGeometry/LeftBuilding/Bouncepad" unique_id=1231475864]
@@ -1068,7 +1066,6 @@ shape = SubResource("BoxShape3D_fv7g2")
 
 [node name="Bouncepad2" type="Node3D" parent="LevelGeometry/LeftBuilding" unique_id=1699800658]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -39.106354, 52.88194, 65.179855)
-script = ExtResource("31_fv7g2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/LeftBuilding/Bouncepad2" unique_id=2068741737]
 transform = Transform3D(4.9940786, 0, 0, 0, 0.999999, 0, 0, 0, 4.394213, 0, 0.7489357, 0)
@@ -1093,7 +1090,6 @@ shape = SubResource("BoxShape3D_fv7g2")
 
 [node name="Bouncepad3" type="Node3D" parent="LevelGeometry/LeftBuilding" unique_id=630319775]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -26.8187, 69.21475, 45.127697)
-script = ExtResource("31_fv7g2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/LeftBuilding/Bouncepad3" unique_id=707210512]
 transform = Transform3D(4.9940786, 0, 0, 0, 0.999999, 0, 0, 0, 4.394213, 0, 0.7489357, 0)
@@ -1280,6 +1276,7 @@ size = Vector3(16.550388, 30.489105, 7.0814133)
 
 [node name="StartingPlatform7" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1192552823]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -16.281246, 28.27377, -0.9399929)
+material_override = ExtResource("32_1h3cl")
 use_collision = true
 collision_mask = 3
 size = Vector3(1.3479156, 37.941345, 26.635124)
@@ -1296,21 +1293,24 @@ collision_mask = 3
 size = Vector3(1.3479156, 37.941345, 26.635124)
 
 [node name="StartingPlatform4" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=195742771]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -15.496773, 9.803097, 16.06954)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -29.023014, 9.803097, 16.06954)
 use_collision = true
 collision_mask = 3
-size = Vector3(13.824722, 1, 5.137558)
+size = Vector3(40.877205, 1, 5.137558)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=610199397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.365997, 10.756473, -3.4117537)
+material_override = ExtResource("32_1h3cl")
 size = Vector3(4.472473, 1, 1)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1332970397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.250797, 10.756473, -0.107066154)
+material_override = ExtResource("32_1h3cl")
 size = Vector3(1.3200989, 1, 7.609375)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1488034812]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.365997, 10.756473, 3.1747155)
+material_override = ExtResource("32_1h3cl")
 size = Vector3(4.472473, 1, 1)
 
 [node name="Stairs" type="CSGCombiner3D" parent="LevelGeometry/LeftBuilding" unique_id=1930843658]
@@ -1320,18 +1320,22 @@ use_collision = true
 [node name="f" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs" unique_id=480318749]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2276, 16.439373, 10.274006)
 size = Vector3(5.8905334, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs" unique_id=214767213]
 transform = Transform3D(0.7799391, 0.6258554, 0, -0.6258554, 0.7799391, 0, 0, 0, 1, -31.94067, 12.905052, 10.274006)
 size = Vector3(11.922684, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs" unique_id=1233928028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.454247, 23.663235, 4.310375)
 size = Vector3(15.2082405, 1, 15.546524)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs" unique_id=2080920575]
 transform = Transform3D(0.7799391, 0.6258554, 0, -0.6258554, 0.7799391, 0, 0, 0, 1, -46.590424, 20.045595, 10.274006)
 size = Vector3(11.922684, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="Stairs2" type="CSGCombiner3D" parent="LevelGeometry/LeftBuilding" unique_id=2119362468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.290085)
@@ -1340,18 +1344,22 @@ use_collision = true
 [node name="f" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs2" unique_id=1990162854]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2276, 16.439373, 10.274006)
 size = Vector3(5.8905334, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs2" unique_id=1270601317]
 transform = Transform3D(0.7799391, 0.6258554, 0, -0.6258554, 0.7799391, 0, 0, 0, 1, -31.94067, 12.905052, 10.274006)
 size = Vector3(11.922684, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs2" unique_id=1803301388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.795395, 23.663235, 10.274006)
 size = Vector3(5.8905334, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="LevelGeometry/LeftBuilding/Stairs2" unique_id=1240429426]
 transform = Transform3D(0.7799391, 0.6258554, 0, -0.6258554, 0.7799391, 0, 0, 0, 1, -46.590424, 20.045595, 10.274006)
 size = Vector3(11.922684, 1, 3.6192627)
+material = ExtResource("32_1h3cl")
 
 [node name="SmallJump" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1241021370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.03637, 24.65088, -4.752147)
@@ -1361,11 +1369,39 @@ collision_mask = 3
 size = Vector3(3, 1, 2)
 
 [node name="SmallJump16" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1029628846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.23062, 40.548836, 12.535007)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.23062, 41.283638, 12.535007)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
-size = Vector3(3, 1, 2)
+size = Vector3(3, 2.4696045, 2)
+
+[node name="SmallJump24" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=448450486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.50284, 42.22529, 22.626236)
+material_override = ExtResource("30_oqfl0")
+use_collision = true
+collision_mask = 3
+size = Vector3(3.5444336, 4.3529053, 2)
+
+[node name="SmallJump25" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1238128972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.9245, 40.24427, 32.00164)
+material_override = ExtResource("30_oqfl0")
+use_collision = true
+collision_mask = 3
+size = Vector3(3, 0.39086914, 2)
+
+[node name="SmallJump27" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=196749332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.50431, 40.420906, 36.948753)
+material_override = ExtResource("30_oqfl0")
+use_collision = true
+collision_mask = 3
+size = Vector3(3, 0.7441406, 2)
+
+[node name="SmallJump26" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1718281699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.9245, 41.28248, 17.029423)
+material_override = ExtResource("30_oqfl0")
+use_collision = true
+collision_mask = 3
+size = Vector3(3, 2.4672852, 2)
 
 [node name="SmallJump23" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=394834307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.84645, 46.938824, 69.837296)
@@ -1375,42 +1411,42 @@ collision_mask = 3
 size = Vector3(3, 1, 7.8602295)
 
 [node name="SmallJump17" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=39711885]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.04048, 40.548836, 22.374792)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.04048, 40.548836, 41.636726)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 1, 2)
 
 [node name="SmallJump18" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=564409217]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.000446, 41.048836, 30.912495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.000446, 41.048836, 46.593136)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 2, 2)
 
 [node name="SmallJump19" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1643200296]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.00044, 41.548836, 39.165207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.00044, 41.548836, 50.294273)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 3, 2)
 
 [node name="SmallJump20" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=860500495]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98448, 42.048836, 47.814857)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98448, 42.048836, 54.379913)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 4, 2)
 
 [node name="SmallJump21" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=696501560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.973167, 42.548836, 54.673576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.973167, 42.548836, 59.350735)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 5, 2)
 
 [node name="SmallJump22" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1795730748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.998173, 43.048836, 62.58468)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.998173, 43.048836, 64.86566)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
@@ -1558,10 +1594,14 @@ parcelToDeliver = 15
 
 [node name="ParcelDeliveryPoint2" parent="." unique_id=1500950502 instance=ExtResource("35_wojqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1029963, 84.44046, 19.994373)
-parcelToDeliver = 16
+parcelToDeliver = 20
 
 [node name="ParcelDeliveryPoint3" parent="." unique_id=2068443612 instance=ExtResource("35_wojqa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.177391, 9.149291, -42.791893)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.1144, 12.768556, 17.19194)
+parcelToDeliver = 19
+
+[node name="ParcelDeliveryPoint4" parent="." unique_id=1318740371 instance=ExtResource("35_wojqa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.92151, 49.14742, 67.25281)
 parcelToDeliver = 17
 
 [connection signal="new_day" from="DayNightManager" to="BonoNPC" method="_on_day_night_manager_new_day"]
