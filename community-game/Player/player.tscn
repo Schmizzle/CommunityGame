@@ -85,3 +85,8 @@ offset_left = 70.0
 offset_top = 70.0
 offset_right = 832.0
 offset_bottom = 361.0
+
+[node name="Timers" type="Node" parent="." unique_id=1988496879]
+
+[node name="PushTimer" type="Timer" parent="Timers" unique_id=1630242309]
+one_shot = true

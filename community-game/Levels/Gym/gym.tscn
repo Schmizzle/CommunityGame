@@ -95,6 +95,7 @@ environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("2_5qgok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5017912, -22)
+Sensitivity = 0.5
 
 [node name="Blocks" type="Node3D" parent="." unique_id=862098181]
 
@@ -342,7 +343,7 @@ texture = ExtResource("17_x4v8x")
 [node name="Cameras" type="Node3D" parent="." unique_id=1524875198]
 
 [node name="StartCameraVolume" parent="Cameras" unique_id=1125341515 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0377164, -4.8519726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.882452, -4.8519726)
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/StartCameraVolume" unique_id=346765692]
@@ -354,7 +355,7 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 transform = Transform3D(-0.05677986, 0.44982344, -0.89131075, 1.671351e-08, 0.89275104, 0.4505503, 0.99838674, 0.025582168, -0.050690286, -9.776372, 4.539567, -2.9073954)
 
 [node name="CameraVolume2" parent="Cameras" unique_id=1094653332 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.442562, 9.536743e-07, -13.074266)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.442562, 23.09539, -13.074266)
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume2" unique_id=1978599420]
@@ -376,7 +377,7 @@ shape = SubResource("BoxShape3D_ygpug")
 transform = Transform3D(1, 0, 0, 0, 0.846035, 0.53312737, 0, -0.53312737, 0.846035, -3.5023155, 0.07961559, 10.521941)
 
 [node name="CameraVolume" parent="Cameras" unique_id=933095402 node_paths=PackedStringArray("Camera") instance=ExtResource("17_ontrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.505733, 0, -26.456854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.505733, 25.456333, -26.456854)
 Camera = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cameras/CameraVolume" unique_id=36468907]
@@ -400,7 +401,7 @@ debug_color = Color(0.95223814, 0.16859168, 0.35800138, 1)
 transform = Transform3D(-0.8660254, 0.25000006, -0.43301272, 1.4901163e-08, 0.86602545, 0.5, 0.50000006, 0.4330127, -0.75, -1.9598064, 4.375637, -3.234871)
 
 [node name="MarinaNPC" parent="." unique_id=1446232392 instance=ExtResource("30_c8vk2")]
-transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.766659, 0.92756164, -23.729254)
+transform = Transform3D(-0.6021495, 0, -0.79838336, 0, 1, 0, 0.79838336, 0, -0.6021495, 20.740274, 0.92756164, -23.699274)
 
 [node name="CameraShader" parent="." unique_id=7851634 instance=ExtResource("34_aqird")]
 
