@@ -949,11 +949,9 @@ transform = Transform3D(-8.265494e-08, 0, 2.1295986, 0, 1.9310675, 0, -1.8909247
 [node name="InteractableComponent" parent="PlayerBed" unique_id=2078702778 instance=ExtResource("5_hggfc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5672245, 0.8213005, -1.2139969)
 
-[node name="ParcelDeliverer" type="Node3D" parent="." unique_id=1011141338 node_paths=PackedStringArray("allDeliveryPoints")]
+[node name="ParcelDeliverer" type="Node3D" parent="." unique_id=1011141338]
 transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, -24.77962, 11.364354, -37.409237)
 script = ExtResource("31_wojqa")
-allDeliveryPoints = [NodePath("../ParcelDeliveryPoint"), NodePath("../ParcelDeliveryPoint2"), NodePath("../ParcelDeliveryPoint3")]
-DeliveryQuest = 5
 
 [node name="InteractableComponent" parent="ParcelDeliverer" unique_id=1736434577 instance=ExtResource("5_hggfc")]
 
@@ -971,7 +969,7 @@ parcelToDeliver = 16
 
 [node name="ParcelDeliveryPoint3" parent="." unique_id=2068443612 instance=ExtResource("35_wojqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.177391, 9.149291, -42.791893)
-parcelToDeliver = 17
+parcelToDeliver = 3
 
 [connection signal="new_day" from="DayNightManager" to="BonoNPC" method="_on_day_night_manager_new_day"]
 [connection signal="_interaction_signal" from="LevelInteractables/WaterWell/InteractableComponent" to="LevelInteractables/WaterWell" method="_on_interactable_component__interaction_signal"]

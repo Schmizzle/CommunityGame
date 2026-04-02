@@ -46,6 +46,7 @@ script = ExtResource("4_4cflx")
 Tag = 1
 Name = "Testing!!!"
 Description = "Testing if this stuff even works at all... you know, regular stuff..."
+State = 0
 TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_od3ui"), SubResource("Resource_x3vf3")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
@@ -124,6 +125,39 @@ State = 2
 TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_o28un"), SubResource("Resource_pisgm"), SubResource("Resource_n471f")])
 metadata/_custom_type_script = "uid://bs5wutnvkbjir"
 
+[sub_resource type="Resource" id="Resource_lgjux"]
+script = ExtResource("6_50xdj")
+Tag = 15
+Description = "Deliver to the Docks"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_4cflx"]
+script = ExtResource("6_50xdj")
+Tag = 16
+Description = "Deliver to the Library"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_2voxf"]
+script = ExtResource("6_50xdj")
+Tag = 17
+Description = "Deliver To the Cafe"
+metadata/_custom_type_script = "uid://dutlivtx32sdj"
+
+[sub_resource type="Resource" id="Resource_50xdj"]
+script = ExtResource("5_2voxf")
+Tag = 14
+Description = "Deliver!"
+Tasks = Array[ExtResource("6_50xdj")]([SubResource("Resource_lgjux"), SubResource("Resource_4cflx"), SubResource("Resource_2voxf")])
+metadata/_custom_type_script = "uid://d23h7xp3s8yao"
+
+[sub_resource type="Resource" id="Resource_hy2ry"]
+script = ExtResource("4_4cflx")
+Tag = 5
+Name = "PostMan"
+Description = "Deliver Mail across the block"
+TaskLists = Array[ExtResource("5_2voxf")]([SubResource("Resource_50xdj")])
+metadata/_custom_type_script = "uid://bs5wutnvkbjir"
+
 [node name="GameManager" type="Node" unique_id=2071329493 node_paths=PackedStringArray("QuestManagerNode", "CameraManagerNode", "LevelParent") groups=["GameManager"]]
 script = ExtResource("1_14qgn")
 QuestManagerNode = NodePath("QuestManager")
@@ -132,7 +166,7 @@ LevelParent = NodePath("LevelParent")
 StartUpLevel = ExtResource("2_lgjux")
 
 [node name="QuestManager" parent="." unique_id=774256434 instance=ExtResource("3_adhdh")]
-Quests = Array[ExtResource("4_4cflx")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1"), SubResource("Resource_dkpta")])
+Quests = Array[ExtResource("4_4cflx")]([SubResource("Resource_apopc"), SubResource("Resource_k53q1"), SubResource("Resource_dkpta"), SubResource("Resource_hy2ry")])
 
 [node name="CameraManager" parent="." unique_id=895131971 instance=ExtResource("4_lgjux")]
 
