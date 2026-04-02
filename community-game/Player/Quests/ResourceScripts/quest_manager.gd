@@ -194,4 +194,10 @@ func query_task_complete(tag: ProgressionTracker.TaskTags) -> bool:
 	
 	return ReturnValue
 
+func get_quest_of_tag(tag: ProgressionTracker.QuestTags) -> Quest:
+	for x in Quests:
+		if x.Tag == tag:
+			return x
+	return null
+
 #endregion
