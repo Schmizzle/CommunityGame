@@ -4,12 +4,23 @@ class_name Player
 var GameManagerNode: GameManager
 
 # Movement variables
+var Direction: Vector3
+var LerpedDirection: Vector3
+var TargetVelocity: Vector3
+@export var MaxSpeed: int = 7
+@export var InitialSpeed: int = 2
+var CurrentSpeed: float = 0
+var TargetSpeed: float = 0
+var SpeedLerpStep: float = 5
+var Braking: bool = false
+
 var CanMove: bool = true
-@export var Speed: int = 700
+var InputtingMovement: bool = false
+var InMovement: bool = false
+
 var Gravity: int = 20
 var JumpForce: int = 7
-var Direction: Vector3
-var TargetVelocity: Vector3
+
 
 # Look variables
 var CanLook: bool = true
@@ -49,12 +60,14 @@ func _ready() -> void:
 	QuestManagerNode.create_quest_boxes()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 #region Input
 	
 #region Moving
 	# Gets the player's movement input
-	var InputDirection: Vector2
+	var InputVector: Vector2
+	InputVector = Input.get_vector("move-left", "move-right","move-forward","move-backward")
+	var InputVector3: Vector3 = Vector3(InputVector.x, 0, InputVector.y).rotated(Vector3.UP, YRotationDirection).normalized()
 	
 	if UsingFixedCamera:
 		if Direction == Vector3.ZERO:
@@ -62,17 +75,47 @@ func _process(delta: float) -> void:
 	else:
 		YRotationDirection = LookPivot.global_rotation.y
 	
-	InputDirection = Input.get_vector("move-left", "move-right","move-forward","move-backward")
-	Direction = Vector3(InputDirection.x, 0, InputDirection.y).rotated(Vector3.UP, YRotationDirection)
+	InputtingMovement = InputVector != Vector2.ZERO
+	InMovement = CurrentSpeed == 0
 	
-	# Sets the horizontal components of target velocity
+	if InputtingMovement and (not InMovement):
+		Direction = InputVector3
+	elif InputtingMovement:
+		Direction = Direction.move_toward(InputVector3, .01)
+	
+	# checking what to set the speeds to
+	# if the player is inputting movement and sets the target speed
+	if InputtingMovement:
+		TargetSpeed = MaxSpeed
+		# checks if the player is below the minimal push speed and pushes them up if not
+		if CurrentSpeed < InitialSpeed:
+			CurrentSpeed = InitialSpeed
+	else:
+		TargetSpeed = 0
+	
+	var Step: float
+	if Braking:
+		Step = 0.5
+	else:
+		Step = 0.1
+	
+	CurrentSpeed = move_toward(CurrentSpeed, TargetSpeed, Step)
+	CurrentSpeed = clamp(CurrentSpeed, 0, MaxSpeed)
+	
+	print(CurrentSpeed, " ", TargetSpeed, " ", InputtingMovement, " ", InMovement)
+	# print(Direction)
+	
+	# Sets the horizontal components of target velocity if the character can move, completely stops them if not
 	if CanMove:
-		TargetVelocity.x = Direction.x * Speed * delta
-		TargetVelocity.z = Direction.z * Speed * delta
+		TargetVelocity.x = Direction.x * CurrentSpeed
+		TargetVelocity.z = Direction.z * CurrentSpeed
+	else:
+		TargetVelocity.x = 0
+		TargetVelocity.z = 0
 	
 	# Makes the player fall if they're not on the floor
 	if not is_on_floor():
-		TargetVelocity.y -= Gravity * delta
+		TargetVelocity.y -= Gravity
 	else:
 		TargetVelocity.y = 0
 	
@@ -134,3 +177,7 @@ func switch_to_fp_camera():
 
 func switch_to_fixed_camera():
 	UsingFixedCamera = true
+
+func push_off():
+	CurrentSpeed 
+	CurrentSpeed = clamp(CurrentSpeed, 0, MaxSpeed)
