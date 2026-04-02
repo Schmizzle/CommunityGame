@@ -24,6 +24,7 @@ func activate_quest(tag: ProgressionTracker.QuestTags):
 	for x in Quests:
 		if (x.Tag == tag) and (x.State == Quest.QuestStates.Available):
 			x.State = Quest.QuestStates.Active
+			x.ActiveTaskList = x.TaskLists[0]
 			create_quest_boxes()
 
 
