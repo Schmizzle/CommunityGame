@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://jd4d3x64fw1p" path="res://Levels/CityBlock/Elements/BaseLevelGeometry/dock.tscn" id="28_u5642"]
 [ext_resource type="Material" uid="uid://2rwr1jpl5axt" path="res://Environment/AllPurposeTextures/WoodTextures/darkwoodTriplanar.tres" id="29_66e0b"]
 [ext_resource type="Material" uid="uid://b06fsvhwqc1qo" path="res://Levels/FirstPersonBranch/Elements/JumpBlocks/jump_cube_material.tres" id="30_oqfl0"]
+[ext_resource type="Material" uid="uid://cufdjn16qx2nr" path="res://Environment/TestingStuff/InitTester/test_mat1.tres" id="31_fv7g2"]
 [ext_resource type="Script" uid="uid://cnfpw6bvsplif" path="res://Levels/FirstPersonBranch/parcel_deliverer.gd" id="31_wojqa"]
 [ext_resource type="Script" uid="uid://dj4evdvgi47st" path="res://NPCs/LumberJack/npc_lumber_jack.gd" id="31_xafe4"]
 [ext_resource type="Resource" uid="uid://dg8hkr7euexih" path="res://NPCs/LumberJack/tl_lumberjack.dtl" id="32_yxx74"]
@@ -477,7 +478,7 @@ Speed = 600
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.394712, 4.6845074, -27.297054)
 
 [node name="WaterWell" type="MeshInstance3D" parent="LevelInteractables" unique_id=2062626808]
-transform = Transform3D(1, 0, 0, 0, 3.831475, -0.40962055, 0, 1.7204063, 0.912256, -40.713932, 20.258966, -14.782749)
+transform = Transform3D(0.99999994, 0, 0, 0, 4.199837, 0.008796334, 0, -0.036944658, 0.9999613, -36.741222, 14.479898, -2.7098808)
 mesh = SubResource("TorusMesh_n2e8l")
 script = ExtResource("4_60nto")
 
@@ -639,7 +640,7 @@ transform = Transform3D(0.20789169, 0, -0.13885632, 0, 0.25, 0, 0.13885632, 0, 0
 [node name="marina" parent="ShutInRoom/MarinaNPC" index="3" unique_id=678181806]
 OutsideLocation = Vector3(-2.2, 1, 4.5)
 
-[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 44603572) index="0" unique_id=1460004692]
+[node name="Skeleton3D" parent="ShutInRoom/MarinaNPC/marina/Rig" parent_id_path=PackedInt32Array(706979957, 678181806, 149950082) index="0" unique_id=790309223]
 bones/0/rotation = Quaternion(0.7070358, 0.010022881, -0.01002288, 0.7070358)
 bones/1/rotation = Quaternion(0, 0, 0, 1)
 bones/2/rotation = Quaternion(0, 0, 0, 1)
@@ -660,8 +661,8 @@ bones/18/rotation = Quaternion(0.7006804, -8.716751e-08, -8.5604256e-08, 0.71347
 bones/19/rotation = Quaternion(-0.0044633495, 2.9637592e-09, 1.0773735e-09, 0.99999005)
 bones/20/rotation = Quaternion(-1.7877335e-07, -1.0185976e-08, -0.70710677, 0.70710677)
 
-[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=1697079701]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00016467273, 0.00013720989, 0.0001628995)
+[node name="ProfessorMesh" parent="ShutInRoom/MarinaNPC/marina/Rig/Skeleton3D" index="0" unique_id=2032903724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004927665, 0.00033980608, 0.0006907433)
 
 [node name="Ocean" parent="." unique_id=1206046621 instance=ExtResource("16_mmo4w")]
 transform = Transform3D(17.533104, 0, -239.73341, 0, 1, 0, 136.2258, 0, 30.855171, 2.7381463, 0.5756645, -42.394924)
@@ -733,39 +734,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67067, 2.9743667, -40.80149
 [node name="dock" parent="LevelGeometry" unique_id=46886904 instance=ExtResource("28_u5642")]
 transform = Transform3D(-0.14584135, 0, 0.989308, 0, 1, 0, -0.989308, 0, -0.14584135, 20.269547, 3.0834322, -32.962753)
 
-[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=1576113409]
+[node name="Cube" parent="LevelGeometry/dock" index="0" unique_id=256878451]
 transform = Transform3D(6.4, 0, 0, 0, 0.19999999, 0, 0, 0, 2.88, 2.98378, 2.3841858e-07, 0.016954422)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=981231151]
+[node name="Stairs_002" parent="LevelGeometry/dock" index="2" unique_id=622480262]
 transform = Transform3D(1.7881393e-07, 0, -3.2, 0, 1, 0, 1, 0, 5.364418e-07, 6.283779, 0.7000003, -3.9000015)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=294546303]
+[node name="Cylinder" parent="LevelGeometry/dock" index="3" unique_id=1852739092]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, -1.9830456)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=698958341]
+[node name="Cylinder_001" parent="LevelGeometry/dock" index="4" unique_id=2132086557]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 8.983776, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=1526789193]
+[node name="Cylinder_002" parent="LevelGeometry/dock" index="5" unique_id=299225390]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=587254369]
+[node name="Cylinder_003" parent="LevelGeometry/dock" index="6" unique_id=953287208]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 4.98378, -1.1999998, 2.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=794121355]
+[node name="Cylinder_004" parent="LevelGeometry/dock" index="7" unique_id=1532484495]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 5.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=498879361]
+[node name="Cylinder_005" parent="LevelGeometry/dock" index="8" unique_id=1182954658]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.483778, -1.1999998, 15.016956)
 surface_material_override/0 = ExtResource("29_66e0b")
 
-[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=739495506]
+[node name="Cylinder_006" parent="LevelGeometry/dock" index="9" unique_id=396530668]
 transform = Transform3D(0.30000004, 0, 0, 0, -1.11, 0, 0, 0, 0.30000004, 0.4837761, -1.1999998, 11.0169525)
 surface_material_override/0 = ExtResource("29_66e0b")
 
@@ -794,6 +795,99 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5, -60.5)
 use_collision = true
 collision_mask = 3
 size = Vector3(10, 1, 8)
+
+[node name="StartingPlatform2" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=1996322937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.968876, 6.835476, -50.614117)
+use_collision = true
+collision_mask = 3
+size = Vector3(43.44391, 1.7582474, 12.033813)
+material = ExtResource("30_oqfl0")
+
+[node name="StartingPlatform6" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=1200903629]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -40.432888, 17.519264, -37.227345)
+use_collision = true
+collision_mask = 3
+size = Vector3(20.491684, 1.2807922, 11.300659)
+
+[node name="StartingPlatform7" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=2048239584]
+transform = Transform3D(0.96457124, 0.26382256, -1.5486421e-09, -0.26382256, 0.96457124, -1.1532049e-08, -1.5486421e-09, 1.1532051e-08, 1, -29.15601, 15.934702, -45.317345)
+use_collision = true
+collision_mask = 3
+size = Vector3(11.982967, 1.2807922, 4.256775)
+
+[node name="StartingPlatform12" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=968512621]
+transform = Transform3D(-0.89644396, -0.32782853, 0.29818892, -0.33635002, 0.94143516, 0.02384503, -0.2885426, -0.078920096, -0.954209, -28.709024, 13.119328, -58.988186)
+use_collision = true
+collision_mask = 3
+size = Vector3(11.982967, 1.2807922, 4.256775)
+
+[node name="StartingPlatform8" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=346873418]
+transform = Transform3D(-0.9999866, -0.0051836073, 8.2955076e-08, -0.0051836073, 0.9999866, -3.4166604e-08, -8.277685e-08, -3.459615e-08, -1, -32.637367, 7.730466, -59.626923)
+use_collision = true
+collision_mask = 3
+size = Vector3(8.848051, 8.18265, 10.271088)
+material = ExtResource("31_fv7g2")
+
+[node name="StartingPlatform9" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=1941614388]
+transform = Transform3D(-0.9999866, -0.0051836073, 8.2955076e-08, -0.0051836073, 0.9999866, -3.4166604e-08, -8.277685e-08, -3.459615e-08, -1, -43.026352, 5.2643285, -53.717022)
+use_collision = true
+collision_mask = 3
+size = Vector3(8.956374, 9.342598, 17.960228)
+material = ExtResource("31_fv7g2")
+
+[node name="StartingPlatform11" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=218698603]
+transform = Transform3D(-0.9999866, -0.0051836073, 8.2955076e-08, -0.0051836073, 0.9999866, -3.4166604e-08, -8.277685e-08, -3.459615e-08, -1, -42.739147, 5.942608, -58.266098)
+use_collision = true
+collision_mask = 3
+size = Vector3(8.956374, 10.699175, 8.862072)
+material = ExtResource("30_oqfl0")
+
+[node name="StartingPlatform10" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=2006828168]
+transform = Transform3D(-0.9999866, -0.0051836073, 8.2955076e-08, -0.0051836073, 0.9999866, -3.4166604e-08, -8.277685e-08, -3.459615e-08, -1, -35.081493, 6.014806, -46.019848)
+use_collision = true
+collision_mask = 3
+size = Vector3(3.9145086, 5.9099903, 8.184176)
+material = ExtResource("29_66e0b")
+
+[node name="StartingPlatform5" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=438373549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.605907, 9.61404, -38.226746)
+use_collision = true
+collision_mask = 3
+size = Vector3(11.765167, 7.3153763, 11.98584)
+
+[node name="StartingPlatform4" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=1252898851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.940372, 11.07383, -50.593975)
+use_collision = true
+collision_mask = 3
+size = Vector3(27.301086, 7.7297077, 11.99353)
+material = ExtResource("31_fv7g2")
+
+[node name="StartingPlatform5" type="CSGBox3D" parent="LevelGeometry/Metrics/StartingPlatform4" unique_id=525763969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3255539, 0.08579922, -0.16682816)
+operation = 2
+use_collision = true
+collision_mask = 3
+size = Vector3(24.766617, 4.7934895, 10.856487)
+
+[node name="StartingPlatform6" type="CSGBox3D" parent="LevelGeometry/Metrics/StartingPlatform4" unique_id=1745873948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.852277, 0.08579922, 0.42080307)
+operation = 2
+use_collision = true
+collision_mask = 3
+size = Vector3(5.3321247, 4.7934895, 12.031749)
+
+[node name="StartingPlatform7" type="CSGBox3D" parent="LevelGeometry/Metrics/StartingPlatform4" unique_id=1645326874]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.286312, 0.08579922, 0.42080307)
+operation = 2
+use_collision = true
+collision_mask = 3
+size = Vector3(5.3321247, 4.7934895, 12.031749)
+
+[node name="StartingPlatform3" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=984604458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6123347, 5.6846657, -57.735348)
+use_collision = true
+collision_mask = 3
+size = Vector3(11.984009, 1.2807922, 2.8969116)
 
 [node name="SmallJump" type="CSGBox3D" parent="LevelGeometry/Metrics" unique_id=483845401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 6, -68.5)
@@ -962,11 +1056,11 @@ mesh = SubResource("CylinderMesh_fv7g2")
 surface_material_override/0 = SubResource("StandardMaterial3D_1h3cl")
 
 [node name="ParcelDeliveryPoint" parent="." unique_id=903112496 instance=ExtResource("35_wojqa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8507, 9.313255, -32.213036)
+transform = Transform3D(-0.950927, 0, 0.3094154, 0, 1, 0, -0.3094154, 0, -0.950927, 27.98928, 4.0972824, -32.857365)
 parcelToDeliver = 15
 
 [node name="ParcelDeliveryPoint2" parent="." unique_id=1500950502 instance=ExtResource("35_wojqa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.177391, 9.149291, -33.947613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.47743, 9.149291, -54.813736)
 parcelToDeliver = 16
 
 [node name="ParcelDeliveryPoint3" parent="." unique_id=2068443612 instance=ExtResource("35_wojqa")]
