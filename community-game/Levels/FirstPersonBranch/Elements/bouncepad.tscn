@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7svrcqgjhhlg"]
+
+[ext_resource type="Script" uid="uid://du7ksyg2h0nb" path="res://Levels/FirstPersonBranch/bouncepad.gd" id="1_n8bax"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wojqa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv7g2"]
+albedo_color = Color(0.39215687, 0.5882353, 0.91764706, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fv7g2"]
+size = Vector3(3.4472656, 2, 4.680664)
+
+[node name="Bouncepad" type="Node3D" unique_id=675245947]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+script = ExtResource("1_n8bax")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=305378401]
+transform = Transform3D(4.9940786, 0, 0, 0, 0.999999, 0, 0, 0, 4.394213, 0, 0.7489357, 0)
+mesh = SubResource("BoxMesh_wojqa")
+surface_material_override/0 = SubResource("StandardMaterial3D_fv7g2")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=595128422]
+transform = Transform3D(4.9940786, 0, 0, 0, 0.9999996, 0, 0, 0, 4.394218, 0, 1.0544701, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1789731449]
+transform = Transform3D(0.2002371, 0, 0, 0, 0.9999589, 0, 0, 0, 0.22756603, 0, -0.5808878, 0)
+shape = SubResource("BoxShape3D_fv7g2")

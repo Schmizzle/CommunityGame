@@ -73,8 +73,8 @@ func _process(delta: float) -> void:
 	# Makes the player fall if they're not on the floor
 	if not is_on_floor():
 		TargetVelocity.y -= Gravity * delta
-	else:
-		TargetVelocity.y = 0
+	"else:
+		TargetVelocity.y = 0"
 	
 	# lets the player jump
 	if is_on_floor() and Input.is_action_just_pressed("jump") and CanMove:
@@ -134,3 +134,7 @@ func switch_to_fp_camera():
 
 func switch_to_fixed_camera():
 	UsingFixedCamera = true
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	TargetVelocity.y  = 30
