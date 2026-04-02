@@ -24,6 +24,7 @@ func activate_quest(tag: ProgressionTracker.QuestTags):
 	for x in Quests:
 		if (x.Tag == tag) and (x.State == Quest.QuestStates.Available):
 			x.State = Quest.QuestStates.Active
+			x.ActiveTaskList = x.TaskLists[0]
 			create_quest_boxes()
 
 
@@ -192,5 +193,11 @@ func query_task_complete(tag: ProgressionTracker.TaskTags) -> bool:
 					ReturnValue = true
 	
 	return ReturnValue
+
+func get_quest_of_tag(tag: ProgressionTracker.QuestTags) -> Quest:
+	for x in Quests:
+		if x.Tag == tag:
+			return x
+	return null
 
 #endregion
