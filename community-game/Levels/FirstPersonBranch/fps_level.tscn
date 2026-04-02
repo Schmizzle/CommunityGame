@@ -486,7 +486,8 @@ environment = SubResource("Environment_4jjoa")
 
 [node name="Player" parent="." unique_id=1432177263 instance=ExtResource("3_y77ps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.188065, 9.911495, -33.37515)
-Speed = 600
+MaxSpeed = 10
+InitialSpeed = 3
 
 [node name="LevelInteractables" type="Node3D" parent="." unique_id=962601878]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.394712, 4.6845074, -27.297054)
@@ -1375,22 +1376,15 @@ use_collision = true
 collision_mask = 3
 size = Vector3(3, 2.4696045, 2)
 
-[node name="SmallJump24" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=448450486]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.50284, 42.22529, 22.626236)
-material_override = ExtResource("30_oqfl0")
-use_collision = true
-collision_mask = 3
-size = Vector3(3.5444336, 4.3529053, 2)
-
 [node name="SmallJump25" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1238128972]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.9245, 40.24427, 32.00164)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.9245, 40.24427, 23.051973)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 0.39086914, 2)
 
 [node name="SmallJump27" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=196749332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.50431, 40.420906, 36.948753)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.50431, 40.420906, 29.85765)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
@@ -1411,35 +1405,35 @@ collision_mask = 3
 size = Vector3(3, 1, 7.8602295)
 
 [node name="SmallJump17" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=39711885]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.04048, 40.548836, 41.636726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.04048, 40.548836, 30.044395)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 1, 2)
 
 [node name="SmallJump18" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=564409217]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.000446, 41.048836, 46.593136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.000446, 41.048836, 36.689438)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 2, 2)
 
 [node name="SmallJump19" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=1643200296]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.00044, 41.548836, 50.294273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.00044, 41.548836, 42.989628)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 3, 2)
 
 [node name="SmallJump20" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=860500495]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98448, 42.048836, 54.379913)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98448, 42.048836, 51.085663)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
 size = Vector3(3, 4, 2)
 
 [node name="SmallJump21" type="CSGBox3D" parent="LevelGeometry/LeftBuilding" unique_id=696501560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.973167, 42.548836, 59.350735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.973167, 42.548836, 56.97648)
 material_override = ExtResource("30_oqfl0")
 use_collision = true
 collision_mask = 3
@@ -1612,8 +1606,8 @@ parcelToDeliver = 17
 [connection signal="body_entered" from="LevelGeometry/LeftBuilding/Bouncepad2/Area3D2" to="Player" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="LevelGeometry/LeftBuilding/Bouncepad3/Area3D" to="Player" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="LevelGeometry/LeftBuilding/Bouncepad3/Area3D2" to="Player" method="_on_area_3d_body_entered"]
-[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
 [connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_bed_sleep"]
+[connection signal="_interaction_signal" from="PlayerBed/InteractableComponent" to="DayNightManager" method="_on_interactable_component__interaction_signal"]
 [connection signal="_interaction_signal" from="ParcelDeliverer/InteractableComponent" to="ParcelDeliverer" method="_on_interactable_component__interaction_signal"]
 
 [editable path="ShutInRoom/MarinaNPC"]

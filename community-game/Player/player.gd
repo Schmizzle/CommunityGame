@@ -18,8 +18,8 @@ var CanMove: bool = true
 var InputtingMovement: bool = false
 var InMovement: bool = false
 
-var Gravity: int = 20
-var JumpForce: int = 7
+var Gravity: float = 0.4
+var JumpForce: int = 10
 
 
 # Look variables
